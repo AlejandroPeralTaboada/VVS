@@ -1,1 +1,6 @@
 Documento de pruebas de unidad
+
+PR_UN_Registro_001 Registro addSuceso Valor Frontera 0 0
+PR_UN_Registro_002 Registro addSuceso Valor Frontera -1 0
+PR_UN_Registro_003 Registro addSuceso Valor Frontera 1 1
+PR_UN_Registro_004 Registro addSuceso Valor Frontera 10 10
