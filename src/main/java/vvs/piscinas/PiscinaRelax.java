@@ -11,7 +11,7 @@ import vvs.registro.SucesoNivelSales;
  *
  * @author alejandro.peral
  */
-public class PiscinaRelax extends Piscina {
+public class PiscinaRelax extends PiscinaImp {
 
 	float nivelSales;
 
@@ -34,8 +34,8 @@ public class PiscinaRelax extends Piscina {
 		this.nivelSales = nivel;
 		this.setChanged();
 		this.notifyObservers();
-		if (estado.registrarParametros(this)) {
-			registro.addSuceso(new SucesoNivelSales(nivel_inicial, nivel));
+		if (getEstado().registrarParametros(this)) {
+			getRegistro().addSuceso(new SucesoNivelSales(nivel_inicial, nivel));
 		}
 
 	}

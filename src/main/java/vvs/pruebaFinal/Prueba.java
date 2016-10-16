@@ -12,6 +12,7 @@ import vvs.alarma.AlarmaNivelCloroEvacuacion;
 import vvs.alarma.AlarmaNivelSales;
 import vvs.alarma.AlarmaPersonas;
 import vvs.piscinas.Piscina;
+import vvs.piscinas.PiscinaImp;
 import vvs.piscinas.PiscinaRelax;
 import vvs.plantilla.Empleado;
 import vvs.plantilla.Empleado.Genero;
@@ -19,7 +20,6 @@ import vvs.plantilla.Encargado;
 import vvs.plantilla.Equipo;
 import vvs.plantilla.Gestor;
 import vvs.plantilla.Mantenimiento;
-import vvs.plantilla.Plantilla;
 import vvs.plantilla.Socorrista;
 import vvs.sensor.SensorNivelAgua;
 import vvs.sensor.SensorNivelCloro;
@@ -37,8 +37,7 @@ public class Prueba {
 	public static void main(String[] args) {
 		Gestor gestor = new Gestor("Bárcenas", Genero.H);
 		Encargado encargado = new Encargado("Paleto de turno", Genero.H);
-		Plantilla plantilla;
-		Piscina piscina = new Piscina("Olímpica", "Zona 1");
+		Piscina piscina = new PiscinaImp("Olímpica", "Zona 1");
 		Alarma alarma1 = new AlarmaPersonas(30);
 		Empleado empleado1 = new Socorrista("Pedro", Genero.H);
 		alarma1.addResponsable(empleado1);
@@ -73,13 +72,12 @@ public class Prueba {
 		encargado.evacuar(piscina);
 		sensor3.medirNivelPH((float) 7.001);
 		sensor4.medirNivelCloro((float) 13.4);
-		piscina.setLongitudRegistro(20);
 
 		System.out.println(gestor.generarInforme(piscina));
 		System.out.println(alarma1.informe());
 		System.out.println(alarma2.informe());
 
-		Piscina piscinapequeña = new Piscina("Piscina Pequeña", "Zona 3");
+		Piscina piscinapequeña = new PiscinaImp("Piscina Pequeña", "Zona 3");
 		SensorNivelAgua sensor11 = new SensorNivelAgua(piscinapequeña);
 		Alarma alarma6 = new AlarmaNivelAgua((float) 1.9, (float) 0.5020);
 		piscinapequeña.addObserver(alarma6);

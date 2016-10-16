@@ -21,33 +21,28 @@ import vvs.plantilla.Plantilla;
 public abstract class Alarma implements Observer {
 
 	private Plantilla plantilla;
-	protected List registro;
+	protected List<String> registro;
 
 	public Alarma() {
 		plantilla = new Plantilla();
-		registro = new LinkedList();
+		registro = new LinkedList<String>();
 	}
 
-	
 	public Plantilla getPlantilla() {
 		return plantilla;
 	}
-
 
 	public void setPlantilla(Plantilla plantilla) {
 		this.plantilla = plantilla;
 	}
 
-
-	public List getRegistro() {
+	public List<String> getRegistro() {
 		return registro;
 	}
 
-
-	public void setRegistro(List registro) {
+	public void setRegistro(List<String> registro) {
 		this.registro = registro;
 	}
-
 
 	public void addResponsable(Equipo equipo) {
 		plantilla.addEquipo(equipo);
@@ -62,7 +57,7 @@ public abstract class Alarma implements Observer {
 	}
 
 	public String informe() {
-		Iterator aux = registro.iterator();
+		Iterator<String> aux = registro.iterator();
 		StringBuilder sb = new StringBuilder();
 		while (aux.hasNext()) {
 			sb.append(aux.next());

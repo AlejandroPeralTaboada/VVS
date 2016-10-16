@@ -1,45 +1,53 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vvs.piscinas;
 
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.List;
 import java.util.Observable;
 
 import vvs.registro.Registro;
 import vvs.registro.Suceso;
-import vvs.registro.SucesoNivelAgua;
-import vvs.registro.SucesoNivelCloro;
-import vvs.registro.SucesoPersonas;
-import vvs.registro.SucesoTemperatura;
 import vvs.sensor.Sensor;
 
-/**
- *
- * @author alejandro.peral
- */
-public class Piscina extends Observable {
+public abstract class Piscina extends Observable {
 
-	private final String nombre;
-	private final String ubicacion;
-	private float nivelAgua;
-	private float temperatura;
-	private float nivelCloro;
-	private float nivelPH;
-	private int personas;
+	String nombre;
+	String ubicacion;
+	float nivelAgua;
+	float temperatura;
+	float nivelCloro;
+	float nivelPH;
+	int personas;
 	EstadoPiscina estado;
 	Registro registro;
-	private ArrayList<Sensor> sensores;
+	List<Sensor> sensores;
 
-	public Piscina(String nombre, String ubicacion) {
-		this.nombre = nombre;
-		this.ubicacion = ubicacion;
-		this.registro = new Registro(10);
-		this.estado = Mantenimiento.getInstancia();
-		this.sensores = new ArrayList();
+	public abstract void regsitrarNuevoSuceso(Suceso suceso);
+
+	public abstract String informe();
+
+	public abstract void activar();
+
+	public abstract void cerrar();
+
+	public abstract void evacuar();
+
+	public abstract void mantenimiento();
+
+	public abstract boolean lanzarAlarmas();
+
+	public abstract void addSensor(Sensor sensor);
+
+	public abstract void setNivelAgua(float nivel);
+
+	public abstract void setTemperatura(float temperatura);
+
+	public abstract void setNivelCloro(float nivel);
+
+	public abstract void setNivelPH(float nivel);
+
+	public abstract void setPersonas(int personas);
+
+	public Registro getRegistro() {
+		return registro;
 	}
 
 	public String getNombre() {
@@ -74,140 +82,8 @@ public class Piscina extends Observable {
 		return this.estado;
 	}
 
-	// ----------------------------------------------------
-	public void setNivelAgua(float nivel) {
-		if (nivel < 0) {
-			throw new IllegalArgumentException();
-		}
-		if (nivel == this.nivelAgua) {
-			return;
-		}
-		float nivel_inicial = this.nivelAgua;
-		this.nivelAgua = nivel;
-		this.setChanged();
-		this.notifyObservers();
-		if (estado.registrarParametros(this)) {
-			registro.addSuceso(new SucesoNivelAgua(nivel_inicial, nivel));
-		}
-	}
-
-	public void setTemperatura(float temperatura) {
-		if (temperatura < 0) {
-			throw new IllegalArgumentException();
-		}
-		if (temperatura == this.temperatura) {
-			return;
-		}
-		float temperatura_inicial = this.temperatura;
-		this.temperatura = temperatura;
-		this.setChanged();
-		this.notifyObservers();
-		if (estado.registrarParametros(this)) {
-			registro.addSuceso(new SucesoTemperatura(temperatura_inicial, temperatura));
-		}
-	}
-
-	public void setNivelCloro(float nivel) {
-		if (nivel < 0) {
-			throw new IllegalArgumentException();
-		}
-		if (nivel == this.nivelCloro) {
-			return;
-		}
-		float nivel_inicial = this.nivelCloro;
-		this.nivelCloro = nivel;
-		this.setChanged();
-		this.notifyObservers();
-		if (estado.registrarParametros(this)) {
-			registro.addSuceso(new SucesoNivelCloro(nivel_inicial, nivel));
-		}
-	}
-
-	public void setNivelPH(float nivel) {
-		if (nivel < 0) {
-			throw new IllegalArgumentException();
-		}
-		if (nivel == this.nivelPH) {
-			return;
-		}
-		float nivel_inicial = this.nivelPH;
-		this.nivelPH = nivel;
-		this.setChanged();
-		this.notifyObservers();
-		if (estado.registrarParametros(this)) {
-			registro.addSuceso(new SucesoNivelCloro(nivel_inicial, nivel));
-		}
-	}
-
-	public void setPersonas(int personas) {
-		if (personas < 0) {
-			throw new IllegalArgumentException();
-		}
-
-		int personas_inicial = this.personas;
-		this.personas = personas;
-		this.setChanged();
-		this.notifyObservers();
-		if (estado.registrarParametros(this)) {
-			registro.addSuceso(new SucesoPersonas(personas_inicial, personas));
-		}
-		estado.notificarPersonas(this);
-	}
-
 	public void setEstado(EstadoPiscina estado) {
 		this.estado = estado;
-
 	}
 
-	// -----------------------------------------------------------
-	void borrarRegistro() {
-		this.registro.borrar();
-	}
-
-	void nuevoSuceso(Suceso suceso) {
-		this.registro.addSuceso(suceso);
-	}
-
-	public String informe() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("# Informe de piscina \"" + this.getNombre() + "\", ubicada en \"" + this.getUbicacion() + "\".\n");
-		Date llamada = new Date();
-		sb.append("# Generado el " + llamada.toString() + "\n");
-		sb.append(this.registro.informe());
-		sb.append("# Fase actual: " + this.getEstado().toString() + "\n");
-		return new String(sb);
-	}
-
-	public void setLongitudRegistro(int tam) {
-		this.registro.setNumeroRegistros(tam);
-	}
-
-	public void activar() {
-		this.estado.activar(this);
-	}
-
-	public void cerrar() {
-		this.estado.cerrar(this);
-	}
-
-	public void evacuar() {
-		this.estado.evacuar(this);
-	}
-
-	public void mantenimiento() {
-		this.estado.mantenimiento(this);
-	}
-
-	public boolean lanzarAlarmas() {
-		return this.estado.lanzarAlarmas(this);
-	}
-
-	public void addSensor(Sensor sensor) {
-		if ((sensor != null) && (!this.sensores.contains(sensor)) && (sensor.getPiscina() == this)) {
-			this.sensores.add(sensor);
-		} else {
-			throw new IllegalArgumentException();
-		}
-
-	}
 }

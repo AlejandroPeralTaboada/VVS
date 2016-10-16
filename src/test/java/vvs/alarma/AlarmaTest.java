@@ -9,480 +9,470 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import vvs.plantilla.Empleado;
 import vvs.plantilla.Equipo;
-import vvs.plantilla.Plantilla;
 
 @RunWith(MockitoJUnitRunner.class)
 public class AlarmaTest {
 
-	@Mock 
+	@Mock
 	private Equipo equipo;
-	
-	@Mock 
+
+	@Mock
 	private Empleado empleado;
-	
-	@Test 
-	public void PR_UN_Alarma_001(){
-		Alarma alarma = new AlarmaNivelAgua(4,2);
+
+	@Test
+	public void PR_UN_Alarma_001() {
+		Alarma alarma = new AlarmaNivelAgua(4, 2);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_002(){
+	public void PR_UN_Alarma_002() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelAgua(2,4);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelAgua(2, 4);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_003(){
-		Alarma alarma = new AlarmaNivelAgua(0,0);
+
+	@Test
+	public void PR_UN_Alarma_003() {
+		Alarma alarma = new AlarmaNivelAgua(0, 0);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	
+
 	@Test
-	public void PR_UN_Alarma_004(){
+	public void PR_UN_Alarma_004() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelAgua(5,-3);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelAgua(5, -3);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_005(){
+	public void PR_UN_Alarma_005() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelAgua(-3,2);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelAgua(-3, 2);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_006(){
+	public void PR_UN_Alarma_006() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelAgua(-1,-5);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelAgua(-1, -5);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_007(){
-		Alarma alarma = new AlarmaNivelAgua(6,2);
-		alarma.addResponsable(empleado);
-		boolean pepito = alarma.getPlantilla().getEmpleados().size()==1;
-		assertTrue(pepito);
-	}
-	
-	@Test 
-	public void PR_UN_Alarma_008(){
-		Alarma alarma = new AlarmaNivelCloro(4,2);
-		alarma.addResponsable(equipo);
-		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
-		assertTrue(pepito);
-	}
-	
-	@Test
-	public void PR_UN_Alarma_009(){
-		boolean catched = false;
-		try {
-			Alarma alarma = new AlarmaNivelCloro(2,4);
-		} catch(IllegalArgumentException e){
-			catched = true;
-		}
-		assertTrue(catched);
-	}
-	
-	@Test 
-	public void PR_UN_Alarma_010(){
-		Alarma alarma = new AlarmaNivelCloro(0,0);
-		alarma.addResponsable(equipo);
-		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
-		assertTrue(pepito);
-	}
-	
-	
-	@Test
-	public void PR_UN_Alarma_011(){
-		boolean catched = false;
-		try {
-			Alarma alarma = new AlarmaNivelCloro(5,-3);
-		} catch(IllegalArgumentException e){
-			catched = true;
-		}
-		assertTrue(catched);
-	}
-	
-	@Test
-	public void PR_UN_Alarma_012(){
-		boolean catched = false;
-		try {
-			Alarma alarma = new AlarmaNivelCloro(-3,2);
-		} catch(IllegalArgumentException e){
-			catched = true;
-		}
-		assertTrue(catched);
-	}
-	
-	@Test
-	public void PR_UN_Alarma_013(){
-		boolean catched = false;
-		try {
-			Alarma alarma = new AlarmaNivelCloro(-1,-5);
-		} catch(IllegalArgumentException e){
-			catched = true;
-		}
-		assertTrue(catched);
-	}
-	
-	@Test 
-	public void PR_UN_Alarma_014(){
-		Alarma alarma = new AlarmaNivelCloro(6,2);
+	public void PR_UN_Alarma_007() {
+		Alarma alarma = new AlarmaNivelAgua(6, 2);
 		alarma.addResponsable(empleado);
 		boolean pepito = alarma.getPlantilla().getEmpleados().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_015(){
-		Alarma alarma = new AlarmaNivelCloroEvacuacion(4,2);
+
+	@Test
+	public void PR_UN_Alarma_008() {
+		Alarma alarma = new AlarmaNivelCloro(4, 2);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_016(){
+	public void PR_UN_Alarma_009() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelCloroEvacuacion(2,4);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelCloro(2, 4);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_017(){
-		Alarma alarma = new AlarmaNivelCloroEvacuacion(0,0);
+
+	@Test
+	public void PR_UN_Alarma_010() {
+		Alarma alarma = new AlarmaNivelCloro(0, 0);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	
+
 	@Test
-	public void PR_UN_Alarma_018(){
+	public void PR_UN_Alarma_011() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelCloroEvacuacion(5,-3);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelCloro(5, -3);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_019(){
+	public void PR_UN_Alarma_012() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelCloroEvacuacion(-3,2);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelCloro(-3, 2);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_020(){
+	public void PR_UN_Alarma_013() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelCloroEvacuacion(-1,-5);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelCloro(-1, -5);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_021(){
-		Alarma alarma = new AlarmaNivelCloroEvacuacion(6,2);
+
+	@Test
+	public void PR_UN_Alarma_014() {
+		Alarma alarma = new AlarmaNivelCloro(6, 2);
 		alarma.addResponsable(empleado);
 		boolean pepito = alarma.getPlantilla().getEmpleados().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_022(){
-		Alarma alarma = new AlarmaNivelPH(4,2);
+
+	@Test
+	public void PR_UN_Alarma_015() {
+		Alarma alarma = new AlarmaNivelCloroEvacuacion(4, 2);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_023(){
+	public void PR_UN_Alarma_016() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelPH(2,4);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelCloroEvacuacion(2, 4);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_024(){
-		Alarma alarma = new AlarmaNivelPH(0,0);
+
+	@Test
+	public void PR_UN_Alarma_017() {
+		Alarma alarma = new AlarmaNivelCloroEvacuacion(0, 0);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	
+
 	@Test
-	public void PR_UN_Alarma_025(){
+	public void PR_UN_Alarma_018() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelPH(5,-3);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelCloroEvacuacion(5, -3);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_026(){
+	public void PR_UN_Alarma_019() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelPH(-3,2);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelCloroEvacuacion(-3, 2);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_027(){
+	public void PR_UN_Alarma_020() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelPH(-1,-5);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelCloroEvacuacion(-1, -5);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_028(){
-		Alarma alarma = new AlarmaNivelPH(6,2);
+
+	@Test
+	public void PR_UN_Alarma_021() {
+		Alarma alarma = new AlarmaNivelCloroEvacuacion(6, 2);
 		alarma.addResponsable(empleado);
 		boolean pepito = alarma.getPlantilla().getEmpleados().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_029(){
-		Alarma alarma = new AlarmaNivelSales(4,2);
+
+	@Test
+	public void PR_UN_Alarma_022() {
+		Alarma alarma = new AlarmaNivelPH(4, 2);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_030(){
+	public void PR_UN_Alarma_023() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelSales(2,4);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelPH(2, 4);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_031(){
-		Alarma alarma = new AlarmaNivelSales(0,0);
+
+	@Test
+	public void PR_UN_Alarma_024() {
+		Alarma alarma = new AlarmaNivelPH(0, 0);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	
+
 	@Test
-	public void PR_UN_Alarma_032(){
+	public void PR_UN_Alarma_025() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelSales(5,-3);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelPH(5, -3);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_033(){
+	public void PR_UN_Alarma_026() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelSales(-3,2);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelPH(-3, 2);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_034(){
+	public void PR_UN_Alarma_027() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaNivelSales(-1,-5);
-		} catch(IllegalArgumentException e){
+			new AlarmaNivelPH(-1, -5);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_035(){
-		Alarma alarma = new AlarmaNivelSales(6,2);
+
+	@Test
+	public void PR_UN_Alarma_028() {
+		Alarma alarma = new AlarmaNivelPH(6, 2);
 		alarma.addResponsable(empleado);
 		boolean pepito = alarma.getPlantilla().getEmpleados().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_036(){
+
+	@Test
+	public void PR_UN_Alarma_029() {
+		Alarma alarma = new AlarmaNivelSales(4, 2);
+		alarma.addResponsable(equipo);
+		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
+		assertTrue(pepito);
+	}
+
+	@Test
+	public void PR_UN_Alarma_030() {
+		boolean catched = false;
+		try {
+			new AlarmaNivelSales(2, 4);
+		} catch (IllegalArgumentException e) {
+			catched = true;
+		}
+		assertTrue(catched);
+	}
+
+	@Test
+	public void PR_UN_Alarma_031() {
+		Alarma alarma = new AlarmaNivelSales(0, 0);
+		alarma.addResponsable(equipo);
+		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
+		assertTrue(pepito);
+	}
+
+	@Test
+	public void PR_UN_Alarma_032() {
+		boolean catched = false;
+		try {
+			new AlarmaNivelSales(5, -3);
+		} catch (IllegalArgumentException e) {
+			catched = true;
+		}
+		assertTrue(catched);
+	}
+
+	@Test
+	public void PR_UN_Alarma_033() {
+		boolean catched = false;
+		try {
+			new AlarmaNivelSales(-3, 2);
+		} catch (IllegalArgumentException e) {
+			catched = true;
+		}
+		assertTrue(catched);
+	}
+
+	@Test
+	public void PR_UN_Alarma_034() {
+		boolean catched = false;
+		try {
+			new AlarmaNivelSales(-1, -5);
+		} catch (IllegalArgumentException e) {
+			catched = true;
+		}
+		assertTrue(catched);
+	}
+
+	@Test
+	public void PR_UN_Alarma_035() {
+		Alarma alarma = new AlarmaNivelSales(6, 2);
+		alarma.addResponsable(empleado);
+		boolean pepito = alarma.getPlantilla().getEmpleados().size() == 1;
+		assertTrue(pepito);
+	}
+
+	@Test
+	public void PR_UN_Alarma_036() {
 		Alarma alarma = new AlarmaPersonas(4);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_037(){
+
+	@Test
+	public void PR_UN_Alarma_037() {
 		Alarma alarma = new AlarmaPersonas(0);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_038(){
+
+	@Test
+	public void PR_UN_Alarma_038() {
 		Alarma alarma = new AlarmaPersonas(-4);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_039(){
+
+	@Test
+	public void PR_UN_Alarma_039() {
 		Alarma alarma = new AlarmaPersonas(4);
 		alarma.addResponsable(empleado);
 		boolean pepito = alarma.getPlantilla().getEmpleados().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_040(){
+
+	@Test
+	public void PR_UN_Alarma_040() {
 		Alarma alarma = new AlarmaPersonas(0);
 		alarma.addResponsable(empleado);
 		boolean pepito = alarma.getPlantilla().getEmpleados().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_041(){
+
+	@Test
+	public void PR_UN_Alarma_041() {
 		Alarma alarma = new AlarmaPersonas(4);
 		alarma.addResponsable(empleado);
 		boolean pepito = alarma.getPlantilla().getEmpleados().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_042(){
-		Alarma alarma = new AlarmaTemperatura(4,2);
+
+	@Test
+	public void PR_UN_Alarma_042() {
+		Alarma alarma = new AlarmaTemperatura(4, 2);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_043(){
+	public void PR_UN_Alarma_043() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaTemperatura(2,4);
-		} catch(IllegalArgumentException e){
+			new AlarmaTemperatura(2, 4);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
-	@Test 
-	public void PR_UN_Alarma_044(){
-		Alarma alarma = new AlarmaTemperatura(0,0);
+
+	@Test
+	public void PR_UN_Alarma_044() {
+		Alarma alarma = new AlarmaTemperatura(0, 0);
 		alarma.addResponsable(equipo);
 		boolean pepito = alarma.getPlantilla().getEquipos().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	
+
 	@Test
-	public void PR_UN_Alarma_045(){
+	public void PR_UN_Alarma_045() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaTemperatura(5,-3);
-		} catch(IllegalArgumentException e){
+			new AlarmaTemperatura(5, -3);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_046(){
+	public void PR_UN_Alarma_046() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaTemperatura(-3,2);
-		} catch(IllegalArgumentException e){
+			new AlarmaTemperatura(-3, 2);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_047(){
+	public void PR_UN_Alarma_047() {
 		boolean catched = false;
 		try {
-			Alarma alarma = new AlarmaTemperatura(-1,-5);
-		} catch(IllegalArgumentException e){
+			new AlarmaTemperatura(-1, -5);
+		} catch (IllegalArgumentException e) {
 			catched = true;
 		}
 		assertTrue(catched);
 	}
-	
+
 	@Test
-	public void PR_UN_Alarma_048(){
-		Alarma alarma = new AlarmaTemperatura(6,2);
+	public void PR_UN_Alarma_048() {
+		Alarma alarma = new AlarmaTemperatura(6, 2);
 		alarma.addResponsable(empleado);
-		boolean pepito = alarma.getPlantilla().getEmpleados().size()==1;
+		boolean pepito = alarma.getPlantilla().getEmpleados().size() == 1;
 		assertTrue(pepito);
 	}
-	
-	
-	
-	
+
 }

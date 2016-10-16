@@ -44,7 +44,7 @@ public class Cerrada implements EstadoPiscina {
 
 	@Override
 	public void mantenimiento(Piscina piscina) {
-		piscina.nuevoSuceso(new SucesoEstado("Cerrada", "Mantenimiento"));
+		piscina.regsitrarNuevoSuceso(new SucesoEstado("Cerrada", "Mantenimiento"));
 		piscina.setEstado(Evacuacion.getInstancia());
 		;
 	}
