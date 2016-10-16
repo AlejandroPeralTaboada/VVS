@@ -4,3 +4,13 @@ PR_UN_Registro_001 Registro addSuceso Valor Frontera 0 0
 PR_UN_Registro_002 Registro addSuceso Valor Frontera -1 0
 PR_UN_Registro_003 Registro addSuceso Valor Frontera 1 1
 PR_UN_Registro_004 Registro addSuceso Valor Frontera 10 10
+PR_UN_Registro_005 Registro setNumeroRegistros Valor Frontera 0 0 Inicial 0
+PR_UN_Registro_006 Registro setNumeroRegistros Valor Frontera 0 0 Inicial -1
+PR_UN_Registro_007 Registro setNumeroRegistros Valor Frontera 0 0 Inicial 10
+PR_UN_Registro_008 Registro setNumeroRegistros Valor Frontera -1 0 Inicial 0
+PR_UN_Registro_009 Registro setNumeroRegistros Valor Frontera -1 0 Inicial -1
+PR_UN_Registro_010 Registro setNumeroRegistros Valor Frontera -1 0 Inicial 1
+PR_UN_Registro_011 Registro setNumeroRegistros Valor Frontera 1 1 Inicial 0
+PR_UN_Registro_012 Registro setNumeroRegistros Valor Frontera 1 1 Inicial -1
+PR_UN_Registro_013 Registro setNumeroRegistros Valor Frontera 1 1 Inicial 1
+PR_UN_Registro_013 Registro setNumeroRegistros Valor Frontera 2 2 Inicial 1
