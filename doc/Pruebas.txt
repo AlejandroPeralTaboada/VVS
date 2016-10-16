@@ -13,4 +13,8 @@ PR_UN_Registro_010 Registro setNumeroRegistros Valor Frontera -1 0 Inicial 1
 PR_UN_Registro_011 Registro setNumeroRegistros Valor Frontera 1 1 Inicial 0
 PR_UN_Registro_012 Registro setNumeroRegistros Valor Frontera 1 1 Inicial -1
 PR_UN_Registro_013 Registro setNumeroRegistros Valor Frontera 1 1 Inicial 1
-PR_UN_Registro_013 Registro setNumeroRegistros Valor Frontera 2 2 Inicial 1
+PR_UN_Registro_014 Registro setNumeroRegistros Valor Frontera 2 2 Inicial 1
+PR_UN_Registro_015 Registro informe Valor Frontera -  "" Inicial 0 registros
+PR_UN_Registro_015 Registro informe Valor Frontera -  "Suceso1" Inicial 1 registros
+PR_UN_Registro_016 Registro informe Valor Frontera -  "Suceso1 Suceso1" Inicial 2 registros
+PR_UN_Registro_017 Registro informe Valor Frontera -  "" Inicial 0 registros

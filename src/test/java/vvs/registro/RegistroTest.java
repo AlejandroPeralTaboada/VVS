@@ -1,6 +1,8 @@
 package vvs.registro;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.when;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +23,7 @@ public class RegistroTest {
 		assertTrue(result);
 	}
 
-	// @Test
+	@Test
 	public void PR_UN_Registro_002() {
 		Registro registro = new Registro(-1);
 		registro.addSuceso(suceso);
@@ -74,7 +76,7 @@ public class RegistroTest {
 		assertTrue(result);
 	}
 
-	// @Test
+	@Test
 	public void PR_UN_Registro_008() {
 		Registro registro = new Registro(0);
 		registro.addSuceso(suceso);
@@ -83,7 +85,7 @@ public class RegistroTest {
 		assertTrue(result);
 	}
 
-	// @Test
+	@Test
 	public void PR_UN_Registro_009() {
 		Registro registro = new Registro(-1);
 		registro.addSuceso(suceso);
@@ -92,7 +94,7 @@ public class RegistroTest {
 		assertTrue(result);
 	}
 
-	// @Test
+	@Test
 	public void PR_UN_Registro_010() {
 		Registro registro = new Registro(1);
 		registro.addSuceso(suceso);
@@ -103,19 +105,19 @@ public class RegistroTest {
 
 	@Test
 	public void PR_UN_Registro_011() {
-		Registro registro = new Registro(1);
+		Registro registro = new Registro(0);
 		registro.addSuceso(suceso);
-		registro.setNumeroRegistros(0);
-		boolean result = (registro.getRegistro().size() == 0 && registro.getNumeroRegistros() == 0);
+		registro.setNumeroRegistros(1);
+		boolean result = (registro.getRegistro().size() == 0 && registro.getNumeroRegistros() == 1);
 		assertTrue(result);
 	}
 
-	// @Test
+	@Test
 	public void PR_UN_Registro_012() {
-		Registro registro = new Registro(1);
+		Registro registro = new Registro(-1);
 		registro.addSuceso(suceso);
-		registro.setNumeroRegistros(-1);
-		boolean result = (registro.getRegistro().size() == 0 && registro.getNumeroRegistros() == 0);
+		registro.setNumeroRegistros(1);
+		boolean result = (registro.getRegistro().size() == 0 && registro.getNumeroRegistros() == 1);
 		assertTrue(result);
 	}
 
@@ -137,4 +139,26 @@ public class RegistroTest {
 		assertTrue(result);
 	}
 
+	@Test
+	public void PR_UN_Registro_015() {
+		Registro registro = new Registro(1);
+		registro.addSuceso(suceso);
+		when(suceso.toString()).thenReturn("Suceso1");
+		assertEquals(registro.informe(), "Suceso1");
+	}
+
+	@Test
+	public void PR_UN_Registro_016() {
+		Registro registro = new Registro(2);
+		registro.addSuceso(suceso);
+		registro.addSuceso(suceso);
+		when(suceso.toString()).thenReturn("Suceso1");
+		assertEquals(registro.informe(), "Suceso1 Suceso1");
+	}
+
+	@Test
+	public void PR_UN_Registro_017() {
+		Registro registro = new Registro(2);
+		assertEquals(registro.informe(), "");
+	}
 }

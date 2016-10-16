@@ -5,21 +5,21 @@
  */
 package vvs.registro;
 
-import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 /**
  *
  * @author alejandro.peral
  */
-public class Registro implements Suceso {
+public class Registro {
 
 	private int numeroRegistros;
 	private LinkedList<Suceso> registro;
 
 	public Registro(int tamaño) {
 		this.numeroRegistros = tamaño;
-		this.registro = new LinkedList();
+		this.registro = new LinkedList<Suceso>();
 	}
 
 	public int getNumeroRegistros() {
@@ -44,7 +44,7 @@ public class Registro implements Suceso {
 	}
 
 	public String informe() {
-		Iterator aux = registro.listIterator();
+		ListIterator<Suceso> aux = registro.listIterator();
 		StringBuilder sb = new StringBuilder();
 		while (aux.hasNext()) {
 			sb.append(aux.next().toString());
