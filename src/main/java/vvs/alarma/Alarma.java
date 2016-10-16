@@ -28,6 +28,27 @@ public abstract class Alarma implements Observer {
 		registro = new LinkedList();
 	}
 
+	
+	public Plantilla getPlantilla() {
+		return plantilla;
+	}
+
+
+	public void setPlantilla(Plantilla plantilla) {
+		this.plantilla = plantilla;
+	}
+
+
+	public List getRegistro() {
+		return registro;
+	}
+
+
+	public void setRegistro(List registro) {
+		this.registro = registro;
+	}
+
+
 	public void addResponsable(Equipo equipo) {
 		plantilla.addEquipo(equipo);
 	}

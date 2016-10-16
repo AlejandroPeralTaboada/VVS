@@ -23,7 +23,27 @@ public class Plantilla {
         equipos = new <Equipo>ArrayList();
     }
 
-    public void addEmpleado(Empleado empleado) {
+    public List<Empleado> getEmpleados() {
+		return empleados;
+	}
+
+
+	public void setEmpleados(List<Empleado> empleados) {
+		this.empleados = empleados;
+	}
+
+
+	public List<Equipo> getEquipos() {
+		return equipos;
+	}
+
+
+	public void setEquipos(List<Equipo> equipos) {
+		this.equipos = equipos;
+	}
+
+
+	public void addEmpleado(Empleado empleado) {
         if (!empleados.contains(empleado)) {
             empleados.add(empleado);
         }
