@@ -5,14 +5,15 @@
  */
 package vvs.alarma;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Observer;
 
 import vvs.plantilla.Empleado;
 import vvs.plantilla.Equipo;
 import vvs.plantilla.Plantilla;
+import vvs.registro.Suceso;
 
 /**
  *
@@ -57,10 +58,10 @@ public abstract class Alarma implements Observer {
 	}
 
 	public String informe() {
-		Iterator<String> aux = registro.iterator();
+		ListIterator<String> aux = registro.listIterator();
 		StringBuilder sb = new StringBuilder();
 		while (aux.hasNext()) {
-			sb.append(aux.next());
+			sb.append(aux.next().toString());
 		}
 		return (new String(sb));
 	}

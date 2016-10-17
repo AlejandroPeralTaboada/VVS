@@ -18,3 +18,37 @@ PR_UN_Registro_015 Registro informe Valor Frontera -  "" Inicial 0 registros
 PR_UN_Registro_015 Registro informe Valor Frontera -  "Suceso1" Inicial 1 registros
 PR_UN_Registro_016 Registro informe Valor Frontera -  "Suceso1 Suceso1" Inicial 2 registros
 PR_UN_Registro_017 Registro informe Valor Frontera -  "" Inicial 0 registros
+--------------------------------------------------------------
+PR_UN_Sensor_001 SensorNivelAgua medirNivelAgua Valor Frontera 10 10
+PR_UN_Sensor_002 SensorNivelAgua medirNivelAgua Valor Frontera 0 0
+PR_UN_Sensor_003 SensorNivelAgua medirNivelAgua Valor Frontera -10 0
+PR_UN_Sensor_004 SensorNivelCloro medirNivelCloro Valor Frontera 10 10
+PR_UN_Sensor_005 SensorNivelCloro medirNivelCloro Valor Frontera 0 0
+PR_UN_Sensor_006 SensorNivelCloro medirNivelCloro Valor Frontera -10 0
+PR_UN_Sensor_007 SensorNivelPH medirNivelPH Valor Frontera 10 10
+PR_UN_Sensor_008 SensorNivelPH medirNivelPH Valor Frontera 0 0
+PR_UN_Sensor_009 SensorNivelPH medirNivelPH Valor Frontera -10 0
+PR_UN_Sensor_010 SensorNivelSales medirNivelSales Valor Frontera 10 10
+PR_UN_Sensor_011 SensorNivelSales medirNivelSales Valor Frontera 0 0
+PR_UN_Sensor_012 SensorNivelSales medirNivelSales Valor Frontera -10 0
+PR_UN_Sensor_013 SensorPersonas medirPersonas Valor Frontera 10 10
+PR_UN_Sensor_014 SensorPersonas medirPersonas Valor Frontera 0 0
+PR_UN_Sensor_015 SensorPersonas medirPersonas Valor Frontera -10 0
+PR_UN_Sensor_016 SensorTemperatura medirTemperatura Valor Frontera 10 10
+PR_UN_Sensor_017 SensorTemperatura medirTemperatura Valor Frontera 0 0
+PR_UN_Sensor_018 SensorTemperatura medirTemperatura Valor Frontera -10 0
+PR_UN_Sensor_019 SensorNivelAgua getPiscina Valor Frontera piscina piscina
+PR_UN_Sensor_020 SensorNivelCloro getPiscina Valor Frontera piscina piscina
+PR_UN_Sensor_021 SensorNivelPH getPiscina Valor Frontera piscina piscina
+PR_UN_Sensor_022 SensorNivelSales getPiscina Valor Frontera piscinaRelax piscinaRelax
+PR_UN_Sensor_023 SensorPersonas getPiscina Valor Frontera piscina piscina
+PR_UN_Sensor_024 SensorTemperatura getPiscina Valor Frontera piscina piscina
+PR_UN_Sensor_025 Sensor getPiscina Valor Frontera piscina piscina
+----------------------------------------------------------------------
+PR_UN_Alarma_001 Alarma addResponsable Valor Frontera equipo equipo
+PR_UN_Alarma_002 Alarma addResponsable Valor Frontera empleado empleado
+PR_UN_Alarma_003 Alarma addResponsable Valor Frontera equipo equipo
+PR_UN_Alarma_004 Alarma addResponsable Valor Frontera empleado empleado
+PR_UN_Alarma_005 Alarma setPlantilla/getPlantilla Valor Frontera plantilla plantilla
+PR_UN_Alarma_006 Alarma setRegistro/getRegistro Valor Frontera registro registro
+PR_UN_Alarma_007 Alarma informe Valor Frontera "" Inicial 0 registros
