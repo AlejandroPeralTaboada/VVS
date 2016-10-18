@@ -19,6 +19,27 @@ PR_UN_Registro_015 Registro informe Valor Frontera -  "Suceso1" Inicial 1 regist
 PR_UN_Registro_016 Registro informe Valor Frontera -  "Suceso1 Suceso1" Inicial 2 registros
 PR_UN_Registro_017 Registro informe Valor Frontera -  "" Inicial 0 registros
 --------------------------------------------------------------
+PR_UN_Estados_001 Piscina activar 		Cambio Estado Activa -> Activa
+PR_UN_Estados_002 Piscina cerrar 		Cambio Estado Activa -> Activa
+PR_UN_Estados_003 Piscina mantenimiento Cambio Estado Activa -> Activa
+PR_UN_Estados_004 Piscina evacuar 		Cambio Estado Activa -> Evacuacion
+PR_UN_Estados_005 Piscina activar 		Cambio Estado Cerrada -> Cerrada
+PR_UN_Estados_006 Piscina cerrar 		Cambio Estado Cerrada -> Cerrada
+PR_UN_Estados_007 Piscina mantenimiento Cambio Estado Cerrada -> Mantenimiento
+PR_UN_Estados_008 Piscina evacuar 		Cambio Estado Cerrada -> Cerrada
+PR_UN_Estados_009 Piscina activar		Cambio Estado Mantenimiento-> Activa
+PR_UN_Estados_010 Piscina cerrar		Cambio Estado Mantenimiento-> Cerrar
+PR_UN_Estados_011 Piscina mantenimiento Cambio Estado Mantenimiento-> Mantenimiento
+PR_UN_Estados_012 Piscina evacuar		Cambio Estado Mantenimiento-> Mantenimiento
+PR_UN_Estados_013 Piscina activar 		Cambio Estado Evacuacion -> Evacuacion
+PR_UN_Estados_014 Piscina activar		Cambio Estado Evacuacion 10 personas -> Evacuacion
+PR_UN_Estados_015 Piscina evacuar		Cambio Estado Evacuacion 0 personas-> Mantenimiento
+PR_UN_Estados_016 Piscina evacuar 		Cambio Estado Evacuacion 10 personas-> 0 personas -> Mantenimiento
+PR_UN_Estados_017 Piscina cerrar		Cambio Estado Evacuacion -> Evacuacion
+PR_UN_Estados_018 Piscina mantenimiento	Cambio Estado Evacuacion -> Evacuacion
+
+
+--------------------------------------------------------------
 PR_UN_Sensor_001 SensorNivelAgua medirNivelAgua Valor Frontera 10 10
 PR_UN_Sensor_002 SensorNivelAgua medirNivelAgua Valor Frontera 0 0
 PR_UN_Sensor_003 SensorNivelAgua medirNivelAgua Valor Frontera -10 0
