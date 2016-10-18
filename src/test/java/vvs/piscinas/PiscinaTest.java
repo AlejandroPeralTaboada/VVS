@@ -6,7 +6,10 @@ import java.util.Random;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import vvs.sensor.Sensor;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PiscinaTest {
@@ -44,32 +47,176 @@ public class PiscinaTest {
 		assertEquals(value, piscina.getNivelAgua(), delta);
 	}
 
-	/*
-	 * TODO public abstract void regsitrarNuevoSuceso(Suceso suceso);
-	 * 
-	 * public abstract String informe();
-	 * 
-	 * public abstract void activar();
-	 * 
-	 * public abstract void cerrar();
-	 * 
-	 * public abstract void evacuar();
-	 * 
-	 * public abstract void mantenimiento();
-	 * 
-	 * public abstract boolean lanzarAlarmas();
-	 * 
-	 * public abstract void addSensor(Sensor sensor);
-	 * 
-	 * public abstract void setNivelAgua(float nivel);
-	 * 
-	 * public abstract void setTemperatura(float temperatura);
-	 * 
-	 * public abstract void setNivelCloro(float nivel);
-	 * 
-	 * public abstract void setNivelPH(float nivel);
-	 * 
-	 * public abstract void setPersonas(int personas);
-	 */
+	@Test
+	public void PR_UN_Piscina_005() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setTemperatura(0);
+		assertEquals(0, piscina.getTemperatura(), delta);
+	}
 
+	@Test
+	public void PR_UN_Piscina_006() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setTemperatura(-273.15f);
+		assertEquals(-273.15f, piscina.getTemperatura(), delta);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void PR_UN_Piscina_007() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setTemperatura(-273.16f);
+	}
+
+	@Test
+	public void PR_UN_Piscina_008() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		float range = random.nextFloat() * 10000 - 273.15f;
+		piscina.setTemperatura(range);
+		assertEquals(range, piscina.getTemperatura(), delta);
+	}
+
+	@Test
+	public void PR_UN_Piscina_009() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setNivelCloro(10.00f);
+		assertEquals(0, piscina.getTemperatura(), delta);
+	}
+
+	@Test
+	public void PR_UN_Piscina_010() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setNivelCloro(0);
+		assertEquals(0, piscina.getTemperatura(), delta);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void PR_UN_Piscina_011() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setNivelCloro(-0.01f);
+	}
+
+	@Test
+	public void PR_UN_Piscina_012() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setNivelCloro(100);
+		assertEquals(0, piscina.getTemperatura(), delta);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void PR_UN_Piscina_013() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setNivelCloro(100.01f);
+	}
+
+	@Test
+	public void PR_UN_Piscina_014() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		float range = random.nextFloat() * 100;
+		piscina.setTemperatura(range);
+		assertEquals(range, piscina.getTemperatura(), delta);
+	}
+
+	@Test
+	public void PR_UN_Piscina_015() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setNivelPH(10.00f);
+		assertEquals(10f, piscina.getNivelPH(), delta);
+	}
+
+	@Test
+	public void PR_UN_Piscina_016() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setNivelPH(0);
+		assertEquals(0, piscina.getNivelPH(), delta);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void PR_UN_Piscina_017() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setNivelPH(-0.01f);
+	}
+
+	@Test
+	public void PR_UN_Piscina_018() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setNivelPH(14);
+		assertEquals(14, piscina.getNivelPH(), delta);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void PR_UN_Piscina_019() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setNivelPH(14.01f);
+	}
+
+	@Test
+	public void PR_UN_Piscina_020() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		float range = random.nextFloat() * 14;
+		piscina.setNivelPH(range);
+		assertEquals(range, piscina.getNivelPH(), delta);
+	}
+
+	@Test
+	public void PR_UN_Piscina_021() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setPersonas(0);
+		assertEquals(0, piscina.getPersonas());
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void PR_UN_Piscina_022() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setPersonas(-1);
+	}
+
+	@Test
+	public void PR_UN_Piscina_023() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		piscina.setPersonas(10);
+		assertEquals(10, piscina.getPersonas());
+	}
+
+	@Test
+	public void PR_UN_Piscina_024() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		int value = random.nextInt(randomInt);
+		piscina.setPersonas(value);
+		assertEquals(value, piscina.getPersonas());
+	}
+
+	@Test
+	public void PR_UN_Piscina_025() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		Sensor sensor = Mockito.mock(Sensor.class);
+		Mockito.when(sensor.getPiscina()).thenReturn(piscina);
+		piscina.addSensor(sensor);
+		assertEquals(sensor, piscina.getSensores().get(0));
+	}
+
+	@Test
+	public void PR_UN_Piscina_026() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		PiscinaImp piscina2 = new PiscinaImp(nombre + "2", ubicacion);
+		Sensor sensor = Mockito.mock(Sensor.class);
+		Mockito.when(sensor.getPiscina()).thenReturn(piscina2);
+		piscina.addSensor(sensor);
+		assertEquals(sensor, piscina.getSensores().get(0));
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void PR_UN_Piscina_027() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		Sensor sensor = Mockito.mock(Sensor.class);
+		piscina.addSensor(sensor);
+		piscina.addSensor(sensor);
+	}
+
+	@Test
+	public void PR_UN_Piscina_028() {
+		PiscinaImp piscina = new PiscinaImp(nombre, ubicacion);
+		String informe = piscina.informe();
+		String[] partes = informe.split("\\r\\n|\\n|\\r");
+		assertEquals("# Informe de piscina \"" + nombre + "\", ubicada en \"" + ubicacion + "\".", partes[0]);
+	}
 }

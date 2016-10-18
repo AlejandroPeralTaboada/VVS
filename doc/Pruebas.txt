@@ -76,10 +76,34 @@ PR_UN_Alarma_006 Alarma setRegistro/getRegistro Valor Frontera registro registro
 PR_UN_Alarma_007 Alarma informe Valor Frontera "" Inicial 0 registros
 
 
------------------------------ PISCINAIMP ----------------------------------
+----------------------------------------------------- PISCINAIMP --------------------------------------------------------
 Nombre Caso prueba	Clase a probar	método			Tipo Prueba				Valor Entrada	Valor Salida	Estado Inicial
 PR_UN_Piscina_001	Piscina			setNivelAgua 	Valor Frontera			0				-				0
 PR_UN_Piscina_002	Piscina			setNivelAgua 	Valor Frontera			-1				Excepcion		0
 PR_UN_Piscina_003	Piscina			setNivelAgua 	Valor Frontera			10				-				0
 PR_UN_Piscina_004	Piscina			setNivelAgua 	Aleatorio Positivo		Random			-				0
+PR_UN_Piscina_005	Piscina			setTemperatura 	Valor Frontera			0				-				0
+PR_UN_Piscina_006	Piscina			setTemperatura 	Valor Frontera			-273,15			-				0
+PR_UN_Piscina_007	Piscina			setTemperatura 	Valor Frontera			-273,16			Excepcion		0
+PR_UN_Piscina_008	Piscina			setTemperatura 	Aleatorio Rango			Random			-				0
+PR_UN_Piscina_009	Piscina			setNivelCloro 	Valor Frontera			10				-				0
+PR_UN_Piscina_010	Piscina			setNivelCloro 	Valor Frontera			0				-				0
+PR_UN_Piscina_011	Piscina			setNivelCloro 	Valor Frontera			-0.01			Excepcion		0
+PR_UN_Piscina_012	Piscina			setNivelCloro 	Valor Frontera			100				-				0
+PR_UN_Piscina_013	Piscina			setNivelCloro 	Valor Frontera			100.01			Excepcion		0
+PR_UN_Piscina_014	Piscina			setNivelCloro 	Aleatorio Rango			Random			-				0
+PR_UN_Piscina_015	Piscina			setNivelPH 		Valor Frontera			10				-				0
+PR_UN_Piscina_016	Piscina			setNivelPH 		Valor Frontera			0				-				0
+PR_UN_Piscina_017	Piscina			setNivelPH 		Valor Frontera			-0.01			Excepcion		0
+PR_UN_Piscina_018	Piscina			setNivelPH 		Valor Frontera			14				-				0
+PR_UN_Piscina_019	Piscina			setNivelPH 		Valor Frontera			14.01			Excepcion		0
+PR_UN_Piscina_020	Piscina			setNivelPH 		Aleatorio Rango			Random			-				0
+PR_UN_Piscina_021	Piscina			setPersonas 	Valor Frontera			0				-				0
+PR_UN_Piscina_022	Piscina			setPersonas 	Valor Frontera			-1				Excepcion		0
+PR_UN_Piscina_023	Piscina			setPersonas 	Valor Frontera			10				-				0
+PR_UN_Piscina_024	Piscina			setPersonas 	Aleatorio Positivo		Random			-				0
+PR_UN_Piscina_025	Piscina			setPersonas 	Valor Frontera			1 sensor piscina igual			0 sensores
+PR_UN_Piscina_026	Piscina			setPersonas 	Valor Frontera			1 sensor piscina distinta		0 sensores
+PR_UN_Piscina_027	Piscina			setPersonas 	Valor Frontera			1 sensor iguales Excepcion		1 sensor
+PR_UN_Piscina_028	Piscina			informe		 	Formato					-				# Informe de piscina "nombre", ubicada en "ubicacion".
 

@@ -29,7 +29,7 @@ public class Mantenimiento implements EstadoPiscina {
 
 	@Override
 	public void activar(Piscina piscina) {
-		piscina.regsitrarNuevoSuceso(new SucesoEstado("Mantenimiento", "Activa"));
+		piscina.getRegistro().addSuceso((new SucesoEstado("Mantenimiento", "Activa")));
 		piscina.setEstado(Activa.getInstancia());
 	}
 
@@ -40,7 +40,7 @@ public class Mantenimiento implements EstadoPiscina {
 
 	@Override
 	public void cerrar(Piscina piscina) {
-		piscina.regsitrarNuevoSuceso(new SucesoEstado("Mantenimiento", "Cerrada"));
+		piscina.getRegistro().addSuceso((new SucesoEstado("Mantenimiento", "Cerrada")));
 		piscina.setEstado(Cerrada.getInstancia());
 		;
 		piscina.getRegistro().borrar();

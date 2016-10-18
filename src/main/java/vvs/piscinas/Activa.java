@@ -34,7 +34,7 @@ public class Activa implements EstadoPiscina {
 
 	@Override
 	public void evacuar(Piscina piscina) {
-		piscina.regsitrarNuevoSuceso(new SucesoEstado("Activa", "Evacuación"));
+		piscina.getRegistro().addSuceso((new SucesoEstado("Activa", "Evacuación")));
 		piscina.setEstado(Evacuacion.getInstancia());
 	}
 

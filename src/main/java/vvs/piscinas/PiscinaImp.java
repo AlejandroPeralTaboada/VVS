@@ -100,11 +100,6 @@ public class PiscinaImp extends Piscina {
 	// --------------------------INHERITED METHODS--------------------------
 
 	@Override
-	public void regsitrarNuevoSuceso(Suceso suceso) {
-		this.registro.addSuceso(suceso);
-	}
-
-	@Override
 	public String informe() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("# Informe de piscina \"" + this.getNombre() + "\", ubicada en \"" + this.getUbicacion() + "\".\n");

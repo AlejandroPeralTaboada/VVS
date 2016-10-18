@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Observable;
 
 import vvs.registro.Registro;
-import vvs.registro.Suceso;
 import vvs.sensor.Sensor;
 
 public abstract class Piscina extends Observable {
@@ -20,7 +19,7 @@ public abstract class Piscina extends Observable {
 	Registro registro;
 	List<Sensor> sensores;
 
-	public abstract void regsitrarNuevoSuceso(Suceso suceso);
+	// public abstract void regsitrarNuevoSuceso(Suceso suceso);
 
 	public abstract String informe();
 
@@ -84,6 +83,10 @@ public abstract class Piscina extends Observable {
 
 	public void setEstado(EstadoPiscina estado) {
 		this.estado = estado;
+	}
+
+	List<Sensor> getSensores() {
+		return this.sensores;
 	}
 
 }

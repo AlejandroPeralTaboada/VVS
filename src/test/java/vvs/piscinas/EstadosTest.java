@@ -1,9 +1,12 @@
 package vvs.piscinas;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -159,4 +162,46 @@ public class EstadosTest {
 		piscina.mantenimiento();
 		assertEquals(Evacuacion.class, piscina.getEstado().getClass());
 	}
+
+	// Métodos Estados
+	@Test
+	public void PR_UN_Estados_019() {
+		EstadoPiscina estadoPiscina = Activa.getInstancia();
+		Piscina piscina = Mockito.mock(Piscina.class);
+		assertTrue(estadoPiscina.registrarParametros(piscina));
+		assertTrue(estadoPiscina.saltarAlarmaNiveles(piscina));
+		assertTrue(estadoPiscina.saltarAlarmaPersonas(piscina));
+		assertTrue(estadoPiscina.lanzarAlarmas(piscina));
+	}
+
+	@Test
+	public void PR_UN_Estados_020() {
+		EstadoPiscina estadoPiscina = Cerrada.getInstancia();
+		Piscina piscina = Mockito.mock(Piscina.class);
+		assertFalse(estadoPiscina.registrarParametros(piscina));
+		assertFalse(estadoPiscina.saltarAlarmaNiveles(piscina));
+		assertTrue(estadoPiscina.saltarAlarmaPersonas(piscina));
+		assertFalse(estadoPiscina.lanzarAlarmas(piscina));
+	}
+
+	@Test
+	public void PR_UN_Estados_021() {
+		EstadoPiscina estadoPiscina = Evacuacion.getInstancia();
+		Piscina piscina = Mockito.mock(Piscina.class);
+		assertTrue(estadoPiscina.registrarParametros(piscina));
+		assertFalse(estadoPiscina.saltarAlarmaNiveles(piscina));
+		assertTrue(estadoPiscina.saltarAlarmaPersonas(piscina));
+		assertFalse(estadoPiscina.lanzarAlarmas(piscina));
+	}
+
+	@Test
+	public void PR_UN_Estados_022() {
+		EstadoPiscina estadoPiscina = Mantenimiento.getInstancia();
+		Piscina piscina = Mockito.mock(Piscina.class);
+		assertFalse(estadoPiscina.registrarParametros(piscina));
+		assertFalse(estadoPiscina.saltarAlarmaNiveles(piscina));
+		assertTrue(estadoPiscina.saltarAlarmaPersonas(piscina));
+		assertFalse(estadoPiscina.lanzarAlarmas(piscina));
+	}
+
 }

@@ -55,7 +55,7 @@ public class Evacuacion implements EstadoPiscina {
 	@Override
 	public void notificarPersonas(Piscina piscina) {
 		if (piscina.getPersonas() == 0) {
-			piscina.regsitrarNuevoSuceso(new SucesoEstado("Evacuación", "Mantenimiento"));
+			piscina.getRegistro().addSuceso((new SucesoEstado("Evacuación", "Mantenimiento")));
 			piscina.setEstado(Mantenimiento.getInstancia());
 		}
 	}
