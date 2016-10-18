@@ -1,5 +1,6 @@
 Documento de pruebas de unidad
 
+----------------------------- REGSITRO ----------------------------------
 PR_UN_Registro_001 Registro addSuceso Valor Frontera 0 0
 PR_UN_Registro_002 Registro addSuceso Valor Frontera -1 0
 PR_UN_Registro_003 Registro addSuceso Valor Frontera 1 1
@@ -73,3 +74,12 @@ PR_UN_Alarma_004 Alarma addResponsable Valor Frontera empleado empleado
 PR_UN_Alarma_005 Alarma setPlantilla/getPlantilla Valor Frontera plantilla plantilla
 PR_UN_Alarma_006 Alarma setRegistro/getRegistro Valor Frontera registro registro
 PR_UN_Alarma_007 Alarma informe Valor Frontera "" Inicial 0 registros
+
+
+----------------------------- PISCINAIMP ----------------------------------
+Nombre Caso prueba	Clase a probar	método			Tipo Prueba				Valor Entrada	Valor Salida	Estado Inicial
+PR_UN_Piscina_001	Piscina			setNivelAgua 	Valor Frontera			0				-				0
+PR_UN_Piscina_002	Piscina			setNivelAgua 	Valor Frontera			-1				Excepcion		0
+PR_UN_Piscina_003	Piscina			setNivelAgua 	Valor Frontera			10				-				0
+PR_UN_Piscina_004	Piscina			setNivelAgua 	Aleatorio Positivo		Random			-				0
+
