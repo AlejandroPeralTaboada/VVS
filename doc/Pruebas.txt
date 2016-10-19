@@ -40,44 +40,107 @@ PR_UN_Estados_017 Piscina cerrar		Cambio Estado Evacuacion -> Evacuacion
 PR_UN_Estados_018 Piscina mantenimiento	Cambio Estado Evacuacion -> Evacuacion
 
 
---------------------------------------------------------------
-PR_UN_Sensor_001 SensorNivelAgua medirNivelAgua Valor Frontera 10 10
-PR_UN_Sensor_002 SensorNivelAgua medirNivelAgua Valor Frontera 0 0
-PR_UN_Sensor_003 SensorNivelAgua medirNivelAgua Valor Frontera -10 0
-PR_UN_Sensor_004 SensorNivelCloro medirNivelCloro Valor Frontera 10 10
-PR_UN_Sensor_005 SensorNivelCloro medirNivelCloro Valor Frontera 0 0
-PR_UN_Sensor_006 SensorNivelCloro medirNivelCloro Valor Frontera -10 0
-PR_UN_Sensor_007 SensorNivelPH medirNivelPH Valor Frontera 10 10
-PR_UN_Sensor_008 SensorNivelPH medirNivelPH Valor Frontera 0 0
-PR_UN_Sensor_009 SensorNivelPH medirNivelPH Valor Frontera -10 0
-PR_UN_Sensor_010 SensorNivelSales medirNivelSales Valor Frontera 10 10
-PR_UN_Sensor_011 SensorNivelSales medirNivelSales Valor Frontera 0 0
-PR_UN_Sensor_012 SensorNivelSales medirNivelSales Valor Frontera -10 0
-PR_UN_Sensor_013 SensorPersonas medirPersonas Valor Frontera 10 10
-PR_UN_Sensor_014 SensorPersonas medirPersonas Valor Frontera 0 0
-PR_UN_Sensor_015 SensorPersonas medirPersonas Valor Frontera -10 0
-PR_UN_Sensor_016 SensorTemperatura medirTemperatura Valor Frontera 10 10
-PR_UN_Sensor_017 SensorTemperatura medirTemperatura Valor Frontera 0 0
-PR_UN_Sensor_018 SensorTemperatura medirTemperatura Valor Frontera -10 0
-PR_UN_Sensor_019 SensorNivelAgua getPiscina Valor Frontera piscina piscina
-PR_UN_Sensor_020 SensorNivelCloro getPiscina Valor Frontera piscina piscina
-PR_UN_Sensor_021 SensorNivelPH getPiscina Valor Frontera piscina piscina
-PR_UN_Sensor_022 SensorNivelSales getPiscina Valor Frontera piscinaRelax piscinaRelax
-PR_UN_Sensor_023 SensorPersonas getPiscina Valor Frontera piscina piscina
-PR_UN_Sensor_024 SensorTemperatura getPiscina Valor Frontera piscina piscina
-PR_UN_Sensor_025 Sensor getPiscina Valor Frontera piscina piscina
-----------------------------------------------------------------------
-PR_UN_Alarma_001 Alarma addResponsable Valor Frontera equipo equipo
-PR_UN_Alarma_002 Alarma addResponsable Valor Frontera empleado empleado
-PR_UN_Alarma_003 Alarma addResponsable Valor Frontera equipo equipo
-PR_UN_Alarma_004 Alarma addResponsable Valor Frontera empleado empleado
-PR_UN_Alarma_005 Alarma setPlantilla/getPlantilla Valor Frontera plantilla plantilla
-PR_UN_Alarma_006 Alarma setRegistro/getRegistro Valor Frontera registro registro
-PR_UN_Alarma_007 Alarma informe Valor Frontera "" Inicial 0 registros
+/******************************************************************************************************************\
+/**********************************SENSOR**************************************************************************\
+/******************************************************************************************************************\
 
+Nombre Caso prueba   Clase a probar     Método          Tipo Prueba    Valor Entrada  Valor Salida  Estado Inicial
+--------------------------------------------------------------------------------------------------------------------
+PR_UN_Sensor_001    SensorNivelAgua    medirNivelAgua   Valor Frontera     10           10               0
+PR_UN_Sensor_002    SensorNivelCloro   medirNivelCloro  Valor Frontera     10           10               0
+PR_UN_Sensor_003    SensorNivelPH      medirNivelPH     Valor Frontera     10           10               0
+PR_UN_Sensor_004    SensorNivelSales   medirNivelSales  Valor Frontera     10           10               0
+PR_UN_Sensor_005    SensorPersonas     medirPersonas    Valor Frontera     10           10               0
+PR_UN_Sensor_006    SensorTemperatura  medirTemperatura Valor Frontera     10           10               0              
+PR_UN_Sensor_007    SensorNivelAgua    getPiscina       Valor Frontera     piscina      piscina          vacío
+PR_UN_Sensor_008    SensorNivelCloro   getPiscina       Valor Frontera     piscina      piscina          vacío
+PR_UN_Sensor_009    SensorNivelPH      getPiscina       Valor Frontera     piscina      piscina          vacío
+PR_UN_Sensor_010    SensorNivelSales   getPiscina       Valor Frontera     piscinaRelax piscinaRelax     vacío
+PR_UN_Sensor_011    SensorPersonas     getPiscina       Valor Frontera     piscina      piscina          vacío
+PR_UN_Sensor_012    SensorTemperatura  getPiscina       Valor Frontera     piscina      piscina          vacío
+       
+/******************************************************************************************************************\
+/**********************************ALARMA**************************************************************************\
+/******************************************************************************************************************\
 
------------------------------------------------------ PISCINAIMP --------------------------------------------------------
+Nombre Caso prueba   Clase a probar     Método        Tipo Prueba    Valor Entrada   Valor Salida   Estado Inicial
+--------------------------------------------------------------------------------------------------------------------
+PR_UN_Alarma_001   AlarmaNivelAgua 	addResponsable	 Valor Frontera		equipo         equipo			 vacío
+PR_UN_Alarma_002   AlarmaNivelAgua 	addResponsable	 Valor Frontera		   -           EXCEPCIÓN         vacío
+PR_UN_Alarma_003   AlarmaNivelAgua	addResponsable	 Valor Frontera	    equipo         equipo			 vacío 
+PR_UN_Alarma_004   AlarmaNivelAgua  addResponsable	 Valor Frontera        -           EXCEPCIÓN         vacío
+PR_UN_Alarma_005   AlarmaNivelAgua 	addResponsable 	 Valor Frontera        -           EXCEPCIÓN         vacío
+PR_UN_Alarma_006   AlarmaNivelAgua 	addResponsable 	 Valor Frontera        -           EXCEPCIÓN         vacío
+PR_UN_Alarma_007   AlarmaNivelAgua 	addResponsable 	 Valor Frontera     empleado       empleado          vacío
+PR_UN_Alarma_008   AlarmaNivelCloro addResponsable 	 Valor Frontera		equipo         equipo			 vacío
+PR_UN_Alarma_009   AlarmaNivelCloro	addResponsable 	 Valor Frontera		   -           EXCEPCIÓN         vacío
+PR_UN_Alarma_010   AlarmaNivelCloro addResponsable 	 Valor Frontera		equipo         equipo			 vacío
+PR_UN_Alarma_011   AlarmaNivelCloro	addResponsable 	 Valor Frontera		   -           EXCEPCIÓN         vacío
+PR_UN_Alarma_012   AlarmaNivelCloro addResponsable 	 Valor Frontera        -           EXCEPCIÓN         vacío
+PR_UN_Alarma_013   AlarmaNivelCloro addResponsable 	 Valor Frontera        -           EXCEPCIÓN         vacío
+PR_UN_Alarma_014   AlarmaNivelCloro	addResponsable 	 Valor Frontera		empleado       empleado          vacío
+PR_UN_Alarma_015   AlarmaNivelCloEv addResponsable 	 Valor Frontera     equipo         equipo			 vacío
+PR_UN_Alarma_016   AlarmaNivelCloEv addResponsable 	 Valor Frontera        -           EXCEPCIÓN         vacío
+PR_UN_Alarma_017   AlarmaNivelCloEv addResponsable 	 Valor Frontera     equipo         equipo			 vacío
+PR_UN_Alarma_018   AlarmaNivelCloEv addResponsable 	 Valor Frontera        -           EXCEPCIÓN         vacío
+PR_UN_Alarma_019   AlarmaNivelCloEv addResponsable 	 Valor Frontera        -           EXCEPCIÓN         vacío
+PR_UN_Alarma_020   AlarmaNivelCloEv addResponsable 	 Valor Frontera        -           EXCEPCIÓN         vacío
+PR_UN_Alarma_021   AlarmaNivelCloEv addResponsable 	 Valor Frontera     empleado       empleado          vacío
+PR_UN_Alarma_022   AlarmaNivelPH  	addResponsable 	 Valor Frontera     equipo         equipo			 vacío
+PR_UN_Alarma_023   AlarmaNivelPH 	addResponsable 	 Valor Frontera        -           EXCEPCIÓN         vacío
+PR_UN_Alarma_024   AlarmaNivelPH 	addResponsable 	 Valor Frontera     equipo         equipo			 vacío
+PR_UN_Alarma_025   AlarmaNivelPH 	addResponsable 	 Valor Frontera        -           EXCEPCIÓN         vacío 
+PR_UN_Alarma_026   AlarmaNivelPH 	addResponsable	 Valor Frontera        -           EXCEPCIÓN         vacío 
+PR_UN_Alarma_027   AlarmaNivelPH 	addResponsable	 Valor Frontera        -           EXCEPCIÓN         vacío
+PR_UN_Alarma_028   AlarmaNivelPH 	addResponsable	 Valor Frontera     empleado       empleado          vacío
+PR_UN_Alarma_029   AlarmaNivelSales addResponsable	 Valor Frontera     equipo         equipo			 vacío
+PR_UN_Alarma_030   AlarmaNivelSales	addResponsable	 Valor Frontera       -            EXCEPCIÓN         vacío
+PR_UN_Alarma_031   AlarmaNivelSales addResponsable	 Valor Frontera     equipo         equipo			 vacío
+PR_UN_Alarma_032   AlarmaNivelSales addResponsable	 Valor Frontera       -            EXCEPCIÓN         vacío
+PR_UN_Alarma_033   AlarmaNivelSales addResponsable	 Valor Frontera       -            EXCEPCIÓN         vacío
+PR_UN_Alarma_034   AlarmaNivelSales	addResponsable	 Valor Frontera       -            EXCEPCIÓN         vacío
+PR_UN_Alarma_035   AlarmaNivelSales	addResponsable	 Valor Frontera     empleado       empleado          vacío
+PR_UN_Alarma_036   AlarmaPersonas 	addResponsable	 Valor Frontera     equipo         equipo			 vacío
+PR_UN_Alarma_037   AlarmaPersonas	addResponsable	 Valor Frontera     equipo         equipo			 vacío
+PR_UN_Alarma_038   AlarmaPersonas	addResponsable	 Valor Frontera     equipo         equipo			 vacío
+PR_UN_Alarma_039   AlarmaPersonas	addResponsable	 Valor Frontera     empleado       empleado          vacío
+PR_UN_Alarma_040   AlarmaPersonas	addResponsable	 Valor Frontera     empleado       empleado          vacío
+PR_UN_Alarma_041   AlarmaPersonas	addResponsable	 Valor Frontera     empleado       empleado          vacío
+PR_UN_Alarma_042   AlarmaTemperatur addResponsable	 Valor Frontera     equipo         equipo			 vacío
+PR_UN_Alarma_043   AlarmaTemperatur addResponsable	 Valor Frontera       -            EXCEPCIÓN         vacío              
+PR_UN_Alarma_044   AlarmaTemperatur	addResponsable	 Valor Frontera     equipo         equipo			 vacío
+PR_UN_Alarma_045   AlarmaTemperatur	addResponsable	 Valor Frontera       -            EXCEPCIÓN         vacío             
+PR_UN_Alarma_046   AlarmaTemperatur addResponsable	 Valor Frontera       -            EXCEPCIÓN         vacío 
+PR_UN_Alarma_047   AlarmaTemperatur addResponsable	 Valor Frontera       -            EXCEPCIÓN         vacío
+PR_UN_Alarma_048   AlarmaTemperatur addResponsable	 Valor Frontera     empleado       empleado          vacío
+PR_UN_Alarma_049   AlarmaNivelAgua	setPlantilla  	 Valor Frontera     plantilla      plantilla         vacío
+PR_UN_Alarma_050   AlarmaNivelAgua	setRegistro   	 Valor Frontera     registro       registro          vacío
+PR_UN_Alarma_051   AlarmaNivelAgua	informe          Formato              -                -              ""
+PR_UN_Alarma_052   AlarmaNivelCloro	setPlantilla  	 Valor Frontera     plantilla      plantilla         vacío
+PR_UN_Alarma_053   AlarmaNivelCloro	setRegistro   	 Valor Frontera     registro       registro          vacío
+PR_UN_Alarma_054   AlarmaNivelCloro	informe          Formato              -                -              ""
+PR_UN_Alarma_055   AlarmaNivelCloEv	setPlantilla  	 Valor Frontera     plantilla      plantilla         vacío
+PR_UN_Alarma_056   AlarmaNivelCloEv	setRegistro   	 Valor Frontera     registro       registro          vacío
+PR_UN_Alarma_057   AlarmaNivelCloEv	informe          Formato              -                -              ""
+PR_UN_Alarma_058   AlarmaNivelPH	setPlantilla  	 Valor Frontera     plantilla      plantilla         vacío
+PR_UN_Alarma_059   AlarmaNivelPH	setRegistro   	 Valor Frontera     registro       registro          vacío
+PR_UN_Alarma_060   AlarmaNivelPH	informe          Formato              -                -              ""
+PR_UN_Alarma_061   AlarmaNivelSales setPlantilla   	 Valor Frontera     plantilla      plantilla         vacío
+PR_UN_Alarma_062   AlarmaNivelSales	setRegistro   	 Valor Frontera     registro       registro          vacío
+PR_UN_Alarma_063   AlarmaNivelSales	informe  		 Formato              -                -              ""
+PR_UN_Alarma_064   AlarmaPersonas 	setPlantilla  	 Valor Frontera     plantilla      plantilla         vacío
+PR_UN_Alarma_065   AlarmaPersonas 	setRegistro   	 Valor Frontera     registro       registro          vacío
+PR_UN_Alarma_066   AlarmaPersonas 	informe   		 Formato              -                -              ""
+PR_UN_Alarma_067   AlarmaTemperatur	setPlantilla  	 Valor Frontera     plantilla      plantilla         vacío
+PR_UN_Alarma_068   AlarmaTemperatur	setRegistro   	 Valor Frontera     registro       registro          vacío
+PR_UN_Alarma_069   AlarmaTemperatur	informe          Formato              -                -
+		  
+/******************************************************************************************************************\
+/**********************************PISCINAIMP**********************************************************************\
+/******************************************************************************************************************\
+
 Nombre Caso prueba	Clase a probar	método			Tipo Prueba				Valor Entrada	Valor Salida	Estado Inicial
+------------------------------------------------------------------------------------------------------------------------------
 PR_UN_Piscina_001	Piscina			setNivelAgua 	Valor Frontera			0				-				0
 PR_UN_Piscina_002	Piscina			setNivelAgua 	Valor Frontera			-1				Excepcion		0
 PR_UN_Piscina_003	Piscina			setNivelAgua 	Valor Frontera			10				-				0
