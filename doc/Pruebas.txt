@@ -1,43 +1,55 @@
 Documento de pruebas de unidad
 
------------------------------ REGSITRO ----------------------------------
-PR_UN_Registro_001 Registro addSuceso Valor Frontera 0 0
-PR_UN_Registro_002 Registro addSuceso Valor Frontera -1 0
-PR_UN_Registro_003 Registro addSuceso Valor Frontera 1 1
-PR_UN_Registro_004 Registro addSuceso Valor Frontera 10 10
-PR_UN_Registro_005 Registro setNumeroRegistros Valor Frontera 0 0 Inicial 0
-PR_UN_Registro_006 Registro setNumeroRegistros Valor Frontera 0 0 Inicial -1
-PR_UN_Registro_007 Registro setNumeroRegistros Valor Frontera 0 0 Inicial 10
-PR_UN_Registro_008 Registro setNumeroRegistros Valor Frontera -1 0 Inicial 0
-PR_UN_Registro_009 Registro setNumeroRegistros Valor Frontera -1 0 Inicial -1
-PR_UN_Registro_010 Registro setNumeroRegistros Valor Frontera -1 0 Inicial 1
-PR_UN_Registro_011 Registro setNumeroRegistros Valor Frontera 1 1 Inicial 0
-PR_UN_Registro_012 Registro setNumeroRegistros Valor Frontera 1 1 Inicial -1
-PR_UN_Registro_013 Registro setNumeroRegistros Valor Frontera 1 1 Inicial 1
-PR_UN_Registro_014 Registro setNumeroRegistros Valor Frontera 2 2 Inicial 1
-PR_UN_Registro_015 Registro informe Valor Frontera -  "" Inicial 0 registros
-PR_UN_Registro_015 Registro informe Valor Frontera -  "Suceso1" Inicial 1 registros
-PR_UN_Registro_016 Registro informe Valor Frontera -  "Suceso1 Suceso1" Inicial 2 registros
-PR_UN_Registro_017 Registro informe Valor Frontera -  "" Inicial 0 registros
---------------------------------------------------------------
-PR_UN_Estados_001 Piscina activar 		Cambio Estado Activa -> Activa
-PR_UN_Estados_002 Piscina cerrar 		Cambio Estado Activa -> Activa
-PR_UN_Estados_003 Piscina mantenimiento Cambio Estado Activa -> Activa
-PR_UN_Estados_004 Piscina evacuar 		Cambio Estado Activa -> Evacuacion
-PR_UN_Estados_005 Piscina activar 		Cambio Estado Cerrada -> Cerrada
-PR_UN_Estados_006 Piscina cerrar 		Cambio Estado Cerrada -> Cerrada
-PR_UN_Estados_007 Piscina mantenimiento Cambio Estado Cerrada -> Mantenimiento
-PR_UN_Estados_008 Piscina evacuar 		Cambio Estado Cerrada -> Cerrada
-PR_UN_Estados_009 Piscina activar		Cambio Estado Mantenimiento-> Activa
-PR_UN_Estados_010 Piscina cerrar		Cambio Estado Mantenimiento-> Cerrar
-PR_UN_Estados_011 Piscina mantenimiento Cambio Estado Mantenimiento-> Mantenimiento
-PR_UN_Estados_012 Piscina evacuar		Cambio Estado Mantenimiento-> Mantenimiento
-PR_UN_Estados_013 Piscina activar 		Cambio Estado Evacuacion -> Evacuacion
-PR_UN_Estados_014 Piscina activar		Cambio Estado Evacuacion 10 personas -> Evacuacion
-PR_UN_Estados_015 Piscina evacuar		Cambio Estado Evacuacion 0 personas-> Mantenimiento
-PR_UN_Estados_016 Piscina evacuar 		Cambio Estado Evacuacion 10 personas-> 0 personas -> Mantenimiento
-PR_UN_Estados_017 Piscina cerrar		Cambio Estado Evacuacion -> Evacuacion
-PR_UN_Estados_018 Piscina mantenimiento	Cambio Estado Evacuacion -> Evacuacion
+/******************************************************************************************************************\
+/**********************************REGISTRO************************************************************************\
+/******************************************************************************************************************\
+
+Nombre Caso prueba   Clase a probar     Método            Tipo Prueba    Valor Entrada   Valor Salida       Estado Inicial
+--------------------------------------------------------------------------------------------------------------------
+PR_UN_Registro_001      Registro      addSuceso          Valor Frontera      0               0
+PR_UN_Registro_002      Registro      addSuceso          Valor Frontera     -1               0
+PR_UN_Registro_003      Registro      addSuceso          Valor Frontera      1               1
+PR_UN_Registro_004      Registro      addSuceso          Valor Frontera     10              10
+PR_UN_Registro_005      Registro      setNumeroRegistros Valor Frontera      0               0               Inicial 0
+PR_UN_Registro_006      Registro      setNumeroRegistros Valor Frontera      0               0               Inicial -1
+PR_UN_Registro_007      Registro      setNumeroRegistros Valor Frontera      0               0               Inicial 10
+PR_UN_Registro_008      Registro      setNumeroRegistros Valor Frontera     -1               0               Inicial 0
+PR_UN_Registro_009      Registro      setNumeroRegistros Valor Frontera     -1               0               Inicial -1
+PR_UN_Registro_010      Registro      setNumeroRegistros Valor Frontera     -1               0               Inicial 1
+PR_UN_Registro_011      Registro      setNumeroRegistros Valor Frontera      1               1               Inicial 0
+PR_UN_Registro_012      Registro      setNumeroRegistros Valor Frontera      1               1               Inicial -1
+PR_UN_Registro_013      Registro      setNumeroRegistros Valor Frontera      1               1               Inicial 1
+PR_UN_Registro_014      Registro      setNumeroRegistros Valor Frontera      2               2               Inicial 1
+PR_UN_Registro_015      Registro      informe            Valor Frontera      -              ""               Inicial 0 registros
+PR_UN_Registro_015      Registro      informe            Valor Frontera      -           "Suceso1"           Inicial 1 registros
+PR_UN_Registro_016      Registro      informe            Valor Frontera      -        "Suceso1 Suceso1"      Inicial 2 registros
+PR_UN_Registro_017      Registro      informe            Valor Frontera      -              ""               Inicial 0 registros
+
+
+/******************************************************************************************************************\
+/**********************************ESTADOS**************************************************************************\
+/******************************************************************************************************************\
+
+Nombre Caso prueba   Clase a probar     Método          Tipo Prueba    Valor Entrada              Valor Salida  
+--------------------------------------------------------------------------------------------------------------------
+PR_UN_Estados_001      Piscina          activar 		Cambio Estado    Activa                 -> Activa
+PR_UN_Estados_002      Piscina          cerrar 		    Cambio Estado    Activa                 -> Activa
+PR_UN_Estados_003      Piscina          mantenimiento   Cambio Estado    Activa                 -> Activa
+PR_UN_Estados_004      Piscina          evacuar 		Cambio Estado    Activa                 -> Evacuacion
+PR_UN_Estados_005      Piscina          activar 		Cambio Estado    Cerrada                -> Cerrada
+PR_UN_Estados_006      Piscina          cerrar 		    Cambio Estado    Cerrada                -> Cerrada
+PR_UN_Estados_007      Piscina          mantenimiento   Cambio Estado    Cerrada                ->  Mantenimiento
+PR_UN_Estados_008      Piscina          evacuar 		Cambio Estado    Cerrada                -> Cerrada
+PR_UN_Estados_009      Piscina          activar		    Cambio Estado    Mantenimiento          -> Activa
+PR_UN_Estados_010      Piscina          cerrar		    Cambio Estado    Mantenimiento          -> Cerrar
+PR_UN_Estados_011      Piscina          mantenimiento   Cambio Estado    Mantenimiento          -> Mantenimiento
+PR_UN_Estados_012      Piscina          evacuar		    Cambio Estado    Mantenimiento          -> Mantenimiento
+PR_UN_Estados_013      Piscina          activar 		Cambio Estado    Evacuacion             -> Evacuacion
+PR_UN_Estados_014      Piscina          activar		    Cambio Estado    Evacuacion 10 personas -> Evacuacion
+PR_UN_Estados_015      Piscina          evacuar		    Cambio Estado    Evacuacion 0 personas  -> Mantenimiento
+PR_UN_Estados_016      Piscina          evacuar 		Cambio Estado    Evacuacion 10 personas -> 0 personas       -> Mantenimiento
+PR_UN_Estados_017      Piscina          cerrar		    Cambio Estado    Evacuacion             -> Evacuacion
+PR_UN_Estados_018      Piscina          mantenimiento	Cambio Estado    Evacuacion             -> Evacuacion
 
 
 /******************************************************************************************************************\
@@ -139,7 +151,7 @@ PR_UN_Alarma_069   AlarmaTemperatur	informe          Formato              -     
 /**********************************PISCINAIMP**********************************************************************\
 /******************************************************************************************************************\
 
-Nombre Caso prueba	Clase a probar	método			Tipo Prueba				Valor Entrada	Valor Salida	Estado Inicial
+Nombre Caso prueba	Clase a probar	Método			Tipo Prueba				Valor Entrada	Valor Salida	Estado Inicial
 ------------------------------------------------------------------------------------------------------------------------------
 PR_UN_Piscina_001	Piscina			setNivelAgua 	Valor Frontera			0				-				0
 PR_UN_Piscina_002	Piscina			setNivelAgua 	Valor Frontera			-1				Excepcion		0
@@ -170,3 +182,13 @@ PR_UN_Piscina_026	Piscina			setPersonas 	Valor Frontera			1 sensor piscina disti
 PR_UN_Piscina_027	Piscina			setPersonas 	Valor Frontera			1 sensor iguales Excepcion		1 sensor
 PR_UN_Piscina_028	Piscina			informe		 	Formato					-				# Informe de piscina "nombre", ubicada en "ubicacion".
 
+/******************************************************************************************************************\
+/**********************************PLANTILLA**********************************************************************\
+/******************************************************************************************************************\
+
+Nombre Caso prueba   Clase a probar     Método        Tipo Prueba    Valor Entrada   Valor Salida   Estado Inicial
+--------------------------------------------------------------------------------------------------------------------
+PR_UN_Plantilla_001   Plantilla      addEmpleado     Valor Frontera    empleados     empleados       vacío
+PR_UN_Plantilla_002   Plantilla      addEquipo       Valor Frontera    equipos       equipos         vacío
+PR_UN_Plantilla_003   Plantilla      setEmpleados    Valor Frontera    empleados     empleados       vacío
+PR_UN_Plantilla_004   Plantilla      setEquipos      Valor Frontera    equipos       equipos         vacío
