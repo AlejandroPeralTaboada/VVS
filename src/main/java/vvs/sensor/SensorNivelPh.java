@@ -3,20 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.sensor;
 
 import vvs.piscinas.Piscina;
 
-public class SensorTemperatura implements Sensor {
+public class SensorNivelPh implements Sensor {
 
   private Piscina piscina;
 
-  public SensorTemperatura(Piscina piscina) {
+  public SensorNivelPh(Piscina piscina) {
     this.piscina = piscina;
   }
 
-  public void medirTemperatura(float nivel) {
-    this.piscina.setTemperatura(nivel);
+  public void medirNivelPh(float nivel) {
+    this.piscina.setNivelPH(nivel);
   }
 
   @Override

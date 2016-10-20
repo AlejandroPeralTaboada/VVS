@@ -13,21 +13,21 @@ import vvs.piscinas.Piscina;
  */
 public interface EstadoPiscina {
 
-    public boolean registrarParametros(Piscina piscina);
+  public boolean registrarParametros(Piscina piscina);
 
-    public boolean saltarAlarmaNiveles(Piscina piscina);
+  public boolean saltarAlarmaNiveles(Piscina piscina);
 
-    public boolean saltarAlarmaPersonas(Piscina piscina);
+  public boolean saltarAlarmaPersonas(Piscina piscina);
 
-    public void activar(Piscina piscina);
+  public void activar(Piscina piscina);
 
-    public void evacuar(Piscina piscina);
+  public void evacuar(Piscina piscina);
 
-    public void cerrar(Piscina piscina);
+  public void cerrar(Piscina piscina);
 
-    public void mantenimiento(Piscina piscina);
+  public void mantenimiento(Piscina piscina);
 
-    public void notificarPersonas(Piscina piscina);
-    
-    public boolean lanzarAlarmas(Piscina piscina);
+  public void notificarPersonas(Piscina piscina);
+
+  public boolean lanzarAlarmas(Piscina piscina);
 }

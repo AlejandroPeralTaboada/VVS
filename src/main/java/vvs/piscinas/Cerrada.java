@@ -13,65 +13,65 @@ import vvs.registro.SucesoEstado;
  */
 public class Cerrada implements EstadoPiscina {
 
-	private static final Cerrada instancia = new Cerrada();
+  private static final Cerrada instancia = new Cerrada();
 
-	private Cerrada() {
-	}
+  private Cerrada() {
+  }
 
-	public static Cerrada getInstancia() {
-		return instancia;
-	}
+  public static Cerrada getInstancia() {
+    return instancia;
+  }
 
-	@Override
-	public String toString() {
-		return "Cerrada";
-	}
+  @Override
+  public String toString() {
+    return "Cerrada";
+  }
 
-	@Override
-	public void activar(Piscina piscina) {
-		System.out.println("La piscina está cerrada");
-	}
+  @Override
+  public void activar(Piscina piscina) {
+    System.out.println("La piscina está cerrada");
+  }
 
-	@Override
-	public void evacuar(Piscina piscina) {
-		System.out.println("La piscina está cerrada");
-	}
+  @Override
+  public void evacuar(Piscina piscina) {
+    System.out.println("La piscina está cerrada");
+  }
 
-	@Override
-	public void cerrar(Piscina piscina) {
-		System.out.println("La piscina ya está cerrada");
-	}
+  @Override
+  public void cerrar(Piscina piscina) {
+    System.out.println("La piscina ya está cerrada");
+  }
 
-	@Override
-	public void mantenimiento(Piscina piscina) {
-		piscina.getRegistro().addSuceso((new SucesoEstado("Cerrada", "Mantenimiento")));
-		piscina.setEstado(Evacuacion.getInstancia());
-		;
-	}
+  @Override
+  public void mantenimiento(Piscina piscina) {
+    piscina.getRegistro().addSuceso((new SucesoEstado("Cerrada", "Mantenimiento")));
+    piscina.setEstado(Evacuacion.getInstancia());
+    ;
+  }
 
-	@Override
-	public boolean registrarParametros(Piscina piscina) {
-		return false;
-	}
+  @Override
+  public boolean registrarParametros(Piscina piscina) {
+    return false;
+  }
 
-	@Override
-	public void notificarPersonas(Piscina piscina) {
+  @Override
+  public void notificarPersonas(Piscina piscina) {
 
-	}
+  }
 
-	@Override
-	public boolean saltarAlarmaNiveles(Piscina piscina) {
-		return (false);
-	}
+  @Override
+  public boolean saltarAlarmaNiveles(Piscina piscina) {
+    return (false);
+  }
 
-	@Override
-	public boolean saltarAlarmaPersonas(Piscina piscina) {
-		return (true);
-	}
+  @Override
+  public boolean saltarAlarmaPersonas(Piscina piscina) {
+    return (true);
+  }
 
-	@Override
-	public boolean lanzarAlarmas(Piscina piscina) {
-		return false;
-	}
+  @Override
+  public boolean lanzarAlarmas(Piscina piscina) {
+    return false;
+  }
 
 }

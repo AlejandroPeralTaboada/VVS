@@ -9,16 +9,16 @@ import vvs.piscinas.Piscina;
 
 public class Gestor extends Empleado {
 
-	public Gestor(String nombre, Genero genero) {
-		super(nombre, genero);
-	}
+  public Gestor(String nombre, Genero genero) {
+    super(nombre, genero);
+  }
 
-	@Override
-	public String avisar() {
-		return ("- " + this.getAvisadoGenero() + "\"" + this.getNombre() + "\" " + "(gestor)\n");
-	}
+  @Override
+  public String avisar() {
+    return ("- " + this.getAvisadoGenero() + "\"" + this.getNombre() + "\" " + "(gestor)\n");
+  }
 
-	public String generarInforme(Piscina piscina) {
-		return piscina.informe();
-	}
+  public String generarInforme(Piscina piscina) {
+    return piscina.informe();
+  }
 }

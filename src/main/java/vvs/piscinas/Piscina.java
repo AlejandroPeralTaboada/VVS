@@ -8,85 +8,85 @@ import vvs.sensor.Sensor;
 
 public abstract class Piscina extends Observable {
 
-	String nombre;
-	String ubicacion;
-	float nivelAgua;
-	float temperatura;
-	float nivelCloro;
-	float nivelPH;
-	int personas;
-	EstadoPiscina estado;
-	Registro registro;
-	List<Sensor> sensores;
+  String nombre;
+  String ubicacion;
+  float nivelAgua;
+  float temperatura;
+  float nivelCloro;
+  float nivelPH;
+  int personas;
+  EstadoPiscina estado;
+  Registro registro;
+  List<Sensor> sensores;
 
-	// public abstract void regsitrarNuevoSuceso(Suceso suceso);
+  // public abstract void regsitrarNuevoSuceso(Suceso suceso);
 
-	public abstract String informe();
+  public abstract String informe();
 
-	public abstract void activar();
+  public abstract void activar();
 
-	public abstract void cerrar();
+  public abstract void cerrar();
 
-	public abstract void evacuar();
+  public abstract void evacuar();
 
-	public abstract void mantenimiento();
+  public abstract void mantenimiento();
 
-	public abstract boolean lanzarAlarmas();
+  public abstract boolean lanzarAlarmas();
 
-	public abstract void addSensor(Sensor sensor);
+  public abstract void addSensor(Sensor sensor);
 
-	public abstract void setNivelAgua(float nivel);
+  public abstract void setNivelAgua(float nivel);
 
-	public abstract void setTemperatura(float temperatura);
+  public abstract void setTemperatura(float temperatura);
 
-	public abstract void setNivelCloro(float nivel);
+  public abstract void setNivelCloro(float nivel);
 
-	public abstract void setNivelPH(float nivel);
+  public abstract void setNivelPH(float nivel);
 
-	public abstract void setPersonas(int personas);
+  public abstract void setPersonas(int personas);
 
-	public Registro getRegistro() {
-		return registro;
-	}
+  public Registro getRegistro() {
+    return registro;
+  }
 
-	public String getNombre() {
-		return this.nombre;
-	}
+  public String getNombre() {
+    return this.nombre;
+  }
 
-	public String getUbicacion() {
-		return this.ubicacion;
-	}
+  public String getUbicacion() {
+    return this.ubicacion;
+  }
 
-	public float getNivelAgua() {
-		return this.nivelAgua;
-	}
+  public float getNivelAgua() {
+    return this.nivelAgua;
+  }
 
-	public float getTemperatura() {
-		return this.temperatura;
-	}
+  public float getTemperatura() {
+    return this.temperatura;
+  }
 
-	public float getNivelCloro() {
-		return this.nivelCloro;
-	}
+  public float getNivelCloro() {
+    return this.nivelCloro;
+  }
 
-	public float getNivelPH() {
-		return this.nivelPH;
-	}
+  public float getNivelPH() {
+    return this.nivelPH;
+  }
 
-	public int getPersonas() {
-		return this.personas;
-	}
+  public int getPersonas() {
+    return this.personas;
+  }
 
-	public EstadoPiscina getEstado() {
-		return this.estado;
-	}
+  public EstadoPiscina getEstado() {
+    return this.estado;
+  }
 
-	public void setEstado(EstadoPiscina estado) {
-		this.estado = estado;
-	}
+  public void setEstado(EstadoPiscina estado) {
+    this.estado = estado;
+  }
 
-	List<Sensor> getSensores() {
-		return this.sensores;
-	}
+  List<Sensor> getSensores() {
+    return this.sensores;
+  }
 
 }

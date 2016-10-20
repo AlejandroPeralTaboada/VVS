@@ -13,30 +13,30 @@ import vvs.registro.SucesoNivelSales;
  */
 public class PiscinaRelax extends PiscinaImp {
 
-	float nivelSales;
+  float nivelSales;
 
-	public PiscinaRelax(String nombre, String ubicacion) {
-		super(nombre, ubicacion);
-	}
+  public PiscinaRelax(String nombre, String ubicacion) {
+    super(nombre, ubicacion);
+  }
 
-	public float getNivelSales() {
-		return this.nivelSales;
-	}
+  public float getNivelSales() {
+    return this.nivelSales;
+  }
 
-	public void setNivelSales(float nivel) {
-		if (nivel < 0) {
-			throw new IllegalArgumentException();
-		}
-		if (nivel == this.nivelSales) {
-			return;
-		}
-		float nivel_inicial = this.nivelSales;
-		this.nivelSales = nivel;
-		this.setChanged();
-		this.notifyObservers();
-		if (getEstado().registrarParametros(this)) {
-			getRegistro().addSuceso(new SucesoNivelSales(nivel_inicial, nivel));
-		}
+  public void setNivelSales(float nivel) {
+    if (nivel < 0) {
+      throw new IllegalArgumentException();
+    }
+    if (nivel == this.nivelSales) {
+      return;
+    }
+    float nivel_inicial = this.nivelSales;
+    this.nivelSales = nivel;
+    this.setChanged();
+    this.notifyObservers();
+    if (getEstado().registrarParametros(this)) {
+      getRegistro().addSuceso(new SucesoNivelSales(nivel_inicial, nivel));
+    }
 
-	}
+  }
 }

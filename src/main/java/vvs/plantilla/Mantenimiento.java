@@ -7,12 +7,12 @@ package vvs.plantilla;
 
 public class Mantenimiento extends Empleado {
 
-	public Mantenimiento(String nombre, Genero genero) {
-		super(nombre, genero);
-	}
+  public Mantenimiento(String nombre, Genero genero) {
+    super(nombre, genero);
+  }
 
-	@Override
-	public String avisar() {
-		return ("- " + this.getAvisadoGenero() + "\"" + this.getNombre() + "\" " + "(mantenimiento)\n");
-	}
+  @Override
+  public String avisar() {
+    return ("- " + this.getAvisadoGenero() + "\"" + this.getNombre() + "\" " + "(mantenimiento)\n");
+  }
 }

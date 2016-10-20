@@ -13,17 +13,18 @@ import vvs.piscinas.PiscinaRelax;
  */
 public class SensorNivelSales implements Sensor {
 
-    private PiscinaRelax piscina;
-    
-    public SensorNivelSales (PiscinaRelax piscina){
-        this.piscina=piscina;
-    }
-    
-    public void medirNivelSales(float nivel){
-        this.piscina.setNivelSales(nivel);
-    }
-    @Override
-    public PiscinaRelax getPiscina() {
-        return(piscina);
-    }
+  private PiscinaRelax piscina;
+
+  public SensorNivelSales(PiscinaRelax piscina) {
+    this.piscina = piscina;
+  }
+
+  public void medirNivelSales(float nivel) {
+    this.piscina.setNivelSales(nivel);
+  }
+
+  @Override
+  public PiscinaRelax getPiscina() {
+    return (piscina);
+  }
 }

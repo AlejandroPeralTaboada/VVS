@@ -7,12 +7,12 @@ package vvs.plantilla;
 
 public class Marketing extends Empleado {
 
-    public Marketing(String nombre, Genero genero) {
-        super(nombre, genero);
-    }
+  public Marketing(String nombre, Genero genero) {
+    super(nombre, genero);
+  }
 
-    @Override
-    public String avisar() {
-        return ("- " + this.getAvisadoGenero() + "\"" + this.getNombre() + "\" " + "(marketing)\n");
-    }
+  @Override
+  public String avisar() {
+    return ("- " + this.getAvisadoGenero() + "\"" + this.getNombre() + "\" " + "(marketing)\n");
+  }
 }

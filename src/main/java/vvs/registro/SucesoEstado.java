@@ -14,18 +14,19 @@ import java.util.Date;
  */
 public class SucesoEstado implements Suceso {
 
-    final Date momento;
-    String inicio;
-    String fin;
+  final Date momento;
+  String inicio;
+  String fin;
 
-    public SucesoEstado(String inicio, String fin) {
-        momento = new Date();
-        this.inicio = inicio;
-        this.fin = fin;
-    }
+  public SucesoEstado(String inicio, String fin) {
+    momento = new Date();
+    this.inicio = inicio;
+    this.fin = fin;
+  }
 
-    @Override
-    public String toString() {
-        return ("- " + new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(momento) + " Cambio de fase de \"" + inicio + "\" a \"" + fin + "\"\n");
-    }
+  @Override
+  public String toString() {
+    return ("- " + new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(momento)
+        + " Cambio de fase de \"" + inicio + "\" a \"" + fin + "\"\n");
+  }
 }

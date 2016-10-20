@@ -14,20 +14,20 @@ import java.util.Date;
  */
 public class SucesoPersonas implements Suceso {
 
-    final Date momento;
-    int inicio;
-    int fin;
+  final Date momento;
+  int inicio;
+  int fin;
 
-    public SucesoPersonas(int inicio, int fin) {
-        momento = new Date();
-        this.inicio = inicio;
-        this.fin = fin;
-    }
+  public SucesoPersonas(int inicio, int fin) {
+    momento = new Date();
+    this.inicio = inicio;
+    this.fin = fin;
+  }
 
-    @Override
-    public String toString() {
-        return ("- " + new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(momento) + " Parametro \"personas\" cambia de " + inicio
-                + " a " + fin + "\n");
-    }
+  @Override
+  public String toString() {
+    return ("- " + new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(momento)
+        + " Parametro \"personas\" cambia de " + inicio + " a " + fin + "\n");
+  }
 
 }

@@ -12,5 +12,5 @@ import vvs.piscinas.Piscina;
  * @author Alejandro
  */
 public interface Sensor {
-    public Piscina getPiscina();
+  public Piscina getPiscina();
 }

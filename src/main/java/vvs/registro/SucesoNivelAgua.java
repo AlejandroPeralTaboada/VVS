@@ -14,20 +14,20 @@ import java.util.Date;
  */
 public class SucesoNivelAgua implements Suceso {
 
-    final Date momento;
-    float inicio;
-    float fin;
+  final Date momento;
+  float inicio;
+  float fin;
 
-    public SucesoNivelAgua(float inicio, float fin) {
-        momento = new Date();
-        this.inicio = inicio;
-        this.fin = fin;
-    }
+  public SucesoNivelAgua(float inicio, float fin) {
+    momento = new Date();
+    this.inicio = inicio;
+    this.fin = fin;
+  }
 
-    @Override
-    public String toString() {
-        return ("- " + new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(momento) + " Parametro \"nivel del agua\" cambia de " + inicio
-                + " a " + fin + "\n");
-    }
+  @Override
+  public String toString() {
+    return ("- " + new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(momento)
+        + " Parametro \"nivel del agua\" cambia de " + inicio + " a " + fin + "\n");
+  }
 
 }

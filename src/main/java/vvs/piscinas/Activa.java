@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.piscinas;
 
 import vvs.registro.SucesoEstado;
@@ -13,64 +14,64 @@ import vvs.registro.SucesoEstado;
  */
 public class Activa implements EstadoPiscina {
 
-	private static final Activa instancia = new Activa();
+  private static final Activa instancia = new Activa();
 
-	private Activa() {
-	}
+  private Activa() {
+  }
 
-	public static Activa getInstancia() {
-		return instancia;
-	}
+  public static Activa getInstancia() {
+    return instancia;
+  }
 
-	@Override
-	public String toString() {
-		return "Activa";
-	}
+  @Override
+  public String toString() {
+    return "Activa";
+  }
 
-	@Override
-	public void activar(Piscina piscina) {
-		System.out.println("La piscina ya esta activada");
-	}
+  @Override
+  public void activar(Piscina piscina) {
+    System.out.println("La piscina ya esta activada");
+  }
 
-	@Override
-	public void evacuar(Piscina piscina) {
-		piscina.getRegistro().addSuceso((new SucesoEstado("Activa", "Evacuación")));
-		piscina.setEstado(Evacuacion.getInstancia());
-	}
+  @Override
+  public void evacuar(Piscina piscina) {
+    piscina.getRegistro().addSuceso((new SucesoEstado("Activa", "Evacuación")));
+    piscina.setEstado(Evacuacion.getInstancia());
+  }
 
-	@Override
-	public void cerrar(Piscina piscina) {
-		System.out.println("La piscina debe ser evacuada");
-	}
+  @Override
+  public void cerrar(Piscina piscina) {
+    System.out.println("La piscina debe ser evacuada");
+  }
 
-	@Override
-	public void mantenimiento(Piscina piscina) {
-		System.out.println("La piscina debe ser evacuada");
-	}
+  @Override
+  public void mantenimiento(Piscina piscina) {
+    System.out.println("La piscina debe ser evacuada");
+  }
 
-	@Override
-	public boolean registrarParametros(Piscina piscina) {
-		return true;
-	}
+  @Override
+  public boolean registrarParametros(Piscina piscina) {
+    return true;
+  }
 
-	@Override
-	public void notificarPersonas(Piscina piscina) {
+  @Override
+  public void notificarPersonas(Piscina piscina) {
 
-	}
+  }
 
-	@Override
-	public boolean saltarAlarmaNiveles(Piscina piscina) {
-		return (true);
-	}
+  @Override
+  public boolean saltarAlarmaNiveles(Piscina piscina) {
+    return (true);
+  }
 
-	@Override
-	public boolean saltarAlarmaPersonas(Piscina piscina) {
-		return (true);
-	}
+  @Override
+  public boolean saltarAlarmaPersonas(Piscina piscina) {
+    return (true);
+  }
 
-	@Override
-	public boolean lanzarAlarmas(Piscina piscina) {
-		return true;
-	}
+  @Override
+  public boolean lanzarAlarmas(Piscina piscina) {
+    return true;
+  }
 
 }

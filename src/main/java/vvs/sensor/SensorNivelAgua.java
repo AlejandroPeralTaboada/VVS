@@ -9,22 +9,22 @@ import vvs.piscinas.Piscina;
 
 public class SensorNivelAgua implements Sensor {
 
-    private Piscina piscina;
+  private Piscina piscina;
 
-    public SensorNivelAgua(Piscina piscina) {
-        if (piscina == null) {
-            throw new IllegalArgumentException();
-        }
-        this.piscina = piscina;
+  public SensorNivelAgua(Piscina piscina) {
+    if (piscina == null) {
+      throw new IllegalArgumentException();
     }
+    this.piscina = piscina;
+  }
 
-    public void medirNivelAgua(float nivel) {
-        this.piscina.setNivelAgua(nivel);
-    }
+  public void medirNivelAgua(float nivel) {
+    this.piscina.setNivelAgua(nivel);
+  }
 
-    @Override
-    public Piscina getPiscina() {
-        return (piscina);
-    }
+  @Override
+  public Piscina getPiscina() {
+    return (piscina);
+  }
 
 }

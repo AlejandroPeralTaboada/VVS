@@ -7,12 +7,12 @@ package vvs.plantilla;
 
 public class Socorrista extends Empleado {
 
-    public Socorrista(String nombre, Genero genero) {
-        super(nombre, genero);
-    }
+  public Socorrista(String nombre, Genero genero) {
+    super(nombre, genero);
+  }
 
-    @Override
-    public String avisar() {
-        return ("- " + this.getAvisadoGenero() + " \"" + this.getNombre() + "\" " + "(socorrista)\n");
-    }
+  @Override
+  public String avisar() {
+    return ("- " + this.getAvisadoGenero() + " \"" + this.getNombre() + "\" " + "(socorrista)\n");
+  }
 }

@@ -15,53 +15,53 @@ import java.util.List;
  */
 public class Plantilla {
 
-	private List<Empleado> empleados;
-	private List<Equipo> equipos;
+  private List<Empleado> empleados;
+  private List<Equipo> equipos;
 
-	public Plantilla() {
-		empleados = new ArrayList<Empleado>();
-		equipos = new ArrayList<Equipo>();
-	}
+  public Plantilla() {
+    empleados = new ArrayList<Empleado>();
+    equipos = new ArrayList<Equipo>();
+  }
 
-	public List<Empleado> getEmpleados() {
-		return empleados;
-	}
+  public List<Empleado> getEmpleados() {
+    return empleados;
+  }
 
-	public void setEmpleados(List<Empleado> empleados) {
-		this.empleados = empleados;
-	}
+  public void setEmpleados(List<Empleado> empleados) {
+    this.empleados = empleados;
+  }
 
-	public List<Equipo> getEquipos() {
-		return equipos;
-	}
+  public List<Equipo> getEquipos() {
+    return equipos;
+  }
 
-	public void setEquipos(List<Equipo> equipos) {
-		this.equipos = equipos;
-	}
+  public void setEquipos(List<Equipo> equipos) {
+    this.equipos = equipos;
+  }
 
-	public void addEmpleado(Empleado empleado) {
-		if (!empleados.contains(empleado)) {
-			empleados.add(empleado);
-		}
-	}
+  public void addEmpleado(Empleado empleado) {
+    if (!empleados.contains(empleado)) {
+      empleados.add(empleado);
+    }
+  }
 
-	public void addEquipo(Equipo equipo) {
-		if (!equipos.contains(equipo)) {
-			equipos.add(equipo);
-		}
-	}
+  public void addEquipo(Equipo equipo) {
+    if (!equipos.contains(equipo)) {
+      equipos.add(equipo);
+    }
+  }
 
-	public String avisar() {
-		Iterator<Empleado> aux = empleados.listIterator();
-		Iterator<Equipo> aux1 = equipos.listIterator();
-		StringBuilder sb = new StringBuilder("");
-		while (aux.hasNext()) {
-			sb.append(aux.next().avisar());
-		}
-		while (aux1.hasNext()) {
-			sb.append(aux1.next().avisar());
-		}
-		return (new String(sb));
-	}
+  public String avisar() {
+    Iterator<Empleado> aux = empleados.listIterator();
+    Iterator<Equipo> aux1 = equipos.listIterator();
+    StringBuilder sb = new StringBuilder("");
+    while (aux.hasNext()) {
+      sb.append(aux.next().avisar());
+    }
+    while (aux1.hasNext()) {
+      sb.append(aux1.next().avisar());
+    }
+    return (new String(sb));
+  }
 
 }

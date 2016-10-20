@@ -7,20 +7,20 @@ package vvs.sensor;
 
 import vvs.piscinas.Piscina;
 
-
 public class SensorPersonas implements Sensor {
 
-    private Piscina piscina;
-    
-     public SensorPersonas (Piscina piscina){
-        this.piscina=piscina;
-    }
-    
-    public void medirPersonas(int personas){
-        this.piscina.setPersonas(personas);
-    }
-    @Override
-    public Piscina getPiscina() {
-        return(piscina);
-    }
+  private Piscina piscina;
+
+  public SensorPersonas(Piscina piscina) {
+    this.piscina = piscina;
+  }
+
+  public void medirPersonas(int personas) {
+    this.piscina.setPersonas(personas);
+  }
+
+  @Override
+  public Piscina getPiscina() {
+    return (piscina);
+  }
 }

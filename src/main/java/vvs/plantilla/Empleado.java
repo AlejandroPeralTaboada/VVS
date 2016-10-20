@@ -11,30 +11,30 @@ package vvs.plantilla;
  */
 public abstract class Empleado {
 
-    public enum Genero {
+  public enum Genero {
 
-        H, M
+    H, M
+  }
+
+  final private String nombre;
+  final private Genero genero;
+
+  public Empleado(String nombre, Genero genero) {
+    this.nombre = nombre;
+    this.genero = genero;
+  }
+
+  public String getNombre() {
+    return nombre;
+  }
+
+  protected String getAvisadoGenero() {
+    if (this.genero == Genero.H) {
+      return ("Avisado");
+    } else {
+      return ("Avisada");
     }
+  }
 
-    final private String nombre;
-    final private Genero genero;
-
-    public Empleado(String nombre, Genero genero) {
-        this.nombre = nombre;
-        this.genero = genero;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    protected String getAvisadoGenero() {
-        if (this.genero == Genero.H) {
-            return ("Avisado");
-        } else {
-            return ("Avisada");
-        }
-    }
-
-    public abstract String avisar();
+  public abstract String avisar();
 }

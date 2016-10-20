@@ -11,32 +11,32 @@ package vvs.plantilla;
  */
 public class Equipo {
 
-	final private String nombre;
-	private Plantilla plantilla;
+  final private String nombre;
+  private Plantilla plantilla;
 
-	public Equipo(String nombre) {
-		this.nombre = nombre;
-		plantilla = new Plantilla();
-	}
+  public Equipo(String nombre) {
+    this.nombre = nombre;
+    plantilla = new Plantilla();
+  }
 
-	public String getNombre() {
-		return nombre;
-	}
+  public String getNombre() {
+    return nombre;
+  }
 
-	public void setEmpleado(Empleado empleado) {
-		plantilla.addEmpleado(empleado);
-	}
+  public void setEmpleado(Empleado empleado) {
+    plantilla.addEmpleado(empleado);
+  }
 
-	public void setEquipo(Equipo equipo) {
-		plantilla.addEquipo(equipo);
-	}
+  public void setEquipo(Equipo equipo) {
+    plantilla.addEquipo(equipo);
+  }
 
-	public String avisar() {
+  public String avisar() {
 
-		StringBuilder sb = new StringBuilder();
-		sb.append("* Avisado equipo \"" + this.getNombre() + "\"\n");
-		sb.append(plantilla.avisar());
-		return (new String(sb));
-	}
+    StringBuilder sb = new StringBuilder();
+    sb.append("* Avisado equipo \"" + this.getNombre() + "\"\n");
+    sb.append(plantilla.avisar());
+    return (new String(sb));
+  }
 
 }
