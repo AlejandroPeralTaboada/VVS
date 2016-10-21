@@ -3,21 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.registro;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- *
- * @author alejandro.peral
- */
 public class SucesoNivelCloro implements Suceso {
 
   final Date momento;
   float inicio;
   float fin;
 
+  /**
+   * Instancia suceso nivel cloro.
+   * 
+   * @param inicio inicio
+   * @param fin fin 
+   */
+  
   public SucesoNivelCloro(float inicio, float fin) {
     momento = new Date();
     this.inicio = inicio;

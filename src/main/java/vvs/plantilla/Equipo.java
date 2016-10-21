@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.plantilla;
 
-/**
- *
- * @author alejandro.peral
- */
 public class Equipo {
 
-  final private String nombre;
+  private final String nombre;
   private Plantilla plantilla;
 
   public Equipo(String nombre) {
@@ -31,6 +28,12 @@ public class Equipo {
     plantilla.addEquipo(equipo);
   }
 
+  /**
+   * Avisar al equipo.
+   * 
+   * @return String
+   */
+  
   public String avisar() {
 
     StringBuilder sb = new StringBuilder();

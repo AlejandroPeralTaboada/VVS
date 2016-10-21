@@ -3,16 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.plantilla;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- *
- * @author alejandro.peral
- */
 public class Plantilla {
 
   private List<Empleado> empleados;
@@ -39,18 +36,36 @@ public class Plantilla {
     this.equipos = equipos;
   }
 
+  /**
+   * Añade empleado.
+   * 
+   * @param empleado empleado
+   */
+  
   public void addEmpleado(Empleado empleado) {
     if (!empleados.contains(empleado)) {
       empleados.add(empleado);
     }
   }
 
+  /**
+   * Añade equipo.
+   * 
+   * @param equipo equipo
+   */
+  
   public void addEquipo(Equipo equipo) {
     if (!equipos.contains(equipo)) {
       equipos.add(equipo);
     }
   }
 
+  /**
+   * Avisar al equipo y empleados.
+   * 
+   * @return String
+   */
+  
   public String avisar() {
     Iterator<Empleado> aux = empleados.listIterator();
     Iterator<Equipo> aux1 = equipos.listIterator();

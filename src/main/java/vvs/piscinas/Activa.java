@@ -8,10 +8,6 @@ package vvs.piscinas;
 
 import vvs.registro.SucesoEstado;
 
-/**
- *
- * @author Alejandro
- */
 public class Activa implements EstadoPiscina {
 
   private static final Activa instancia = new Activa();

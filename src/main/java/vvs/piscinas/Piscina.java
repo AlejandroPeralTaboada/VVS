@@ -1,10 +1,10 @@
 package vvs.piscinas;
 
-import java.util.List;
-import java.util.Observable;
-
 import vvs.registro.Registro;
 import vvs.sensor.Sensor;
+
+import java.util.List;
+import java.util.Observable;
 
 public abstract class Piscina extends Observable {
 
@@ -13,7 +13,7 @@ public abstract class Piscina extends Observable {
   float nivelAgua;
   float temperatura;
   float nivelCloro;
-  float nivelPH;
+  float nivelPh;
   int personas;
   EstadoPiscina estado;
   Registro registro;
@@ -41,7 +41,7 @@ public abstract class Piscina extends Observable {
 
   public abstract void setNivelCloro(float nivel);
 
-  public abstract void setNivelPH(float nivel);
+  public abstract void setNivelPh(float nivel);
 
   public abstract void setPersonas(int personas);
 
@@ -69,8 +69,8 @@ public abstract class Piscina extends Observable {
     return this.nivelCloro;
   }
 
-  public float getNivelPH() {
-    return this.nivelPH;
+  public float getNivelPh() {
+    return this.nivelPh;
   }
 
   public int getPersonas() {

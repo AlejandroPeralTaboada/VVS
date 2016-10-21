@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vvs.pruebaFinal;
+
+package vvs.pruebafinal;
 
 import vvs.alarma.Alarma;
 import vvs.alarma.AlarmaNivelAgua;
@@ -28,28 +29,33 @@ import vvs.sensor.SensorNivelSales;
 import vvs.sensor.SensorPersonas;
 import vvs.sensor.SensorTemperatura;
 
-/**
- *
- * @author Alejandro
- */
 public class Prueba {
 
+  /**
+   * Prueba Final.
+   * 
+   * @param args args
+   */
+
   public static void main(String[] args) {
-    Gestor gestor = new Gestor("Bárcenas", Genero.H);
     Encargado encargado = new Encargado("Paleto de turno", Genero.H);
     Piscina piscina = new PiscinaImp("Olímpica", "Zona 1");
+    encargado.activa(piscina);
     Alarma alarma1 = new AlarmaPersonas(30);
+    piscina.addObserver(alarma1);
+    Alarma alarma2 = new AlarmaNivelAgua((float) 5, (float) 2);
+    piscina.addObserver(alarma2);
     Empleado empleado1 = new Socorrista("Pedro", Genero.H);
     alarma1.addResponsable(empleado1);
     Equipo equipo1 = new Equipo("Mantenimiento");
     equipo1.setEmpleado(empleado1);
     alarma1.addResponsable(equipo1);
 
-    Alarma alarma2 = new AlarmaNivelAgua((float) 5, (float) 2);
+    
     Empleado empleado2 = new Mantenimiento("Juan", Genero.H);
     alarma2.addResponsable(empleado2);
-    piscina.addObserver(alarma2);
-    piscina.addObserver(alarma1);
+    
+   
 
     SensorPersonas sensor1 = new SensorPersonas(piscina);
     SensorNivelAgua sensor2 = new SensorNivelAgua(piscina);
@@ -60,7 +66,7 @@ public class Prueba {
     piscina.addSensor(sensor3);
     piscina.addSensor(sensor4);
 
-    encargado.activa(piscina);
+    
     sensor1.medirPersonas(10);
     sensor1.medirPersonas(11);
 
@@ -73,36 +79,38 @@ public class Prueba {
     sensor3.medirNivelPh((float) 7.001);
     sensor4.medirNivelCloro((float) 13.4);
 
+    Gestor gestor = new Gestor("Bárcenas", Genero.H);
     System.out.println(gestor.generarInforme(piscina));
     System.out.println(alarma1.informe());
     System.out.println(alarma2.informe());
 
-    Piscina piscinapequeña = new PiscinaImp("Piscina Pequeña", "Zona 3");
-    SensorNivelAgua sensor11 = new SensorNivelAgua(piscinapequeña);
+    Piscina piscinaPeq = new PiscinaImp("Piscina Pequeña", "Zona 3");
     Alarma alarma6 = new AlarmaNivelAgua((float) 1.9, (float) 0.5020);
-    piscinapequeña.addObserver(alarma6);
-    encargado.activa(piscinapequeña);
+    piscinaPeq.addObserver(alarma6);
+    SensorNivelAgua sensor11 = new SensorNivelAgua(piscinaPeq);
+    encargado.activa(piscinaPeq);
     sensor11.medirNivelAgua((float) 1.05);
     sensor11.medirNivelAgua((float) 1.95);
     sensor11.medirNivelAgua((float) 0.45);
     try {
       sensor11.medirNivelAgua((float) -2);
-    } catch (IllegalArgumentException e) {
+    } catch (IllegalArgumentException exc) {
       sensor11.medirNivelAgua((float) 1);
     }
-    encargado.evacuar(piscinapequeña);
+    encargado.evacuar(piscinaPeq);
     sensor11.medirNivelAgua((float) 0);
     sensor11.medirNivelAgua((float) 2);
-    System.out.println(gestor.generarInforme(piscinapequeña));
+    System.out.println(gestor.generarInforme(piscinaPeq));
     System.out.println(alarma6.informe());
 
     PiscinaRelax piscinarelax = new PiscinaRelax("Piscina Relax", "Zona 2");
+    piscinarelax.addObserver(alarma2);
+    piscinarelax.addObserver(alarma1);
     Equipo equipo2 = new Equipo("Socorristas");
     equipo2.setEquipo(equipo1);
     equipo2.setEmpleado(new Socorrista("Alma", Genero.M));
     equipo2.setEmpleado(new Socorrista("Rosa", Genero.M));
-    piscinarelax.addObserver(alarma2);
-    piscinarelax.addObserver(alarma1);
+    
 
     SensorPersonas sensor5 = new SensorPersonas(piscinarelax);
     SensorNivelAgua sensor6 = new SensorNivelAgua(piscinarelax);
@@ -121,14 +129,15 @@ public class Prueba {
     alarma1 = new AlarmaPersonas(30);
     alarma2 = new AlarmaNivelAgua((float) 5, (float) 2);
     Alarma alarma3 = new AlarmaNivelSales(50, 20);
-    Alarma alarma4 = new AlarmaNivelCloro(35, 10);
-    Alarma alarma5 = new AlarmaNivelCloroEvacuacion(60, 5);
     alarma3.addResponsable(empleado2);
+    Alarma alarma4 = new AlarmaNivelCloro(35, 10);
     alarma4.addResponsable(equipo2);
-    alarma1.addResponsable(empleado1);
-    alarma2.addResponsable(equipo1);
+    Alarma alarma5 = new AlarmaNivelCloroEvacuacion(60, 5);
     alarma5.addResponsable(equipo2);
     alarma5.addResponsable(empleado2);
+    alarma1.addResponsable(empleado1);
+    alarma2.addResponsable(equipo1);
+    
 
     piscinarelax.addObserver(alarma1);
     piscinarelax.addObserver(alarma2);

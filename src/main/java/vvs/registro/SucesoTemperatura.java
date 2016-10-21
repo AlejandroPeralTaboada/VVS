@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.registro;
 
 import java.text.SimpleDateFormat;
@@ -14,6 +15,13 @@ public class SucesoTemperatura implements Suceso {
   float inicio;
   float fin;
 
+  /**
+   * Instancia un sensor de temperatura.
+   * 
+   * @param inicio inicio
+   * @param fin fin 
+   */
+  
   public SucesoTemperatura(float inicio, float fin) {
     momento = new Date();
     this.inicio = inicio;

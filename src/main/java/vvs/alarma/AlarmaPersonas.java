@@ -3,28 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vvs.alarma;
 
-import java.util.Observable;
+package vvs.alarma;
 
 import vvs.piscinas.Activa;
 import vvs.piscinas.Piscina;
 
-/**
- *
- * @author Alejandro
- */
+import java.util.Observable;
+
 public class AlarmaPersonas extends Alarma {
 
   int numeroMaximo;
-
-  public AlarmaPersonas(int Max) {
-    this.numeroMaximo = Max;
+  
+  /**
+   * Instantiates a new AlarmaPersonas.
+   *
+   * @param max
+   *            personas
+   */
+  public AlarmaPersonas(int max) {
+    this.numeroMaximo = max;
   }
 
   @Override
-  public void update(Observable o, Object arg) {
-    Piscina piscina = (Piscina) o;
+  public void update(Observable obs, Object arg) {
+    Piscina piscina = (Piscina) obs;
     StringBuilder sb = new StringBuilder();
     sb.append("# Alarma en piscina \"" + piscina.getNombre() + "\" ("
         + piscina.getEstado().toString() + "), ubicada en \"" + piscina.getUbicacion() + "\".\n");

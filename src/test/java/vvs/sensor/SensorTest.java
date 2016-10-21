@@ -16,7 +16,7 @@ import vvs.piscinas.PiscinaRelax;
 public class SensorTest {
 
   @Test
-  public void PR_UN_Sensor_001() {
+  public void pr_UN_Sensor_001() {
     Piscina piscina = Mockito.mock(Piscina.class);
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
@@ -31,7 +31,7 @@ public class SensorTest {
   }
 
   @Test
-  public void PR_UN_Sensor_002() {
+  public void pr_UN_Sensor_002() {
     Piscina piscina = Mockito.mock(Piscina.class);
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
@@ -46,7 +46,7 @@ public class SensorTest {
   }
 
   @Test
-  public void PR_UN_Sensor_003() {
+  public void pr_UN_Sensor_003() {
     Piscina piscina = Mockito.mock(Piscina.class);
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
@@ -54,14 +54,14 @@ public class SensorTest {
         assertEquals(10f, (float) args[0], 0.00001);
         return null;
       }
-    }).when(piscina).setNivelPH(10);
-    SensorNivelPh sensorPH = new SensorNivelPh(piscina);
+    }).when(piscina).setNivelPh(10);
+    SensorNivelPh sensorPh = new SensorNivelPh(piscina);
     float valor = 10f;
-    sensorPH.medirNivelPh(valor);
+    sensorPh.medirNivelPh(valor);
   }
 
   @Test
-  public void PR_UN_Sensor_004() {
+  public void pr_UN_Sensor_004() {
     PiscinaRelax piscinaRelax = Mockito.mock(PiscinaRelax.class);
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
@@ -76,7 +76,7 @@ public class SensorTest {
   }
 
   @Test
-  public void PR_UN_Sensor_005() {
+  public void pr_UN_Sensor_005() {
     Piscina piscina = Mockito.mock(Piscina.class);
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
@@ -91,7 +91,7 @@ public class SensorTest {
   }
 
   @Test
-  public void PR_UN_Sensor_006() {
+  public void pr_UN_Sensor_006() {
     Piscina piscina = Mockito.mock(Piscina.class);
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
@@ -106,42 +106,42 @@ public class SensorTest {
   }
 
   @Test
-  public void PR_UN_Sensor_007() {
+  public void pr_UN_Sensor_007() {
     Piscina piscina = Mockito.mock(Piscina.class);
     SensorNivelAgua sensorAgua = new SensorNivelAgua(piscina);
     assertEquals(piscina, sensorAgua.getPiscina());
   }
 
   @Test
-  public void PR_UN_Sensor_008() {
+  public void pr_UN_Sensor_008() {
     Piscina piscina = Mockito.mock(Piscina.class);
     SensorNivelCloro sensorCloro = new SensorNivelCloro(piscina);
     assertEquals(piscina, sensorCloro.getPiscina());
   }
 
   @Test
-  public void PR_UN_Sensor_009() {
+  public void pr_UN_Sensor_009() {
     Piscina piscina = Mockito.mock(Piscina.class);
-    SensorNivelPh sensorPH = new SensorNivelPh(piscina);
-    assertEquals(piscina, sensorPH.getPiscina());
+    SensorNivelPh sensorPh = new SensorNivelPh(piscina);
+    assertEquals(piscina, sensorPh.getPiscina());
   }
 
   @Test
-  public void PR_UN_Sensor_010() {
+  public void pr_UN_Sensor_010() {
     PiscinaRelax piscinaRelax = Mockito.mock(PiscinaRelax.class);
     SensorNivelSales sensorSales = new SensorNivelSales(piscinaRelax);
     assertEquals(piscinaRelax, sensorSales.getPiscina());
   }
 
   @Test
-  public void PR_UN_Sensor_011() {
+  public void pr_UN_Sensor_011() {
     Piscina piscina = Mockito.mock(Piscina.class);
     SensorPersonas sensorPersonas = new SensorPersonas(piscina);
     assertEquals(piscina, sensorPersonas.getPiscina());
   }
 
   @Test
-  public void PR_UN_Sensor_012() {
+  public void pr_UN_Sensor_012() {
     Piscina piscina = Mockito.mock(Piscina.class);
     SensorTemperatura sensorTemperatura = new SensorTemperatura(piscina);
     assertEquals(piscina, sensorTemperatura.getPiscina());

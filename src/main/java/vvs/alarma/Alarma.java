@@ -6,19 +6,16 @@
 
 package vvs.alarma;
 
+import vvs.plantilla.Empleado;
+import vvs.plantilla.Equipo;
+import vvs.plantilla.Plantilla;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Observer;
 
-import vvs.plantilla.Empleado;
-import vvs.plantilla.Equipo;
-import vvs.plantilla.Plantilla;
 
-/**
- *
- * @author Alejandro
- */
 public abstract class Alarma implements Observer {
 
   private Plantilla plantilla;
@@ -56,7 +53,14 @@ public abstract class Alarma implements Observer {
   protected String avisar() {
     return (plantilla.avisar());
   }
-
+  
+  /**
+   *  Create a inform.
+   *
+   * @return string
+   *            
+   */
+  
   public String informe() {
     ListIterator<String> aux = registro.listIterator();
     StringBuilder sb = new StringBuilder();

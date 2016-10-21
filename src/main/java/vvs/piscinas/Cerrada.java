@@ -3,14 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.piscinas;
 
 import vvs.registro.SucesoEstado;
 
-/**
- *
- * @author Alejandro
- */
 public class Cerrada implements EstadoPiscina {
 
   private static final Cerrada instancia = new Cerrada();

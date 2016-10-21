@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.sensor;
 
 import vvs.piscinas.Piscina;
@@ -11,6 +12,12 @@ public class SensorNivelAgua implements Sensor {
 
   private Piscina piscina;
 
+  /**
+   * Instancia sensor nivel agua.
+   * 
+   * @param piscina piscina
+   */
+  
   public SensorNivelAgua(Piscina piscina) {
     if (piscina == null) {
       throw new IllegalArgumentException();

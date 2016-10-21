@@ -3,10 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vvs.piscinas;
 
-import java.util.ArrayList;
-import java.util.Date;
+package vvs.piscinas;
 
 import vvs.registro.Registro;
 import vvs.registro.Suceso;
@@ -16,13 +14,18 @@ import vvs.registro.SucesoPersonas;
 import vvs.registro.SucesoTemperatura;
 import vvs.sensor.Sensor;
 
-/**
- *
- * @author alejandro.peral
- */
-public class PiscinaImp extends Piscina {
+import java.util.ArrayList;
+import java.util.Date;
 
-  // --------------------------CONSTRUCTOR-------------------------------
+public class PiscinaImp extends Piscina {
+ 
+  /**
+   * Instancia Piscina.
+   * 
+   * @param nombre nombre piscina
+   * @param ubicacion ubicacion piscina
+   */
+
   public PiscinaImp(String nombre, String ubicacion) {
     this.nombre = nombre;
     this.ubicacion = ubicacion;
@@ -47,6 +50,11 @@ public class PiscinaImp extends Piscina {
     }
   }
 
+  /**
+   * set Nivel Agua.
+   * 
+   * @param nivel nivel del agua
+   */
   public void setNivelAgua(float nivel) {
     if (checkWrongParameter(nivel, this.nivelAgua)) {
       return;
@@ -56,6 +64,12 @@ public class PiscinaImp extends Piscina {
     changeAndRegister(suceso);
   }
 
+  /**
+   * set Nivel temperatura.
+   * 
+   * @param temperatura nivel de la temperatura
+   */
+  
   public void setTemperatura(float temperatura) {
     if (checkWrongParameter(temperatura, this.temperatura)) {
       return;
@@ -64,7 +78,13 @@ public class PiscinaImp extends Piscina {
     this.temperatura = temperatura;
     changeAndRegister(suceso);
   }
-
+  
+  /**
+   * set Nivel Cloro.
+   * 
+   * @param nivel nivel del cloro
+   */
+  
   public void setNivelCloro(float nivel) {
     if (checkWrongParameter(nivel, this.nivelAgua)) {
       return;
@@ -73,16 +93,28 @@ public class PiscinaImp extends Piscina {
     this.nivelCloro = nivel;
     changeAndRegister(suceso);
   }
-
-  public void setNivelPH(float nivel) {
+  
+  /**
+   * set Nivel pH.
+   * 
+   * @param nivel nivel del pH
+   */
+  
+  public void setNivelPh(float nivel) {
     if (checkWrongParameter(nivel, this.nivelAgua)) {
       return;
     }
-    Suceso suceso = new SucesoNivelCloro(this.nivelPH, nivel);
-    this.nivelPH = nivel;
+    Suceso suceso = new SucesoNivelCloro(this.nivelPh, nivel);
+    this.nivelPh = nivel;
     changeAndRegister(suceso);
   }
-
+  
+  /**
+   * set Personas.
+   * 
+   * @param personas personas
+   */
+  
   public void setPersonas(int personas) {
     if (personas < 0) {
       throw new IllegalArgumentException();
@@ -130,7 +162,12 @@ public class PiscinaImp extends Piscina {
   public boolean lanzarAlarmas() {
     return this.estado.lanzarAlarmas(this);
   }
-
+  /**
+   * Añade un sensor.
+   * 
+   * @param sensor sensor a añadir
+   */
+  
   public void addSensor(Sensor sensor) {
     if ((sensor != null) && (!this.sensores.contains(sensor)) && (sensor.getPiscina() == this)) {
       this.sensores.add(sensor);

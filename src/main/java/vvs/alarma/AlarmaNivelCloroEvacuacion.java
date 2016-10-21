@@ -3,21 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vvs.alarma;
 
-import java.util.Observable;
+package vvs.alarma;
 
 import vvs.piscinas.Piscina;
 
-/**
- *
- * @author Alejandro
- */
+import java.util.Observable;
+
 public class AlarmaNivelCloroEvacuacion extends Alarma {
 
   final float maximo;
   final float minimo;
 
+  /**
+   * Instantiates a new AlarmaNivelCloroEvacuacion.
+   *
+   * @param max
+   *            cloro
+   * @param min
+   *            cloro
+   */
   public AlarmaNivelCloroEvacuacion(float max, float min) {
     if ((max < min) || (min < 0)) {
       throw new IllegalArgumentException();
@@ -27,8 +32,8 @@ public class AlarmaNivelCloroEvacuacion extends Alarma {
   }
 
   @Override
-  public void update(Observable o, Object arg) {
-    Piscina piscina = (Piscina) o;
+  public void update(Observable obs, Object arg) {
+    Piscina piscina = (Piscina) obs;
     if (piscina.lanzarAlarmas()) {
       StringBuilder sb = new StringBuilder();
       sb.append("# Alarma en piscina \"" + piscina.getNombre() + "\" ("

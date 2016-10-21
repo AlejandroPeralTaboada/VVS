@@ -3,14 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.sensor;
 
 import vvs.piscinas.PiscinaRelax;
 
-/**
- *
- * @author Alejandro
- */
 public class SensorNivelSales implements Sensor {
 
   private PiscinaRelax piscina;

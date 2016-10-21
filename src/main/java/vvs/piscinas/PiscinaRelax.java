@@ -3,14 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.piscinas;
 
 import vvs.registro.SucesoNivelSales;
 
-/**
- *
- * @author alejandro.peral
- */
 public class PiscinaRelax extends PiscinaImp {
 
   float nivelSales;
@@ -23,6 +20,12 @@ public class PiscinaRelax extends PiscinaImp {
     return this.nivelSales;
   }
 
+  /**
+   * set Nivel sales.
+   * 
+   * @param nivel nivel sales
+   */
+  
   public void setNivelSales(float nivel) {
     if (nivel < 0) {
       throw new IllegalArgumentException();
@@ -30,12 +33,12 @@ public class PiscinaRelax extends PiscinaImp {
     if (nivel == this.nivelSales) {
       return;
     }
-    float nivel_inicial = this.nivelSales;
+    float nivelInicial = this.nivelSales;
     this.nivelSales = nivel;
     this.setChanged();
     this.notifyObservers();
     if (getEstado().registrarParametros(this)) {
-      getRegistro().addSuceso(new SucesoNivelSales(nivel_inicial, nivel));
+      getRegistro().addSuceso(new SucesoNivelSales(nivelInicial, nivel));
     }
 
   }

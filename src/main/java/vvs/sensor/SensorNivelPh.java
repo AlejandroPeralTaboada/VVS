@@ -17,7 +17,7 @@ public class SensorNivelPh implements Sensor {
   }
 
   public void medirNivelPh(float nivel) {
-    this.piscina.setNivelPH(nivel);
+    this.piscina.setNivelPh(nivel);
   }
 
   @Override

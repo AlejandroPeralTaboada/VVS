@@ -3,12 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.plantilla;
 
-/**
- *
- * @author alejandro.peral
- */
 public abstract class Empleado {
 
   public enum Genero {
@@ -16,8 +13,8 @@ public abstract class Empleado {
     H, M
   }
 
-  final private String nombre;
-  final private Genero genero;
+  private final String nombre;
+  private final Genero genero;
 
   public Empleado(String nombre, Genero genero) {
     this.nombre = nombre;

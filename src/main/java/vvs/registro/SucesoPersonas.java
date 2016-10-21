@@ -3,21 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.registro;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- *
- * @author alejandro.peral
- */
 public class SucesoPersonas implements Suceso {
 
   final Date momento;
   int inicio;
   int fin;
 
+  /**
+   * Añade un suceso de personas.
+   * 
+   * @param inicio inicio
+   * @param fin fin
+   */
+  
   public SucesoPersonas(int inicio, int fin) {
     momento = new Date();
     this.inicio = inicio;

@@ -3,22 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.registro;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- *
- * @author alejandro.peral
- */
-public class SucesoNivelPH implements Suceso {
+public class SucesoNivelPh implements Suceso {
 
   final Date momento;
   float inicio;
   float fin;
 
-  public SucesoNivelPH(float inicio, float fin) {
+  /**
+   * Instancia sensor nivel pH.
+   * 
+   * @param inicio inicio
+   * @param fin fin 
+   */
+  
+  public SucesoNivelPh(float inicio, float fin) {
     momento = new Date();
     this.inicio = inicio;
     this.fin = fin;

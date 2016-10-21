@@ -3,14 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package vvs.piscinas;
 
 import vvs.piscinas.Piscina;
 
-/**
- *
- * @author Alejandro
- */
 public interface EstadoPiscina {
 
   public boolean registrarParametros(Piscina piscina);
