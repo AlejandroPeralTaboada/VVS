@@ -38,15 +38,10 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_002() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelAgua(2, 4);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelAgua(2, 4);
+    alarma.addResponsable(equipo);
   }
 
   @Test
@@ -57,37 +52,22 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_004() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelAgua(5, -3);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelAgua(5, -3);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_005() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelAgua(-3, 2);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelAgua(-3, 2);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_006() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelAgua(-1, -5);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelAgua(-1, 5);
+    alarma.addResponsable(equipo);
   }
 
   @Test
@@ -106,15 +86,10 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_009() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelCloro(2, 4);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelCloro(2,4);
+    alarma.addResponsable(equipo);
   }
 
   @Test
@@ -125,37 +100,22 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_011() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelCloro(5, -3);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelCloro(5,-3);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_012() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelCloro(-3, 2);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelCloro(-3,2);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_013() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelCloro(-1, -5);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelCloro(-1,-5);
+    alarma.addResponsable(equipo);
   }
 
   @Test
@@ -174,15 +134,10 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_016() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelCloroEvacuacion(2, 4);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelCloroEvacuacion(2,4);
+    alarma.addResponsable(equipo);
   }
 
   @Test
@@ -193,37 +148,22 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_018() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelCloroEvacuacion(5, -3);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelCloroEvacuacion(5,-3);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_019() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelCloroEvacuacion(-3, 2);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelCloroEvacuacion(-3,2);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_020() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelCloroEvacuacion(-1, -5);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelCloroEvacuacion(-1,-5);
+    alarma.addResponsable(equipo);
   }
 
   @Test
@@ -242,15 +182,10 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_023() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelPh(2, 4);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelPh(2,4);
+    alarma.addResponsable(equipo);
   }
 
   @Test
@@ -261,37 +196,22 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_025() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelPh(5, -3);
-    } catch (IllegalArgumentException excxc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelPh(5,-3);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_026() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelPh(-3, 2);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelPh(-3,2);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_027() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelPh(-1, -5);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelPh(-1,-5);
+    alarma.addResponsable(equipo);
   }
 
   @Test
@@ -310,15 +230,10 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_030() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelSales(2, 4);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelSales(2,4);
+    alarma.addResponsable(equipo);
   }
 
   @Test
@@ -329,37 +244,22 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_032() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelSales(5, -3);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelSales(5,-3);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_033() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelSales(-3, 2);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelSales(-3,2);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_034() {
-    boolean catched = false;
-    try {
-      new AlarmaNivelSales(-1, -5);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaNivelSales(-1,-5);
+    alarma.addResponsable(equipo);
   }
 
   @Test
@@ -426,15 +326,10 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_043() {
-    boolean catched = false;
-    try {
-      new AlarmaTemperatura(2, 4);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaTemperatura(2,4);
+    alarma.addResponsable(equipo);
   }
 
   @Test
@@ -445,37 +340,22 @@ public class AlarmaTest {
     assertTrue(pepito);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_045() {
-    boolean catched = false;
-    try {
-      new AlarmaTemperatura(5, -3);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaTemperatura(5,-3);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_046() {
-    boolean catched = false;
-    try {
-      new AlarmaTemperatura(-3, 2);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaTemperatura(-3,2);
+    alarma.addResponsable(equipo);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void pr_UN_Alarma_047() {
-    boolean catched = false;
-    try {
-      new AlarmaTemperatura(-1, -5);
-    } catch (IllegalArgumentException exc) {
-      catched = true;
-    }
-    assertTrue(catched);
+    Alarma alarma = new AlarmaTemperatura(-1,-5);
+    alarma.addResponsable(equipo);
   }
 
   @Test
