@@ -192,3 +192,34 @@ PR_UN_Plantilla_001   Plantilla      addEmpleado     Valor Frontera    empleados
 PR_UN_Plantilla_002   Plantilla      addEquipo       Valor Frontera    equipos       equipos         vacío
 PR_UN_Plantilla_003   Plantilla      setEmpleados    Valor Frontera    empleados     empleados       vacío
 PR_UN_Plantilla_004   Plantilla      setEquipos      Valor Frontera    equipos       equipos         vacío
+
+
+/******************************************************************************************************************\
+/**********************************INTEGRACION PISCINA REGISTRO****************************************************\
+/******************************************************************************************************************\
+
+Nombre Caso prueba  		 Clase a probar    Tipo Prueba   			Descripcion
+--------------------------------------------------------------------------------------------------------------------
+PR_IN_PiscinasRegistro_001   Piscina Registro  Basadas en procedimientos Para una piscinaen estado inicial mantenimiento al modficar un parámetro no se deben registrar los cambios
+PR_IN_PiscinasRegistro_002   Piscina Registro  Basadas en procedimientos Para una piscinaen estado inicial mantenimiento al activarla y cambiar el nivel de Agua debemos obetener 2 registros
+PR_IN_PiscinasRegistro_003   Piscina Registro  Basadas en procedimientos Para una piscinaen estado inicial mantenimiento al activarla y cambiar el nivel de Cloro debemos obetener 2 registros
+PR_IN_PiscinasRegistro_004   Piscina Registro  Basadas en procedimientos Para una piscinaen estado inicial mantenimiento al activarla y cambiar el nivel de PH debemos obetener 2 registros
+PR_IN_PiscinasRegistro_005   Piscina Registro  Basadas en procedimientos Para una piscinaen estado inicial mantenimiento al activarla y cambiar el número de personas debemos obetener 2 registros
+PR_IN_PiscinasRegistro_006   Piscina Registro  Basadas en procedimientos Para una piscinaen estado inicial mantenimiento al activarla y cambiar el nivel de sales debemos obetener 2 registros
+PR_IN_PiscinasRegistro_007   Piscina Registro  Basadas en procedimientos Para una piscinaen estado inicial mantenimiento al cerrarla y cambiar el nivel de sales debemos obetener 0 registros
+PR_IN_PiscinasRegistro_008   Piscina Registro  Basadas en procedimientos Para una piscinaen estado inicial mantenimiento al activarla y añadirle personas, evacuarla y cambiarle un parametro debemos obetener 4 registros
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

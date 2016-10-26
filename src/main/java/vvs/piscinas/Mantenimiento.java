@@ -10,66 +10,65 @@ import vvs.registro.SucesoEstado;
 
 public class Mantenimiento implements EstadoPiscina {
 
-  private static final Mantenimiento instancia = new Mantenimiento();
+	private static final Mantenimiento instancia = new Mantenimiento();
 
-  private Mantenimiento() {
-  }
+	private Mantenimiento() {
+	}
 
-  public static Mantenimiento getInstancia() {
-    return instancia;
-  }
+	public static Mantenimiento getInstancia() {
+		return instancia;
+	}
 
-  @Override
-  public String toString() {
-    return "Mantenimiento";
-  }
+	@Override
+	public String toString() {
+		return "Mantenimiento";
+	}
 
-  @Override
-  public void activar(Piscina piscina) {
-    piscina.getRegistro().addSuceso((new SucesoEstado("Mantenimiento", "Activa")));
-    piscina.setEstado(Activa.getInstancia());
-  }
+	@Override
+	public void activar(Piscina piscina) {
+		piscina.getRegistro().addSuceso((new SucesoEstado("Mantenimiento", "Activa")));
+		piscina.setEstado(Activa.getInstancia());
+	}
 
-  @Override
-  public void evacuar(Piscina piscina) {
-    System.out.println("La piscina está en mantenimiento");
-  }
+	@Override
+	public void evacuar(Piscina piscina) {
+		System.out.println("La piscina está en mantenimiento");
+	}
 
-  @Override
-  public void cerrar(Piscina piscina) {
-    piscina.getRegistro().addSuceso((new SucesoEstado("Mantenimiento", "Cerrada")));
-    piscina.setEstado(Cerrada.getInstancia());
-    ;
-    piscina.getRegistro().borrar();
-  }
+	@Override
+	public void cerrar(Piscina piscina) {
+		piscina.getRegistro().addSuceso((new SucesoEstado("Mantenimiento", "Cerrada")));
+		piscina.setEstado(Cerrada.getInstancia());
+		piscina.getRegistro().borrar();
+	}
 
-  @Override
-  public void mantenimiento(Piscina piscina) {
-    System.out.println("La piscina ya está en mantenimiento");
-  }
+	@Override
+	public void mantenimiento(Piscina piscina) {
+		System.out.println("La piscina ya está en mantenimiento");
+	}
 
-  @Override
-  public boolean registrarParametros(Piscina piscina) {
-    return false;
-  }
+	@Override
+	public boolean registrarParametros(Piscina piscina) {
+		return false;
+	}
 
-  @Override
-  public void notificarPersonas(Piscina piscina) {
+	@Override
+	public void notificarPersonas(Piscina piscina) {
 
-  }
+	}
 
-  @Override
-  public boolean saltarAlarmaNiveles(Piscina piscina) {
-    return (false);
-  }
+	@Override
+	public boolean saltarAlarmaNiveles(Piscina piscina) {
+		return (false);
+	}
 
-  @Override
-  public boolean saltarAlarmaPersonas(Piscina piscina) {
-    return (true);
-  }
+	@Override
+	public boolean saltarAlarmaPersonas(Piscina piscina) {
+		return (true);
+	}
 
-  @Override
-  public boolean lanzarAlarmas(Piscina piscina) {
-    return (false);
-  }
+	@Override
+	public boolean lanzarAlarmas(Piscina piscina) {
+		return (false);
+	}
 }
