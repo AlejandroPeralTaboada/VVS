@@ -32,10 +32,10 @@
 				<version>0.32</version>
 				<configuration>
 					<targetClasses>
-						<param>vvs.*</param>
+						<param>vvs.alarma.*</param>
 					</targetClasses>
 					<targetTests>
-						<param>vvs.**</param>
+						<param>vvs.alarma.*</param>
 					</targetTests>
 				</configuration>
 			</plugin>
