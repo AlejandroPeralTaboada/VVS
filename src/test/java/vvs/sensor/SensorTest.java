@@ -21,7 +21,7 @@ public class SensorTest {
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
         Object[] args = invocation.getArguments();
-        assertEquals(10f, (float) args[0], 0.00001);
+        assertEquals(10f, (Float) args[0], 0.00001);
         return null;
       }
     }).when(piscina).setNivelAgua(10);
@@ -36,7 +36,7 @@ public class SensorTest {
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
         Object[] args = invocation.getArguments();
-        assertEquals(10f, (float) args[0], 0.00001);
+        assertEquals(10f, (Float) args[0], 0.00001);
         return null;
       }
     }).when(piscina).setNivelCloro(10);
@@ -51,7 +51,7 @@ public class SensorTest {
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
         Object[] args = invocation.getArguments();
-        assertEquals(10f, (float) args[0], 0.00001);
+        assertEquals(10f, (Float) args[0], 0.00001);
         return null;
       }
     }).when(piscina).setNivelPh(10);
@@ -66,7 +66,7 @@ public class SensorTest {
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
         Object[] args = invocation.getArguments();
-        assertEquals(10f, (float) args[0], 0.00001);
+        assertEquals(10f, (Float) args[0], 0.00001);
         return null;
       }
     }).when(piscinaRelax).setNivelSales(10);
@@ -81,7 +81,7 @@ public class SensorTest {
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
         Object[] args = invocation.getArguments();
-        assertEquals(10f, (float) args[0], 0.00001);
+        assertEquals(10f, (Float) args[0], 0.00001);
         return null;
       }
     }).when(piscina).setPersonas(10);
@@ -96,7 +96,7 @@ public class SensorTest {
     Mockito.doAnswer(new Answer<Void>() {
       public Void answer(InvocationOnMock invocation) {
         Object[] args = invocation.getArguments();
-        assertEquals(10f, (float) args[0], 0.00001);
+        assertEquals(10f, (Float) args[0], 0.00001);
         return null;
       }
     }).when(piscina).setTemperatura(10);
