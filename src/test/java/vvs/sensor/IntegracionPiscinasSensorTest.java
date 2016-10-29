@@ -32,7 +32,7 @@ public class IntegracionPiscinasSensorTest {
   public void pr_IN_PiscinasSensor_004() {
     Piscina piscina = new PiscinaImp("Caranza","Caranza");
     SensorNivelPh sensorPh = new SensorNivelPh(piscina);
-    float valor = 15f;
+    float valor = 13f;
     sensorPh.medirNivelPh(valor);
     assertEquals(piscina.getNivelPh(),valor,0.001);
   }
