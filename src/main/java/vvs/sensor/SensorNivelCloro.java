@@ -24,4 +24,9 @@ public class SensorNivelCloro implements Sensor {
   public Piscina getPiscina() {
     return (piscina);
   }
+  
+  @Override
+  public void setPiscina(Piscina piscina) {
+	this.piscina=piscina;
+  }
 }

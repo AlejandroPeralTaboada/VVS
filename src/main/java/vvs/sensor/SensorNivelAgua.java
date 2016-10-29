@@ -34,4 +34,9 @@ public class SensorNivelAgua implements Sensor {
     return (piscina);
   }
 
+  @Override
+  public void setPiscina(Piscina piscina) {
+	this.piscina=piscina;
+  }
+
 }

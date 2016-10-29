@@ -71,7 +71,10 @@ public class PiscinaImp extends Piscina {
    */
   
   public void setTemperatura(float temperatura) {
-    if (checkWrongParameter(temperatura, this.temperatura)) {
+	if (temperatura<-273.15f){
+		throw new IllegalArgumentException();
+	}
+    if (temperatura==this.temperatura) {
       return;
     }
     Suceso suceso = new SucesoTemperatura(this.temperatura, temperatura);
@@ -86,9 +89,12 @@ public class PiscinaImp extends Piscina {
    */
   
   public void setNivelCloro(float nivel) {
-    if (checkWrongParameter(nivel, this.nivelAgua)) {
-      return;
-    }
+	if (nivel < 0f || nivel>100f){
+		throw new IllegalArgumentException();
+	}
+	if (nivel==this.nivelCloro) {
+		return;
+	}
     Suceso suceso = new SucesoNivelCloro(this.nivelCloro, nivel);
     this.nivelCloro = nivel;
     changeAndRegister(suceso);
@@ -101,9 +107,12 @@ public class PiscinaImp extends Piscina {
    */
   
   public void setNivelPh(float nivel) {
-    if (checkWrongParameter(nivel, this.nivelAgua)) {
-      return;
-    }
+	if (nivel < 0f || nivel>14f){
+		throw new IllegalArgumentException();
+	}
+	if (nivel==this.nivelPh) {
+		return;
+	}
     Suceso suceso = new SucesoNivelCloro(this.nivelPh, nivel);
     this.nivelPh = nivel;
     changeAndRegister(suceso);
@@ -169,7 +178,8 @@ public class PiscinaImp extends Piscina {
    */
   
   public void addSensor(Sensor sensor) {
-    if ((sensor != null) && (!this.sensores.contains(sensor)) && (sensor.getPiscina() == this)) {
+    if ((sensor != null) && (!this.sensores.contains(sensor))) {
+      sensor.setPiscina(this);
       this.sensores.add(sensor);
     } else {
       throw new IllegalArgumentException();

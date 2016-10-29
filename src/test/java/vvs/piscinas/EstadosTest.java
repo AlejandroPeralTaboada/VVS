@@ -132,7 +132,7 @@ public class EstadosTest {
     Piscina piscina = new PiscinaImp("", "");
     piscina.activar();
     piscina.evacuar();
-    assertEquals(Mantenimiento.class, piscina.getEstado().getClass());
+    assertEquals(Evacuacion.class, piscina.getEstado().getClass());
   }
 
   @Test

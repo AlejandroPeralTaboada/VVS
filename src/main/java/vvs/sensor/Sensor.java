@@ -10,4 +10,5 @@ import vvs.piscinas.Piscina;
 
 public interface Sensor {
   public Piscina getPiscina();
+  public void setPiscina(Piscina piscina);
 }

@@ -6,6 +6,7 @@
 
 package vvs.sensor;
 
+import vvs.piscinas.Piscina;
 import vvs.piscinas.PiscinaRelax;
 
 public class SensorNivelSales implements Sensor {
@@ -23,5 +24,10 @@ public class SensorNivelSales implements Sensor {
   @Override
   public PiscinaRelax getPiscina() {
     return (piscina);
+  }
+  
+  @Override
+  public void setPiscina(Piscina piscina) {
+	this.piscina=(PiscinaRelax)piscina;
   }
 }
