@@ -15,8 +15,15 @@ import vvs.plantilla.Mantenimiento;
 import vvs.plantilla.Marketing;
 import vvs.plantilla.Socorrista;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class IntegracionPiscinasAlarmaPlantillaTest.
+ */
 public class IntegracionPiscinasAlarmaPlantillaTest {
 
+  /**
+   * Pr I N piscinas alarma plantilla 001.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_001() {
     Piscina piscina = new PiscinaImp("", "");
@@ -30,6 +37,9 @@ public class IntegracionPiscinasAlarmaPlantillaTest {
     assertEquals(alarma.getRegistro().size(),1);
   }
 
+  /**
+   * Pr I N piscinas alarma plantilla 002.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_002() {
     Piscina piscina = new PiscinaImp("", "");
@@ -43,6 +53,9 @@ public class IntegracionPiscinasAlarmaPlantillaTest {
     assertEquals(alarma.getRegistro().size(),0);
   }
 
+  /**
+   * Pr I N piscinas alarma plantilla 003.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_003() {
     Piscina piscina = new PiscinaImp("", "");
@@ -56,6 +69,9 @@ public class IntegracionPiscinasAlarmaPlantillaTest {
     assertEquals(alarma.getRegistro().size(),1);
   }
 
+  /**
+   * Pr I N piscinas alarma plantilla 004.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_004() {
     Piscina piscina = new PiscinaImp("", "");
@@ -69,6 +85,9 @@ public class IntegracionPiscinasAlarmaPlantillaTest {
     assertEquals(alarma.getRegistro().size(),0);
   }
 
+  /**
+   * Pr I N piscinas alarma plantilla 005.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_005() {
     Piscina piscina = new PiscinaImp("", "");
@@ -82,6 +101,9 @@ public class IntegracionPiscinasAlarmaPlantillaTest {
     assertEquals(alarma.getRegistro().size(),1);
   }
 
+  /**
+   * Pr I N piscinas alarma plantilla 006.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_006() {
     Piscina piscina = new PiscinaImp("", "");
@@ -95,6 +117,9 @@ public class IntegracionPiscinasAlarmaPlantillaTest {
     assertEquals(alarma.getRegistro().size(),0);
   }
 
+  /**
+   * Pr I N piscinas alarma plantilla 007.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_007() {
     Piscina piscina = new PiscinaImp("", "");
@@ -108,6 +133,9 @@ public class IntegracionPiscinasAlarmaPlantillaTest {
     assertEquals(alarma.getRegistro().size(),1);
   }
 
+  /**
+   * Pr I N piscinas alarma plantilla 008.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_008() {
     Piscina piscina = new PiscinaImp("", "");
@@ -121,6 +149,9 @@ public class IntegracionPiscinasAlarmaPlantillaTest {
     assertEquals(alarma.getRegistro().size(),0);
   }
 
+  /**
+   * Pr I N piscinas alarma plantilla 009.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_009() {
     Piscina piscina = new PiscinaImp("", "");
@@ -134,6 +165,9 @@ public class IntegracionPiscinasAlarmaPlantillaTest {
     assertEquals(alarma.getRegistro().size(),1);
   }
 
+  /**
+   * Pr I N piscinas alarma plantilla 010.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_010() {
     Piscina piscina = new PiscinaImp("", "");
@@ -147,6 +181,9 @@ public class IntegracionPiscinasAlarmaPlantillaTest {
     assertEquals(alarma.getRegistro().size(),0);
   }
 
+  /**
+   * Pr I N piscinas alarma plantilla 011.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_011() {
     Piscina piscina = new PiscinaImp("", "");
@@ -160,6 +197,9 @@ public class IntegracionPiscinasAlarmaPlantillaTest {
     assertEquals(alarma.getRegistro().size(),1);
   }
 
+  /**
+   * Pr I N piscinas alarma plantilla 012.
+   */
   @Test
   public void pr_IN_PiscinasAlarmaPlantilla_012() {
     Piscina piscina = new PiscinaImp("", "");

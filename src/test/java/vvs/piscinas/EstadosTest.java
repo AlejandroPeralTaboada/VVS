@@ -9,10 +9,17 @@ import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class EstadosTest.
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class EstadosTest {
 
   // LAS PISCINAS COMIENZAN SIEMPRE EN MODO EVACUAR
+  /**
+   * Pr U N estados 001.
+   */
   // ESTADO INICIAL ACTIVA
   @Test
   public void pr_UN_Estados_001() {
@@ -22,6 +29,9 @@ public class EstadosTest {
     assertEquals(Activa.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 002.
+   */
   @Test
   public void pr_UN_Estados_002() {
     Piscina piscina = new PiscinaImp("", "");
@@ -30,6 +40,9 @@ public class EstadosTest {
     assertEquals(Activa.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 003.
+   */
   @Test
   public void pr_UN_Estados_003() {
     Piscina piscina = new PiscinaImp("", "");
@@ -38,6 +51,9 @@ public class EstadosTest {
     assertEquals(Activa.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 004.
+   */
   @Test
   public void pr_UN_Estados_004() {
     Piscina piscina = new PiscinaImp("", "");
@@ -46,6 +62,9 @@ public class EstadosTest {
     assertEquals(Evacuacion.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 005.
+   */
   // ESTADO INICIAL CERRADA
   @Test
   public void pr_UN_Estados_005() {
@@ -55,6 +74,9 @@ public class EstadosTest {
     assertEquals(Cerrada.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 006.
+   */
   @Test
   public void pr_UN_Estados_006() {
     Piscina piscina = new PiscinaImp("", "");
@@ -63,6 +85,9 @@ public class EstadosTest {
     assertEquals(Mantenimiento.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 007.
+   */
   @Test
   public void pr_UN_Estados_007() {
     Piscina piscina = new PiscinaImp("", "");
@@ -71,6 +96,9 @@ public class EstadosTest {
     assertEquals(Cerrada.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 008.
+   */
   @Test
   public void pr_UN_Estados_008() {
     Piscina piscina = new PiscinaImp("", "");
@@ -79,6 +107,9 @@ public class EstadosTest {
     assertEquals(Cerrada.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 009.
+   */
   // ESTADO INICIAL MANTENIMIENTO
   @Test
   public void pr_UN_Estados_009() {
@@ -87,6 +118,9 @@ public class EstadosTest {
     assertEquals(Activa.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 010.
+   */
   @Test
   public void pr_UN_Estados_010() {
     Piscina piscina = new PiscinaImp("", "");
@@ -94,6 +128,9 @@ public class EstadosTest {
     assertEquals(Mantenimiento.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 011.
+   */
   @Test
   public void pr_UN_Estados_011() {
     Piscina piscina = new PiscinaImp("", "");
@@ -101,6 +138,9 @@ public class EstadosTest {
     assertEquals(Cerrada.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 012.
+   */
   @Test
   public void pr_UN_Estados_012() {
     Piscina piscina = new PiscinaImp("", "");
@@ -108,6 +148,9 @@ public class EstadosTest {
     assertEquals(Mantenimiento.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 013.
+   */
   // ESTADO INICIAL EVACUACION
   @Test
   public void pr_UN_Estados_013() {
@@ -118,6 +161,9 @@ public class EstadosTest {
     assertEquals(Evacuacion.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 014.
+   */
   @Test
   public void pr_UN_Estados_014() {
     Piscina piscina = new PiscinaImp("", "");
@@ -127,6 +173,9 @@ public class EstadosTest {
     assertEquals(Evacuacion.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 015.
+   */
   @Test
   public void pr_UN_Estados_015() {
     Piscina piscina = new PiscinaImp("", "");
@@ -135,6 +184,9 @@ public class EstadosTest {
     assertEquals(Evacuacion.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 016.
+   */
   @Test
   public void pr_UN_Estados_016() {
     Piscina piscina = new PiscinaImp("", "");
@@ -145,6 +197,9 @@ public class EstadosTest {
     assertEquals(Mantenimiento.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 017.
+   */
   @Test
   public void pr_UN_Estados_017() {
     Piscina piscina = new PiscinaImp("", "");
@@ -154,6 +209,9 @@ public class EstadosTest {
     assertEquals(Evacuacion.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 018.
+   */
   @Test
   public void pr_UN_Estados_018() {
     Piscina piscina = new PiscinaImp("", "");
@@ -163,6 +221,9 @@ public class EstadosTest {
     assertEquals(Evacuacion.class, piscina.getEstado().getClass());
   }
 
+  /**
+   * Pr U N estados 019.
+   */
   // Métodos Estados
   @Test
   public void pr_UN_Estados_019() {
@@ -174,6 +235,9 @@ public class EstadosTest {
     assertTrue(estadoPiscina.lanzarAlarmas(piscina));
   }
 
+  /**
+   * Pr U N estados 020.
+   */
   @Test
   public void pr_UN_Estados_020() {
     EstadoPiscina estadoPiscina = Cerrada.getInstancia();
@@ -184,6 +248,9 @@ public class EstadosTest {
     assertFalse(estadoPiscina.lanzarAlarmas(piscina));
   }
 
+  /**
+   * Pr U N estados 021.
+   */
   @Test
   public void pr_UN_Estados_021() {
     EstadoPiscina estadoPiscina = Evacuacion.getInstancia();
@@ -194,6 +261,9 @@ public class EstadosTest {
     assertFalse(estadoPiscina.lanzarAlarmas(piscina));
   }
 
+  /**
+   * Pr U N estados 022.
+   */
   @Test
   public void pr_UN_Estados_022() {
     EstadoPiscina estadoPiscina = Mantenimiento.getInstancia();

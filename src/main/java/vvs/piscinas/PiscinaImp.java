@@ -17,6 +17,10 @@ import vvs.sensor.Sensor;
 import java.util.ArrayList;
 import java.util.Date;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class PiscinaImp.
+ */
 public class PiscinaImp extends Piscina {
  
   /**
@@ -35,6 +39,13 @@ public class PiscinaImp extends Piscina {
   }
   // --------------------------SETTERS------------------------------------
 
+  /**
+   * Check wrong parameter.
+   *
+   * @param newParam the new param
+   * @param existent the existent
+   * @return true, if successful
+   */
   private boolean checkWrongParameter(float newParam, float existent) {
     if (newParam < 0) {
       throw new IllegalArgumentException();
@@ -42,6 +53,11 @@ public class PiscinaImp extends Piscina {
     return (newParam == existent);
   }
 
+  /**
+   * Change and register.
+   *
+   * @param suceso the suceso
+   */
   private void changeAndRegister(Suceso suceso) {
     this.setChanged();
     this.notifyObservers();
@@ -71,10 +87,10 @@ public class PiscinaImp extends Piscina {
    */
   
   public void setTemperatura(float temperatura) {
-	if (temperatura<-273.15f){
-		throw new IllegalArgumentException();
-	}
-    if (temperatura==this.temperatura) {
+    if (temperatura < -273.15f) {
+      throw new IllegalArgumentException();
+    }
+    if (temperatura == this.temperatura) {
       return;
     }
     Suceso suceso = new SucesoTemperatura(this.temperatura, temperatura);
@@ -89,12 +105,12 @@ public class PiscinaImp extends Piscina {
    */
   
   public void setNivelCloro(float nivel) {
-	if (nivel < 0f || nivel>100f){
-		throw new IllegalArgumentException();
-	}
-	if (nivel==this.nivelCloro) {
-		return;
-	}
+    if (nivel < 0f || nivel > 100f) {
+      throw new IllegalArgumentException();
+    }
+    if (nivel == this.nivelCloro) {
+      return;
+    }
     Suceso suceso = new SucesoNivelCloro(this.nivelCloro, nivel);
     this.nivelCloro = nivel;
     changeAndRegister(suceso);
@@ -107,12 +123,12 @@ public class PiscinaImp extends Piscina {
    */
   
   public void setNivelPh(float nivel) {
-	if (nivel < 0f || nivel>14f){
-		throw new IllegalArgumentException();
-	}
-	if (nivel==this.nivelPh) {
-		return;
-	}
+    if (nivel < 0f || nivel > 14f) {
+      throw new IllegalArgumentException();
+    }
+    if (nivel == this.nivelPh) {
+      return;
+    }
     Suceso suceso = new SucesoNivelCloro(this.nivelPh, nivel);
     this.nivelPh = nivel;
     changeAndRegister(suceso);
@@ -134,12 +150,18 @@ public class PiscinaImp extends Piscina {
     estado.notificarPersonas(this);
   }
 
+  /* (non-Javadoc)
+   * @see vvs.piscinas.Piscina#setEstado(vvs.piscinas.EstadoPiscina)
+   */
   public void setEstado(EstadoPiscina estado) {
     this.estado = estado;
   }
 
   // --------------------------INHERITED METHODS--------------------------
 
+  /* (non-Javadoc)
+   * @see vvs.piscinas.Piscina#informe()
+   */
   @Override
   public String informe() {
     StringBuilder sb = new StringBuilder();
@@ -152,22 +174,37 @@ public class PiscinaImp extends Piscina {
     return new String(sb);
   }
 
+  /* (non-Javadoc)
+   * @see vvs.piscinas.Piscina#activar()
+   */
   public void activar() {
     this.estado.activar(this);
   }
 
+  /* (non-Javadoc)
+   * @see vvs.piscinas.Piscina#cerrar()
+   */
   public void cerrar() {
     this.estado.cerrar(this);
   }
 
+  /* (non-Javadoc)
+   * @see vvs.piscinas.Piscina#evacuar()
+   */
   public void evacuar() {
     this.estado.evacuar(this);
   }
 
+  /* (non-Javadoc)
+   * @see vvs.piscinas.Piscina#mantenimiento()
+   */
   public void mantenimiento() {
     this.estado.mantenimiento(this);
   }
 
+  /* (non-Javadoc)
+   * @see vvs.piscinas.Piscina#lanzarAlarmas()
+   */
   public boolean lanzarAlarmas() {
     return this.estado.lanzarAlarmas(this);
   }

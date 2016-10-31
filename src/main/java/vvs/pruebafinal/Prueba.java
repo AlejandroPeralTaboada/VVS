@@ -29,6 +29,10 @@ import vvs.sensor.SensorNivelSales;
 import vvs.sensor.SensorPersonas;
 import vvs.sensor.SensorTemperatura;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Prueba.
+ */
 public class Prueba {
 
   /**

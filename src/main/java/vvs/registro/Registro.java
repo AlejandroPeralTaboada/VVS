@@ -9,18 +9,36 @@ package vvs.registro;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Registro.
+ */
 public class Registro {
 
+  /** The numero registros. */
   private int numeroRegistros;
+  
+  /** The registro. */
   private LinkedList<Suceso> registro;
 
+  /**
+   * Instantiates a new registro.
+   *
+   * @param tamanho the tamanho
+   */
   public Registro(int tamanho) {
     this.numeroRegistros = tamanho;
-    if (this.numeroRegistros < 0)
+    if (this.numeroRegistros < 0) {
       this.numeroRegistros = 0;
+    }
     this.registro = new LinkedList<Suceso>();
   }
 
+  /**
+   * Gets the numero registros.
+   *
+   * @return the numero registros
+   */
   public int getNumeroRegistros() {
     return this.numeroRegistros;
   }
@@ -37,14 +55,16 @@ public class Registro {
     if (this.numeroRegistros > tam) {
       int cant;
       for (cant = 0; cant < (this.numeroRegistros - tam); cant++) {
-        if (this.registro.size() == 0)
+        if (this.registro.size() == 0) {
           break;
+        }
         this.registro.removeFirst();
       }
     }
     this.numeroRegistros = tam;
-    if (this.numeroRegistros < 0)
+    if (this.numeroRegistros < 0) {
       this.numeroRegistros = 0;
+    }
   }
 
   /**
@@ -76,6 +96,12 @@ public class Registro {
     return (remove(new String(sb)));
   }
 
+  /**
+   * Removes the.
+   *
+   * @param str the str
+   * @return the string
+   */
   public String remove(String str) {
     if (str != null && str.length() > 0) {
       str = str.substring(0, str.length() - 1);
@@ -83,10 +109,18 @@ public class Registro {
     return str;
   }
 
+  /**
+   * Borrar.
+   */
   public void borrar() {
     this.registro.removeAll(registro);
   }
 
+  /**
+   * Gets the registro.
+   *
+   * @return the registro
+   */
   LinkedList<Suceso> getRegistro() {
     return registro;
   }

@@ -9,10 +9,19 @@ package vvs.registro;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class SucesoNivelPh.
+ */
 public class SucesoNivelPh implements Suceso {
 
+  /** The momento. */
   final Date momento;
+  
+  /** The inicio. */
   float inicio;
+  
+  /** The fin. */
   float fin;
 
   /**
@@ -28,6 +37,9 @@ public class SucesoNivelPh implements Suceso {
     this.fin = fin;
   }
 
+  /* (non-Javadoc)
+   * @see java.lang.Object#toString()
+   */
   @Override
   public String toString() {
     return ("- " + new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(momento)

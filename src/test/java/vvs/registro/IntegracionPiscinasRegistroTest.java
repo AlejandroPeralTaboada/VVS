@@ -8,8 +8,15 @@ import vvs.piscinas.Piscina;
 import vvs.piscinas.PiscinaImp;
 import vvs.piscinas.PiscinaRelax;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class IntegracionPiscinasRegistroTest.
+ */
 public class IntegracionPiscinasRegistroTest {
 
+  /**
+   * Pr I N piscinas registro 001.
+   */
   @Test
   public void pr_IN_PiscinasRegistro_001() {
     Piscina piscina = new PiscinaImp("", "");
@@ -17,6 +24,9 @@ public class IntegracionPiscinasRegistroTest {
     assertEquals(0, piscina.getRegistro().getRegistro().size());
   }
 
+  /**
+   * Pr I N piscinas registro 002.
+   */
   @Test
   public void pr_IN_PiscinasRegistro_002() {
     Piscina piscina = new PiscinaImp("", "");
@@ -27,6 +37,9 @@ public class IntegracionPiscinasRegistroTest {
     assertEquals(2, piscina.getRegistro().getRegistro().size());
   }
 
+  /**
+   * Pr I N piscinas registro 003.
+   */
   @Test
   public void pr_IN_PiscinasRegistro_003() {
     Piscina piscina = new PiscinaImp("", "");
@@ -37,6 +50,9 @@ public class IntegracionPiscinasRegistroTest {
     assertEquals(2, piscina.getRegistro().getRegistro().size());
   }
 
+  /**
+   * Pr I N piscinas registro 004.
+   */
   @Test
   public void pr_IN_PiscinasRegistro_004() {
     Piscina piscina = new PiscinaImp("", "");
@@ -47,6 +63,9 @@ public class IntegracionPiscinasRegistroTest {
     assertEquals(2, piscina.getRegistro().getRegistro().size());
   }
 
+  /**
+   * Pr I N piscinas registro 005.
+   */
   @Test
   public void pr_IN_PiscinasRegistro_005() {
     Piscina piscina = new PiscinaImp("", "");
@@ -57,6 +76,9 @@ public class IntegracionPiscinasRegistroTest {
     assertEquals(2, piscina.getRegistro().getRegistro().size());
   }
 
+  /**
+   * Pr I N piscinas registro 006.
+   */
   @Test
   public void pr_IN_PiscinasRegistro_006() {
     PiscinaRelax piscina = new PiscinaRelax("", "");
@@ -67,6 +89,9 @@ public class IntegracionPiscinasRegistroTest {
     assertEquals(2, piscina.getRegistro().getRegistro().size());
   }
 
+  /**
+   * Pr I N piscinas registro 007.
+   */
   @Test
   public void pr_IN_PiscinasRegistro_007() {
     Piscina piscina = new PiscinaImp("", "");
@@ -77,6 +102,9 @@ public class IntegracionPiscinasRegistroTest {
     assertEquals(0, piscina.getRegistro().getRegistro().size());
   }
 
+  /**
+   * Pr I N piscinas registro 008.
+   */
   @Test
   public void pr_IN_PiscinasRegistro_008() {
     Piscina piscina = new PiscinaImp("", "");

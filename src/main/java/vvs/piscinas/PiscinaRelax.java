@@ -8,14 +8,30 @@ package vvs.piscinas;
 
 import vvs.registro.SucesoNivelSales;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class PiscinaRelax.
+ */
 public class PiscinaRelax extends PiscinaImp {
 
+  /** The nivel sales. */
   float nivelSales;
 
+  /**
+   * Instantiates a new piscina relax.
+   *
+   * @param nombre the nombre
+   * @param ubicacion the ubicacion
+   */
   public PiscinaRelax(String nombre, String ubicacion) {
     super(nombre, ubicacion);
   }
 
+  /**
+   * Gets the nivel sales.
+   *
+   * @return the nivel sales
+   */
   public float getNivelSales() {
     return this.nivelSales;
   }

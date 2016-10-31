@@ -8,8 +8,15 @@ import vvs.piscinas.Piscina;
 import vvs.piscinas.PiscinaImp;
 import vvs.piscinas.PiscinaRelax;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class IntegracionPiscinasSensorTest.
+ */
 public class IntegracionPiscinasSensorTest {
 
+  /**
+   * Pr I N piscinas sensor 001.
+   */
   @Test
   public void pr_IN_PiscinasSensor_001() {
     Piscina piscina = new PiscinaImp("Caranza","Caranza");
@@ -19,6 +26,9 @@ public class IntegracionPiscinasSensorTest {
     assertEquals(piscina.getNivelAgua(),valor,0.001);
   }
   
+  /**
+   * Pr I N piscinas sensor 002.
+   */
   @Test
   public void pr_IN_PiscinasSensor_002() {
     Piscina piscina = new PiscinaImp("Caranza","Caranza");
@@ -28,6 +38,9 @@ public class IntegracionPiscinasSensorTest {
     assertEquals(piscina.getNivelCloro(),valor,0.001);
   }
   
+  /**
+   * Pr I N piscinas sensor 004.
+   */
   @Test
   public void pr_IN_PiscinasSensor_004() {
     Piscina piscina = new PiscinaImp("Caranza","Caranza");
@@ -37,6 +50,9 @@ public class IntegracionPiscinasSensorTest {
     assertEquals(piscina.getNivelPh(),valor,0.001);
   }
   
+  /**
+   * Pr I N piscinas sensor 005.
+   */
   @Test
   public void pr_IN_PiscinasSensor_005() {
     PiscinaRelax piscinaRelax = new PiscinaRelax("Caranza","Caranza");
@@ -46,6 +62,9 @@ public class IntegracionPiscinasSensorTest {
     assertEquals(piscinaRelax.getNivelSales(),valor,0.001);
   }
   
+  /**
+   * Pr I N piscinas sensor 006.
+   */
   @Test
   public void pr_IN_PiscinasSensor_006() {
     Piscina piscina = new PiscinaImp("Caranza","Caranza");
@@ -54,6 +73,9 @@ public class IntegracionPiscinasSensorTest {
     assertEquals(piscina.getPersonas(),7);
   }
   
+  /**
+   * Pr I N piscinas sensor 007.
+   */
   @Test
   public void pr_IN_PiscinasSensor_007() {
     Piscina piscina = new PiscinaImp("Caranza","Caranza");
@@ -63,6 +85,9 @@ public class IntegracionPiscinasSensorTest {
     assertEquals(piscina.getTemperatura(),valor,0.001);
   }
   
+  /**
+   * Pr in piscinas sensor 008.
+   */
   @Test 
   public void pr_In_PiscinasSensor_008() {
     Piscina piscina = new PiscinaImp("Caranza","Caranza");
@@ -70,6 +95,9 @@ public class IntegracionPiscinasSensorTest {
     assertEquals(piscina,sensorAgua.getPiscina());
   }
   
+  /**
+   * Pr in piscinas sensor 009.
+   */
   @Test 
   public void pr_In_PiscinasSensor_009() {
     Piscina piscina = new PiscinaImp("Caranza","Caranza");
@@ -77,6 +105,9 @@ public class IntegracionPiscinasSensorTest {
     assertEquals(piscina,sensorCloro.getPiscina());
   }
   
+  /**
+   * Pr in piscinas sensor 010.
+   */
   @Test 
   public void pr_In_PiscinasSensor_010() {
     Piscina piscina = new PiscinaImp("Caranza","Caranza");
@@ -84,6 +115,9 @@ public class IntegracionPiscinasSensorTest {
     assertEquals(piscina,sensorPh.getPiscina());
   }
   
+  /**
+   * Pr in piscinas sensor 011.
+   */
   @Test 
   public void pr_In_PiscinasSensor_011() {
     PiscinaRelax piscinaRelax = new PiscinaRelax("Caranza","Caranza");
@@ -91,6 +125,9 @@ public class IntegracionPiscinasSensorTest {
     assertEquals(piscinaRelax,sensorSales.getPiscina());
   }
   
+  /**
+   * Pr in piscinas sensor 012.
+   */
   @Test 
   public void pr_In_PiscinasSensor_012() {
     Piscina piscina = new PiscinaImp("Caranza","Caranza");
@@ -98,6 +135,9 @@ public class IntegracionPiscinasSensorTest {
     assertEquals(piscina,sensorPersonas.getPiscina());
   }
   
+  /**
+   * Pr in piscinas sensor 013.
+   */
   @Test 
   public void pr_In_PiscinasSensor_013() {
     Piscina piscina = new PiscinaImp("Caranza","Caranza");

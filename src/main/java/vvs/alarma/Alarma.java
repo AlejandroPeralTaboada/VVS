@@ -16,40 +16,85 @@ import java.util.ListIterator;
 import java.util.Observer;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Alarma.
+ */
 public abstract class Alarma implements Observer {
 
+  /** The plantilla. */
   private Plantilla plantilla;
+  
+  /** The registro. */
   protected List<String> registro;
 
+  /**
+   * Instantiates a new alarma.
+   */
   public Alarma() {
     plantilla = new Plantilla();
     registro = new LinkedList<String>();
   }
 
+  /**
+   * Gets the plantilla.
+   *
+   * @return the plantilla
+   */
   public Plantilla getPlantilla() {
     return plantilla;
   }
 
+  /**
+   * Sets the plantilla.
+   *
+   * @param plantilla the new plantilla
+   */
   public void setPlantilla(Plantilla plantilla) {
     this.plantilla = plantilla;
   }
 
+  /**
+   * Gets the registro.
+   *
+   * @return the registro
+   */
   public List<String> getRegistro() {
     return registro;
   }
 
+  /**
+   * Sets the registro.
+   *
+   * @param registro the new registro
+   */
   public void setRegistro(List<String> registro) {
     this.registro = registro;
   }
 
+  /**
+   * Adds the responsable.
+   *
+   * @param equipo the equipo
+   */
   public void addResponsable(Equipo equipo) {
     plantilla.addEquipo(equipo);
   }
 
+  /**
+   * Adds the responsable.
+   *
+   * @param empleado the empleado
+   */
   public void addResponsable(Empleado empleado) {
     plantilla.addEmpleado(empleado);
   }
 
+  /**
+   * Avisar.
+   *
+   * @return the string
+   */
   protected String avisar() {
     return (plantilla.avisar());
   }

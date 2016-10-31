@@ -10,9 +10,16 @@ import vvs.piscinas.Piscina;
 
 import java.util.Observable;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AlarmaNivelPh.
+ */
 public class AlarmaNivelPh extends Alarma {
 
+  /** The maximo. */
   final float maximo;
+  
+  /** The minimo. */
   final float minimo;
 
   /**
@@ -31,6 +38,9 @@ public class AlarmaNivelPh extends Alarma {
     this.minimo = min;
   }
 
+  /* (non-Javadoc)
+   * @see java.util.Observer#update(java.util.Observable, java.lang.Object)
+   */
   @Override
   public void update(Observable obs, Object arg) {
     Piscina piscina = (Piscina) obs;

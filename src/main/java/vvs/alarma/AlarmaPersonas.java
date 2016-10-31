@@ -11,8 +11,13 @@ import vvs.piscinas.Piscina;
 
 import java.util.Observable;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AlarmaPersonas.
+ */
 public class AlarmaPersonas extends Alarma {
 
+  /** The numero maximo. */
   int numeroMaximo;
   
   /**
@@ -25,6 +30,9 @@ public class AlarmaPersonas extends Alarma {
     this.numeroMaximo = max;
   }
 
+  /* (non-Javadoc)
+   * @see java.util.Observer#update(java.util.Observable, java.lang.Object)
+   */
   @Override
   public void update(Observable obs, Object arg) {
     Piscina piscina = (Piscina) obs;

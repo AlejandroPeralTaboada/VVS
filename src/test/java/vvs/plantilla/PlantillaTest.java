@@ -14,21 +14,32 @@ import java.util.List;
 
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class PlantillaTest.
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class PlantillaTest {
 
+  /** The equipos. */
   @Mock
   private List<Equipo> equipos;
 
+  /** The empleados. */
   @Mock
   private List<Empleado> empleados;
 
+  /** The equipo. */
   @Mock
   private Equipo equipo;
 
+  /** The empleado. */
   @Mock
   private Empleado empleado;
 
+  /**
+   * Pr U N plantilla 001.
+   */
   @Test
   public void pr_UN_Plantilla_001() {
     Plantilla plantilla = new Plantilla();
@@ -37,6 +48,9 @@ public class PlantillaTest {
     assertTrue(pepito);
   }
 
+  /**
+   * Pr U N plantilla 002.
+   */
   @Test
   public void pr_UN_Plantilla_002() {
     Plantilla plantilla = new Plantilla();
@@ -45,6 +59,9 @@ public class PlantillaTest {
     assertTrue(pepito);
   }
 
+  /**
+   * Pr U N plantilla 003.
+   */
   @Test
   public void pr_UN_Plantilla_003() {
     Plantilla plantilla = new Plantilla();
@@ -52,6 +69,9 @@ public class PlantillaTest {
     assertEquals(plantilla.getEmpleados(), empleados);
   }
 
+  /**
+   * Pr U N plantilla 004.
+   */
   @Test
   public void pr_UN_Plantilla_004() {
     Plantilla plantilla = new Plantilla();

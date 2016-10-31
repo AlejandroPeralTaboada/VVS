@@ -10,28 +10,58 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Plantilla.
+ */
 public class Plantilla {
 
+  /** The empleados. */
   private List<Empleado> empleados;
+  
+  /** The equipos. */
   private List<Equipo> equipos;
 
+  /**
+   * Instantiates a new plantilla.
+   */
   public Plantilla() {
     empleados = new ArrayList<Empleado>();
     equipos = new ArrayList<Equipo>();
   }
 
+  /**
+   * Gets the empleados.
+   *
+   * @return the empleados
+   */
   public List<Empleado> getEmpleados() {
     return empleados;
   }
 
+  /**
+   * Sets the empleados.
+   *
+   * @param empleados the new empleados
+   */
   public void setEmpleados(List<Empleado> empleados) {
     this.empleados = empleados;
   }
 
+  /**
+   * Gets the equipos.
+   *
+   * @return the equipos
+   */
   public List<Equipo> getEquipos() {
     return equipos;
   }
 
+  /**
+   * Sets the equipos.
+   *
+   * @param equipos the new equipos
+   */
   public void setEquipos(List<Equipo> equipos) {
     this.equipos = equipos;
   }
