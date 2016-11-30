@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.piscinas;
 
 import vvs.registro.SucesoEstado;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Evacuacion.
  */
@@ -86,7 +80,7 @@ public class Evacuacion implements EstadoPiscina {
   @Override
   public void notificarPersonas(Piscina piscina) {
     if (piscina.getPersonas() == 0) {
-      piscina.getRegistro().addSuceso((new SucesoEstado("Evacuación", "Mantenimiento")));
+      piscina.getRegistro().addSuceso(new SucesoEstado("Evacuación", "Mantenimiento"));
       piscina.setEstado(Mantenimiento.getInstancia());
     }
   }
@@ -96,7 +90,7 @@ public class Evacuacion implements EstadoPiscina {
    */
   @Override
   public boolean saltarAlarmaNiveles(Piscina piscina) {
-    return (false);
+    return false;
   }
 
   /* (non-Javadoc)
@@ -104,7 +98,7 @@ public class Evacuacion implements EstadoPiscina {
    */
   @Override
   public boolean saltarAlarmaPersonas(Piscina piscina) {
-    return (true);
+    return true;
   }
 
   /* (non-Javadoc)

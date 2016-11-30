@@ -9,7 +9,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class RegistroTest.
  */

@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.registro;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Registro.
  */
@@ -19,10 +13,10 @@ public class Registro {
   private int numeroRegistros;
   
   /** The registro. */
-  private LinkedList<Suceso> registro;
+  private LinkedList<Suceso> regis;
 
   /**
-   * Instantiates a new registro.
+   * Instantiates a new regis.
    *
    * @param tamanho the tamanho
    */
@@ -31,7 +25,7 @@ public class Registro {
     if (this.numeroRegistros < 0) {
       this.numeroRegistros = 0;
     }
-    this.registro = new LinkedList<Suceso>();
+    this.regis = new LinkedList<>();
   }
 
   /**
@@ -55,10 +49,10 @@ public class Registro {
     if (this.numeroRegistros > tam) {
       int cant;
       for (cant = 0; cant < (this.numeroRegistros - tam); cant++) {
-        if (this.registro.size() == 0) {
+        if (this.regis.isEmpty()) {
           break;
         }
-        this.registro.removeFirst();
+        this.regis.removeFirst();
       }
     }
     this.numeroRegistros = tam;
@@ -75,9 +69,9 @@ public class Registro {
    */
 
   public void addSuceso(Suceso suceso) {
-    this.registro.add(suceso);
-    if (this.registro.size() > this.numeroRegistros) {
-      this.registro.removeFirst();
+    this.regis.add(suceso);
+    if (this.regis.size() > this.numeroRegistros) {
+      this.regis.removeFirst();
     }
   }
 
@@ -88,12 +82,12 @@ public class Registro {
    */
 
   public String informe() {
-    ListIterator<Suceso> aux = registro.listIterator();
+    ListIterator<Suceso> aux = regis.listIterator();
     StringBuilder sb = new StringBuilder();
     while (aux.hasNext()) {
       sb.append(aux.next().toString() + " ");
     }
-    return (remove(new String(sb)));
+    return remove(new String(sb));
   }
 
   /**
@@ -103,17 +97,18 @@ public class Registro {
    * @return the string
    */
   public String remove(String str) {
+    String strin = str;
     if (str != null && str.length() > 0) {
-      str = str.substring(0, str.length() - 1);
+      strin = str.substring(0, str.length() - 1);
     }
-    return str;
+    return strin;
   }
 
   /**
    * Borrar.
    */
   public void borrar() {
-    this.registro.removeAll(registro);
+    this.regis.removeAll(regis);
   }
 
   /**
@@ -122,7 +117,7 @@ public class Registro {
    * @return the registro
    */
   LinkedList<Suceso> getRegistro() {
-    return registro;
+    return regis;
   }
 
 }

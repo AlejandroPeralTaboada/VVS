@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.alarma;
 
@@ -16,7 +11,6 @@ import java.util.ListIterator;
 import java.util.Observer;
 
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Alarma.
  */
@@ -33,7 +27,7 @@ public abstract class Alarma implements Observer {
    */
   public Alarma() {
     plantilla = new Plantilla();
-    registro = new LinkedList<String>();
+    registro = new LinkedList<>();
   }
 
   /**
@@ -96,7 +90,7 @@ public abstract class Alarma implements Observer {
    * @return the string
    */
   protected String avisar() {
-    return (plantilla.avisar());
+    return plantilla.avisar();
   }
   
   /**
@@ -110,9 +104,9 @@ public abstract class Alarma implements Observer {
     ListIterator<String> aux = registro.listIterator();
     StringBuilder sb = new StringBuilder();
     while (aux.hasNext()) {
-      sb.append(aux.next().toString());
+      sb.append(aux.next());
     }
-    return (new String(sb));
+    return new String(sb);
   }
 
 }

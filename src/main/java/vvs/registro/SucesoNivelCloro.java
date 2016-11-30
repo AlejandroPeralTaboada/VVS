@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.registro;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class SucesoNivelCloro.
  */
@@ -42,8 +36,8 @@ public class SucesoNivelCloro implements Suceso {
    */
   @Override
   public String toString() {
-    return ("- " + new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(momento)
-        + " Parametro \"nivel de cloro\" cambia de " + inicio + " a " + fin + "\n");
+    return "- " + new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(momento)
+        + " Parametro \"nivel de cloro\" cambia de " + inicio + " a " + fin + "\n";
   }
 
 }

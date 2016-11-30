@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.piscinas;
 
 import vvs.registro.SucesoEstado;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Cerrada.
  */
@@ -69,9 +63,8 @@ public class Cerrada implements EstadoPiscina {
    */
   @Override
   public void mantenimiento(Piscina piscina) {
-    piscina.getRegistro().addSuceso((new SucesoEstado("Cerrada", "Mantenimiento")));
+    piscina.getRegistro().addSuceso(new SucesoEstado("Cerrada", "Mantenimiento"));
     piscina.setEstado(Mantenimiento.getInstancia());
-    ;
   }
 
   /* (non-Javadoc)
@@ -87,7 +80,7 @@ public class Cerrada implements EstadoPiscina {
    */
   @Override
   public void notificarPersonas(Piscina piscina) {
-
+    /* This method is empty. */
   }
 
   /* (non-Javadoc)
@@ -95,7 +88,7 @@ public class Cerrada implements EstadoPiscina {
    */
   @Override
   public boolean saltarAlarmaNiveles(Piscina piscina) {
-    return (false);
+    return false;
   }
 
   /* (non-Javadoc)
@@ -103,7 +96,7 @@ public class Cerrada implements EstadoPiscina {
    */
   @Override
   public boolean saltarAlarmaPersonas(Piscina piscina) {
-    return (true);
+    return true;
   }
 
   /* (non-Javadoc)

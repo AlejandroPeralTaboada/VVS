@@ -6,7 +6,6 @@ import vvs.sensor.Sensor;
 import java.util.List;
 import java.util.Observable;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Piscina.
  */
@@ -41,8 +40,6 @@ public abstract class Piscina extends Observable {
   
   /** The sensores. */
   List<Sensor> sensores;
-
-  // public abstract void regsitrarNuevoSuceso(Suceso suceso);
 
   /**
    * Informe.

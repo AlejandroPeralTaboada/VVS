@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.plantilla;
 
@@ -10,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Plantilla.
  */
@@ -26,8 +20,8 @@ public class Plantilla {
    * Instantiates a new plantilla.
    */
   public Plantilla() {
-    empleados = new ArrayList<Empleado>();
-    equipos = new ArrayList<Equipo>();
+    empleados = new ArrayList<>();
+    equipos = new ArrayList<>();
   }
 
   /**
@@ -106,7 +100,7 @@ public class Plantilla {
     while (aux1.hasNext()) {
       sb.append(aux1.next().avisar());
     }
-    return (new String(sb));
+    return new String(sb);
   }
 
 }

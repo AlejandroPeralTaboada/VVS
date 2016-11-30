@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.plantilla;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Empleado.
  */
@@ -55,9 +49,9 @@ public abstract class Empleado {
    */
   protected String getAvisadoGenero() {
     if (this.genero == Genero.H) {
-      return ("Avisado");
+      return "Avisado";
     } else {
-      return ("Avisada");
+      return "Avisada";
     }
   }
 

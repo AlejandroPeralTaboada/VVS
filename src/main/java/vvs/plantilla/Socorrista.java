@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.plantilla;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Socorrista.
  */
@@ -27,6 +21,6 @@ public class Socorrista extends Empleado {
    */
   @Override
   public String avisar() {
-    return ("- " + this.getAvisadoGenero() + " \"" + this.getNombre() + "\" " + "(socorrista)\n");
+    return "- " + this.getAvisadoGenero() + " \"" + this.getNombre() + "\" " + "(socorrista)\n";
   }
 }

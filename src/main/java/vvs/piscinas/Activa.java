@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.piscinas;
 
 import vvs.registro.SucesoEstado;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Activa.
  */
@@ -53,7 +47,7 @@ public class Activa implements EstadoPiscina {
    */
   @Override
   public void evacuar(Piscina piscina) {
-    piscina.getRegistro().addSuceso((new SucesoEstado("Activa", "Evacuación")));
+    piscina.getRegistro().addSuceso(new SucesoEstado("Activa", "Evacuación"));
     piscina.setEstado(Evacuacion.getInstancia());
   }
 
@@ -86,7 +80,7 @@ public class Activa implements EstadoPiscina {
    */
   @Override
   public void notificarPersonas(Piscina piscina) {
-
+    /* This method is empty. */
   }
 
   /* (non-Javadoc)
@@ -94,7 +88,7 @@ public class Activa implements EstadoPiscina {
    */
   @Override
   public boolean saltarAlarmaNiveles(Piscina piscina) {
-    return (true);
+    return true;
   }
 
   /* (non-Javadoc)
@@ -102,7 +96,7 @@ public class Activa implements EstadoPiscina {
    */
   @Override
   public boolean saltarAlarmaPersonas(Piscina piscina) {
-    return (true);
+    return true;
   }
 
   /* (non-Javadoc)

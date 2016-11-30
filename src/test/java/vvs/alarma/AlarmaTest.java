@@ -15,7 +15,6 @@ import vvs.plantilla.Plantilla;
 
 import java.util.List;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class AlarmaTest.
  */

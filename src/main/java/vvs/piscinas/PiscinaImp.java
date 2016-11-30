@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.piscinas;
 
@@ -17,7 +12,6 @@ import vvs.sensor.Sensor;
 import java.util.ArrayList;
 import java.util.Date;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class PiscinaImp.
  */
@@ -50,7 +44,7 @@ public class PiscinaImp extends Piscina {
     if (newParam < 0) {
       throw new IllegalArgumentException();
     }
-    return (newParam == existent);
+    return newParam == existent;
   }
 
   /**

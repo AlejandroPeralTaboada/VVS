@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.plantilla;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Equipo.
  */
@@ -66,7 +60,7 @@ public class Equipo {
     StringBuilder sb = new StringBuilder();
     sb.append("* Avisado equipo \"" + this.getNombre() + "\"\n");
     sb.append(plantilla.avisar());
-    return (new String(sb));
+    return new String(sb);
   }
 
 }

@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.piscinas;
 
 import vvs.registro.SucesoEstado;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Mantenimiento.
  */
@@ -16,6 +10,7 @@ public class Mantenimiento implements EstadoPiscina {
 
   /** The Constant instancia. */
   private static final Mantenimiento instancia = new Mantenimiento();
+  private static final String MANTEN = "Mantenimiento";
 
   /**
    * Instantiates a new mantenimiento.
@@ -36,7 +31,7 @@ public class Mantenimiento implements EstadoPiscina {
    */
   @Override
   public String toString() {
-    return "Mantenimiento";
+    return MANTEN;
   }
 
   /* (non-Javadoc)
@@ -44,7 +39,7 @@ public class Mantenimiento implements EstadoPiscina {
    */
   @Override
   public void activar(Piscina piscina) {
-    piscina.getRegistro().addSuceso((new SucesoEstado("Mantenimiento", "Activa")));
+    piscina.getRegistro().addSuceso(new SucesoEstado(MANTEN, "Activa"));
     piscina.setEstado(Activa.getInstancia());
   }
 
@@ -86,14 +81,16 @@ public class Mantenimiento implements EstadoPiscina {
    * @see vvs.piscinas.EstadoPiscina#notificarPersonas(vvs.piscinas.Piscina)
    */
   @Override
-  public void notificarPersonas(Piscina piscina) {}
+  public void notificarPersonas(Piscina piscina) {
+    /* this method is empty. */
+  }
 
   /* (non-Javadoc)
    * @see vvs.piscinas.EstadoPiscina#saltarAlarmaNiveles(vvs.piscinas.Piscina)
    */
   @Override
   public boolean saltarAlarmaNiveles(Piscina piscina) {
-    return (false);
+    return false;
   }
 
   /* (non-Javadoc)
@@ -101,7 +98,7 @@ public class Mantenimiento implements EstadoPiscina {
    */
   @Override
   public boolean saltarAlarmaPersonas(Piscina piscina) {
-    return (true);
+    return true;
   }
 
   /* (non-Javadoc)
@@ -109,6 +106,6 @@ public class Mantenimiento implements EstadoPiscina {
    */
   @Override
   public boolean lanzarAlarmas(Piscina piscina) {
-    return (false);
+    return false;
   }
 }

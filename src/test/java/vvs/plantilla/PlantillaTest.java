@@ -1,6 +1,5 @@
 package vvs.plantilla;
 
-
 import static org.junit.Assert.assertEquals;
 
 import static org.junit.Assert.assertTrue;
@@ -12,9 +11,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.List;
 
-
-
-// TODO: Auto-generated Javadoc
 /**
  * The Class PlantillaTest.
  */

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package vvs.pruebafinal;
 
@@ -29,7 +24,6 @@ import vvs.sensor.SensorNivelSales;
 import vvs.sensor.SensorPersonas;
 import vvs.sensor.SensorTemperatura;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Prueba.
  */
@@ -163,7 +157,6 @@ public class Prueba {
     sensor5.medirPersonas(0);
 
     System.out.println(gestor.generarInforme(piscinarelax));
-    // System.out.println(alarma1.informe());
     System.out.println(alarma2.informe());
     System.out.println(alarma3.informe());
     System.out.println(alarma4.informe());
