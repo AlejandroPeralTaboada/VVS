@@ -4,25 +4,23 @@ package vvs.pruebafinal;
 import vvs.alarma.Alarma;
 import vvs.alarma.AlarmaNivelAgua;
 import vvs.alarma.AlarmaNivelCloro;
-import vvs.alarma.AlarmaNivelCloroEvacuacion;
-import vvs.alarma.AlarmaNivelSales;
+import vvs.alarma.AlarmaNivelPh;
 import vvs.alarma.AlarmaPersonas;
+import vvs.alarma.AlarmaTemperatura;
 import vvs.piscinas.Piscina;
 import vvs.piscinas.PiscinaImp;
-import vvs.piscinas.PiscinaRelax;
 import vvs.plantilla.Empleado;
 import vvs.plantilla.Empleado.Genero;
-import vvs.plantilla.Encargado;
 import vvs.plantilla.Equipo;
-import vvs.plantilla.Gestor;
 import vvs.plantilla.Mantenimiento;
-import vvs.plantilla.Socorrista;
 import vvs.sensor.SensorNivelAgua;
 import vvs.sensor.SensorNivelCloro;
 import vvs.sensor.SensorNivelPh;
-import vvs.sensor.SensorNivelSales;
 import vvs.sensor.SensorPersonas;
 import vvs.sensor.SensorTemperatura;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The Class Prueba.
@@ -33,10 +31,47 @@ public class Prueba {
    * Prueba Final.
    * 
    * @param args args
+   * @throws InterruptedException exception. 
    */
 
-  public static void main(String[] args) {
-    Encargado encargado = new Encargado("Paleto de turno", Genero.H);
+  public static void main(String[] args) throws InterruptedException {
+    List<Piscina> piscinas = new ArrayList<>();
+    for (int i = 0; i <= 50; i++) {
+      Piscina piscina = new PiscinaImp("Olimpica" + i,"Zona" + i);
+      piscinas.add(piscina);
+      SensorPersonas sensor1 = new SensorPersonas(piscina);
+      SensorNivelAgua sensor2 = new SensorNivelAgua(piscina);
+      SensorNivelPh sensor3 = new SensorNivelPh(piscina);
+      SensorNivelCloro sensor4 = new SensorNivelCloro(piscina);
+      SensorTemperatura sensor5 = new SensorTemperatura(piscina);
+      piscina.addSensor(sensor1);
+      piscina.addSensor(sensor2);
+      piscina.addSensor(sensor3);
+      piscina.addSensor(sensor4);
+      piscina.addSensor(sensor5);
+      Alarma alarma1 = new AlarmaPersonas(30);
+      Alarma alarma2 = new AlarmaTemperatura(24,12);
+      Alarma alarma3 = new AlarmaNivelAgua(400,0);
+      Alarma alarma4 = new AlarmaNivelCloro(70,15);
+      Alarma alarma5 = new AlarmaNivelPh(14,7);
+      piscina.addObserver(alarma1);
+      piscina.addObserver(alarma2);
+      piscina.addObserver(alarma3);
+      piscina.addObserver(alarma4);
+      piscina.addObserver(alarma5);
+      Empleado empleado1 = new Mantenimiento("mantenimiento" + i,Genero.H);
+      alarma1.addResponsable(empleado1);
+      alarma2.addResponsable(empleado1);
+      alarma3.addResponsable(empleado1);
+      alarma4.addResponsable(empleado1);
+      alarma5.addResponsable(empleado1);
+      Equipo equipo1 = new Equipo("Mantenimiento" + i);
+      equipo1.setEmpleado(empleado1);
+      alarma1.addResponsable(equipo1);
+      Thread.sleep(1000);
+    }
+    
+    /* Encargado encargado = new Encargado("Paleto de turno", Genero.H);
     Piscina piscina = new PiscinaImp("Olímpica", "Zona 1");
     encargado.activa(piscina);
     Alarma alarma1 = new AlarmaPersonas(30);
@@ -160,7 +195,6 @@ public class Prueba {
     System.out.println(alarma2.informe());
     System.out.println(alarma3.informe());
     System.out.println(alarma4.informe());
-    System.out.println(alarma5.informe());
-
+    System.out.println(alarma5.informe()); */
   }
 }

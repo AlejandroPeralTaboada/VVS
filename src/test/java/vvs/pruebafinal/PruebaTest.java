@@ -11,9 +11,10 @@ public class PruebaTest {
 
   /**
    * Test.
+   * @throws InterruptedException description
    */
   @Test
-  public void test() {
+  public void test() throws InterruptedException  {
     Prueba.main(null);
     assertTrue(true);
   }
