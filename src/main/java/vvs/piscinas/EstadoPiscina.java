@@ -8,7 +8,6 @@ package vvs.piscinas;
 
 import vvs.piscinas.Piscina;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Interface EstadoPiscina.
  */

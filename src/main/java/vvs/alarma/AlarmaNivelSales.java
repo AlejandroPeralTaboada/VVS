@@ -10,7 +10,6 @@ import vvs.piscinas.PiscinaRelax;
 
 import java.util.Observable;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class AlarmaNivelSales.
  */

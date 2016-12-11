@@ -11,7 +11,6 @@ import vvs.sensor.Sensor;
 
 import java.util.Random;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class PiscinaTest.
  */

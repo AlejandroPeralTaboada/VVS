@@ -8,7 +8,6 @@ package vvs.piscinas;
 
 import vvs.registro.SucesoEstado;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Mantenimiento.
  */

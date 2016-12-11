@@ -17,7 +17,6 @@ import vvs.sensor.Sensor;
 import java.util.ArrayList;
 import java.util.Date;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class PiscinaImp.
  */

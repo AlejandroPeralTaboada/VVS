@@ -1,5 +1,5 @@
 package vvs.AutoEstado;
-
+import static org.junit.Assert.assertEquals;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
@@ -20,16 +20,27 @@ import vvs.piscinas.Mantenimiento;
 import vvs.piscinas.Piscina;
 import vvs.piscinas.PiscinaImp;
 
+/**
+ * The Class EstadosTest.
+ */
 public class EstadosTest extends ExecutionContext implements Estados {
 
+	/** The Constant MODEL_PATH. */
 	public final static Path MODEL_PATH = Paths.get("vvs/AutoEstado/Estados.graphml");
 
+	/** The piscina. */
 	private Piscina piscina;
 
+	/**
+	 * Instantiates a new estados test.
+	 */
 	public EstadosTest() {
-		piscina = new PiscinaImp("Olímpica", "Zona 1");
+		piscina = null;
 	}
 
+	/* (non-Javadoc)
+	 * @see vvs.AutoEstado.Estados#activar()
+	 */
 	@Override
 	public void activar() {
 		System.out.println("Cambiando a activa");
@@ -37,6 +48,9 @@ public class EstadosTest extends ExecutionContext implements Estados {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see vvs.AutoEstado.Estados#evacuar()
+	 */
 	@Override
 	public void evacuar() {
 		System.out.println("Cambiando a evacuar");
@@ -44,14 +58,17 @@ public class EstadosTest extends ExecutionContext implements Estados {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see vvs.AutoEstado.Estados#Activa()
+	 */
 	@Override
 	public void Activa() {
-		if (!piscina.getEstado().getClass().equals(Activa.class)) {
-			System.err.println("ERROR, excepted ACTIVA but was " + piscina.getEstado().getClass().getName());
-			throw new RuntimeException();
-		}
+		assertEquals(Activa.class,piscina.getEstado().getClass());
 	}
 
+	/* (non-Javadoc)
+	 * @see vvs.AutoEstado.Estados#cerrar()
+	 */
 	@Override
 	public void cerrar() {
 		System.out.println("Cambiando a cerrar");
@@ -59,23 +76,25 @@ public class EstadosTest extends ExecutionContext implements Estados {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see vvs.AutoEstado.Estados#Evacuacion()
+	 */
 	@Override
 	public void Evacuacion() {
-		if (!piscina.getEstado().getClass().equals(Evacuacion.class)) {
-			System.err.println("ERROR, excepted Evacuacion but was " + piscina.getEstado().getClass().getName());
-			throw new RuntimeException();
-		}
+		assertEquals(Evacuacion.class,piscina.getEstado().getClass());
 	}
 
+	/* (non-Javadoc)
+	 * @see vvs.AutoEstado.Estados#Cerrada()
+	 */
 	@Override
 	public void Cerrada() {
-		if (!piscina.getEstado().getClass().equals(Cerrada.class)) {
-			System.err.println("ERROR, excepted CERRADA but was " + piscina.getEstado().getClass().getName());
-			throw new RuntimeException();
-		}
-
+		assertEquals(Cerrada.class,piscina.getEstado().getClass());
 	}
 
+	/* (non-Javadoc)
+	 * @see vvs.AutoEstado.Estados#mantenimiento()
+	 */
 	@Override
 	public void mantenimiento() {
 		System.out.println("Cambiando a mantenimiento");
@@ -83,32 +102,40 @@ public class EstadosTest extends ExecutionContext implements Estados {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see vvs.AutoEstado.Estados#Mantenimiento()
+	 */
 	@Override
 	public void Mantenimiento() {
-		if (!piscina.getEstado().getClass().equals(Mantenimiento.class)) {
-			System.err.println("ERROR, excepted MANTENIMIENTO but was " + piscina.getEstado().getClass().getName());
-			throw new RuntimeException();
-		}
-
+		assertEquals(Mantenimiento.class,piscina.getEstado().getClass());
 	}
 
-	/*
-	 * @Test public void runSmokeTest() { new
-	 * TestBuilder().setModel(MODEL_PATH).setContext(new EstadosTest())
-	 * .setPathGenerator(new AStarPath(new
-	 * ReachedVertex("evacuar"))).setStart("mantenimiento") .execute(); }
+	/**
+	 * Run functional test.
 	 */
-
 	@Test
 	public void runFunctionalTest() {
 		new TestBuilder().setModel(MODEL_PATH).setContext(new EstadosTest())
-				.setPathGenerator(new RandomPath(new EdgeCoverage(100))).setStart("mantenimiento").execute();
+				.setPathGenerator(new RandomPath(new EdgeCoverage(100))).setStart("crearPiscina").execute();
 	}
-	/*
-	 * @Test public void runStabilityTest() { new
-	 * TestBuilder().setModel(MODEL_PATH).setContext(new EstadosTest())
-	 * .setPathGenerator(new RandomPath(new TimeDuration(30,
-	 * TimeUnit.SECONDS))).setStart("mantenimiento") .execute(); }
+
+	/**
+	 * Run stability test.
 	 */
+	@Test
+	public void runStabilityTest() {
+		new TestBuilder().setModel(MODEL_PATH).setContext(new EstadosTest())
+				.setPathGenerator(new RandomPath(new TimeDuration(30, TimeUnit.SECONDS))).setStart("crearPiscina")
+				.execute();
+	}
+
+	/* (non-Javadoc)
+	 * @see vvs.AutoEstado.Estados#crearPiscina()
+	 */
+	@Override
+	public void crearPiscina() {
+		piscina = new PiscinaImp("Olímpica", "Zona 1");
+
+	}
 
 }

@@ -8,7 +8,6 @@ package vvs.piscinas;
 
 import vvs.registro.SucesoNivelSales;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class PiscinaRelax.
  */

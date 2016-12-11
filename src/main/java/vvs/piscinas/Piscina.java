@@ -6,7 +6,6 @@ import vvs.sensor.Sensor;
 import java.util.List;
 import java.util.Observable;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Piscina.
  */

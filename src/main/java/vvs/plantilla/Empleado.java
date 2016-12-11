@@ -6,7 +6,6 @@
 
 package vvs.plantilla;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Empleado.
  */

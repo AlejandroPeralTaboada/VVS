@@ -8,7 +8,6 @@ import vvs.piscinas.Piscina;
 import vvs.piscinas.PiscinaImp;
 import vvs.piscinas.PiscinaRelax;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class IntegracionPiscinasRegistroTest.
  */

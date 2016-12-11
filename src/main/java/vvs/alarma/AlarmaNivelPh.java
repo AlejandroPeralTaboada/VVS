@@ -10,7 +10,6 @@ import vvs.piscinas.Piscina;
 
 import java.util.Observable;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class AlarmaNivelPh.
  */

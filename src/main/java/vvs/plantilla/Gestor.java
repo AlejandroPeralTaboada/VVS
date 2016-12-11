@@ -8,7 +8,6 @@ package vvs.plantilla;
 
 import vvs.piscinas.Piscina;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Gestor.
  */

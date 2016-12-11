@@ -12,7 +12,6 @@ import org.mockito.stubbing.Answer;
 import vvs.piscinas.Piscina;
 import vvs.piscinas.PiscinaRelax;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class SensorTest.
  */

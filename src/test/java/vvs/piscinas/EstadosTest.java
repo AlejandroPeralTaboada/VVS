@@ -9,7 +9,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class EstadosTest.
  */
@@ -218,7 +217,7 @@ public class EstadosTest {
     piscina.activar();
     piscina.evacuar();
     piscina.mantenimiento();
-    assertEquals(Evacuacion.class, piscina.getEstado().getClass());
+    assertEquals(Mantenimiento.class, piscina.getEstado().getClass());
   }
 
   /**

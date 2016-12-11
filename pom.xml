@@ -8,10 +8,11 @@
 	<name>java-travisCI-test</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- Set graphwalker.version below to the version you wish to use. We recommend the latest stable version -->
-        <graphwalker.version>3.3.0</graphwalker.version>
-    </properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- Set graphwalker.version below to the version you wish to use. We recommend 
+			the latest stable version -->
+		<graphwalker.version>3.3.0</graphwalker.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -29,15 +30,21 @@
 			<version>${graphwalker.version}</version>
 		</dependency>
 		<dependency>
-            <groupId>org.graphwalker</groupId>
-            <artifactId>graphwalker-java</artifactId>
-            <version>${graphwalker.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.graphwalker</groupId>
-            <artifactId>graphwalker-maven-plugin</artifactId>
-            <version>${graphwalker.version}</version>
-        </dependency>
+			<groupId>org.graphwalker</groupId>
+			<artifactId>graphwalker-java</artifactId>
+			<version>${graphwalker.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.graphwalker</groupId>
+			<artifactId>graphwalker-maven-plugin</artifactId>
+			<version>${graphwalker.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.java.quickcheck</groupId>
+			<artifactId>quickcheck</artifactId>
+			<version>0.6</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -68,14 +75,8 @@
 				<artifactId>graphwalker-maven-plugin</artifactId>
 				<version>${graphwalker.version}</version>
 				<!-- Bind goals to the default lifecycle -->
-				<executions><!-- 
-					<execution>
-						<id>generate-sources</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>generate-sources</goal>
-						</goals>
-					</execution>-->
+				<executions><!-- <execution> <id>generate-sources</id> <phase>generate-sources</phase> 
+						<goals> <goal>generate-sources</goal> </goals> </execution> -->
 				</executions>
 			</plugin>
 		</plugins>

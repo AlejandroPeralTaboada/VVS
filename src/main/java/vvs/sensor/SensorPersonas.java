@@ -8,7 +8,6 @@ package vvs.sensor;
 
 import vvs.piscinas.Piscina;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class SensorPersonas.
  */

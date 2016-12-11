@@ -9,7 +9,6 @@ package vvs.sensor;
 import vvs.piscinas.Piscina;
 import vvs.piscinas.PiscinaRelax;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class SensorNivelSales.
  */

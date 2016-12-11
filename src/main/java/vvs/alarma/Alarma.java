@@ -16,7 +16,6 @@ import java.util.ListIterator;
 import java.util.Observer;
 
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Alarma.
  */

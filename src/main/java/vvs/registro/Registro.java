@@ -9,7 +9,6 @@ package vvs.registro;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Registro.
  */

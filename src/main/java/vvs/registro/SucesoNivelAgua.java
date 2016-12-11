@@ -9,7 +9,6 @@ package vvs.registro;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class SucesoNivelAgua.
  */
