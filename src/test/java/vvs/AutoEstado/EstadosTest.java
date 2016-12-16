@@ -11,6 +11,7 @@ import org.graphwalker.core.generator.AStarPath;
 import org.graphwalker.core.generator.RandomPath;
 import org.graphwalker.core.machine.ExecutionContext;
 import org.graphwalker.java.test.TestBuilder;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import vvs.piscinas.Activa;
@@ -122,7 +123,7 @@ public class EstadosTest extends ExecutionContext implements Estados {
 	/**
 	 * Run stability test.
 	 */
-	@Test
+	 @Ignore @Test
 	public void runStabilityTest() {
 		new TestBuilder().setModel(MODEL_PATH).setContext(new EstadosTest())
 				.setPathGenerator(new RandomPath(new TimeDuration(30, TimeUnit.SECONDS))).setStart("crearPiscina")
