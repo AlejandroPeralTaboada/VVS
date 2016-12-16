@@ -1,3 +1,4 @@
+
 package vvs.alarma;
 
 import static org.junit.Assert.assertEquals;

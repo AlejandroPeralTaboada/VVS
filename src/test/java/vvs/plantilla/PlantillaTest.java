@@ -1,4 +1,6 @@
+
 package vvs.plantilla;
+
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,6 +12,8 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.List;
+
+
 
 /**
  * The Class PlantillaTest.

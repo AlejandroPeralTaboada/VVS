@@ -217,7 +217,7 @@ public class EstadosTest {
     piscina.activar();
     piscina.evacuar();
     piscina.mantenimiento();
-    assertEquals(Evacuacion.class, piscina.getEstado().getClass());
+    assertEquals(Mantenimiento.class, piscina.getEstado().getClass());
   }
 
   /**
